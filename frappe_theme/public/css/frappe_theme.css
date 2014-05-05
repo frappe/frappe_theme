@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5 {
 	min-height: 140px;
 	padding: 50px 0px;
 	font-size: 95%;
+	line-height: 1.8;
 	box-shadow: inset 0px 3px 5px rgba(0,0,0,0.3);
 }
 
