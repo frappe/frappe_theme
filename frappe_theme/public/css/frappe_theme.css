@@ -120,6 +120,16 @@ h1, h2, h3, h4, h5 {
 	display: none;
 }
 
+/* code */
+
+pre {
+	background-color: #333;
+	color: #fff;
+	border-radius: 5px;
+	border: 2px solid #ddd;
+	margin: 20px 0px;
+}
+
 /* home panel */
 
 .home-panel {
