@@ -1,9 +1,10 @@
 from frappe import _
 
-data = {
-	"Frappe Theme": {
-		"color": "orange",
-		"icon": "icon-globe",
-		"label": _("Frappe Theme")
+def get_data():
+	return {
+		"Frappe Theme": {
+			"color": "orange",
+			"icon": "icon-globe",
+			"label": _("Frappe Theme")
+		}
 	}
-}
