@@ -50,7 +50,7 @@ article a {
 	/*background-color: #024959;*/
 	background-color: #fff;
 	border-bottom: none;
-	padding: 18px 0px;
+	padding: 25px 0px;
 	box-shadow: 2px 0px 2px rgba(0,0,0,0.7);
 }
 
@@ -103,8 +103,8 @@ article a {
 }
 
 #wrap-footer {
-	margin-top: 50px;
-	background-color: #ddd;
+	margin-top: 80px;
+	background-color: #e8e8e8;
 }
 
 .frappe-footer {
@@ -116,7 +116,11 @@ article a {
 }
 
 .frappe-footer, .frappe-footer a {
-	color: #777;
+	color: #555;
+}
+
+.frappe-footer a {
+	font-size: 85%;
 }
 
 .frappe-footer h4 {
