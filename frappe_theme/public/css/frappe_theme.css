@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5 {
 	max-width: 970px;
 }
 
+article a {
+	font-weight: bold;
+}
+
 /* page header */
 
 .page-header {
@@ -46,7 +50,7 @@ h1, h2, h3, h4, h5 {
 	/*background-color: #024959;*/
 	background-color: #fff;
 	border-bottom: none;
-	padding: 15px 0px;
+	padding: 18px 0px;
 	box-shadow: 2px 0px 2px rgba(0,0,0,0.7);
 }
 
@@ -56,6 +60,17 @@ h1, h2, h3, h4, h5 {
 
 .navbar a.active {
 	font-weight: bold;
+}
+
+.navbar-nav li a {
+	text-transform: uppercase;
+	font-size: 90%;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+#website-post-login {
+	visibility: hidden;
 }
 
 /* bread crumb */
@@ -101,7 +116,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .frappe-footer, .frappe-footer a {
-	color: #555;
+	color: #777;
 }
 
 .frappe-footer h4 {
