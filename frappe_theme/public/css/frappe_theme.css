@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5 {
 	max-width: 970px;
 }
 
-article a {
+article a, .page-container a, .content-body a {
 	font-weight: bold;
 }
 
@@ -41,8 +41,6 @@ article a {
 .page-header .page-header-left {
 	width: 100%;
 }
-
-
 
 /* navbar */
 
