@@ -139,12 +139,8 @@ article a, .page-container a, .content-body a {
 
 /* code */
 
-pre {
-	background-color: #333;
-	color: #fff;
-	border-radius: 5px;
-	border: 2px solid #ddd;
-	margin: 20px 0px;
+pre code {
+	overflow-x: auto;
 }
 
 /* home panel */
