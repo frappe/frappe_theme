@@ -1,1 +1,1 @@
-frappe_theme
+Frappe Theme
