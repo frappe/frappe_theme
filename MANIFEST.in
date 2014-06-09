@@ -15,4 +15,5 @@ recursive-include frappe_theme *.png
 recursive-include frappe_theme *.py
 recursive-include frappe_theme *.svg
 recursive-include frappe_theme *.txt
+recursive-include frappe_theme/public *
 recursive-exclude frappe_theme *.pyc
