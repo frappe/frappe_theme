@@ -67,10 +67,6 @@ article a, .page-container a, .content-body a {
 	padding-top: 10px;
 }
 
-#website-post-login {
-	visibility: hidden;
-}
-
 /* bread crumb */
 
 .breadcrumb, .breadcrumb .active {
