@@ -189,3 +189,8 @@ pre code {
     	min-height: 311px;
 	}
 }
+
+/* Hide Login */
+.btn-login-area {
+	display: none !important;
+}
