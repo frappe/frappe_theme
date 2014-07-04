@@ -194,3 +194,22 @@ pre code {
 .btn-login-area {
 	display: none !important;
 }
+
+
+/* Styling Figures and Captions */
+figure {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+figure img {
+	margin-bottom: 7px;
+}
+
+figure figcaption {
+	text-align: center;
+	font-size: 90%;
+	color: #999;
+	border: 1px dashed #eee;
+	padding: 7px;
+}
