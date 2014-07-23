@@ -4,7 +4,7 @@
 
 body {
 	font-family: 'Noto Sans', sans-serif;
-	font-size: 16px;
+	font-size: 15.5px;
 	line-height: 1.8em;
 }
 
@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5, .navbar, footer, .sidebar-item {
 
 h4, h5 {
 	font-weight: bold;
+}
+
+blockquote {
+	background-color: #f7f7f7;
 }
 
 .container {
@@ -40,6 +44,16 @@ article a, .page-container a, .content-body a {
 
 .page-header .page-header-left {
 	width: 100%;
+}
+
+.page-sidebar {
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.sidebar-item {
+	margin: 10px 0px;
 }
 
 /* navbar */
