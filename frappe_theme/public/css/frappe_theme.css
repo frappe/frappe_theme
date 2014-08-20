@@ -4,7 +4,7 @@
 
 body {
 	font-family: 'Noto Sans', sans-serif;
-	font-size: 15.5px;
+	font-size: 15px;
 	line-height: 1.8em;
 }
 
@@ -44,16 +44,6 @@ article a, .page-container a, .content-body a {
 
 .page-header .page-header-left {
 	width: 100%;
-}
-
-.page-sidebar {
-	background-color: #f7f7f7;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.sidebar-item {
-	margin: 10px 0px;
 }
 
 /* navbar */
