@@ -63,10 +63,6 @@ article a, .page-container a, .content-body a {
 	color: #000 !important;
 }
 
-.navbar a.active {
-	font-weight: bold;
-}
-
 .navbar-nav li a {
 	text-transform: uppercase;
 	font-size: 90%;
