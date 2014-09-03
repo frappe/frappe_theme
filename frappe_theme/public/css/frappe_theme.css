@@ -101,6 +101,13 @@ article a, .page-container a, .content-body a {
 	max-width: 500px;
 }
 
+article img {
+	padding: 7px;
+	margin: 20px 0px;
+	border: 1px solid #eee;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
 #wrap-footer {
 	margin-top: 80px;
 	background-color: #e8e8e8;
