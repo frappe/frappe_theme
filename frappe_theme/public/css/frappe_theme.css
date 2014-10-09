@@ -49,6 +49,10 @@ article a, .page-container a, .content-body a {
 	width: 100%;
 }
 
+.text-sm {
+	font-size: 80%;
+}
+
 /* navbar small */
 
 .navbar-sm {
@@ -123,6 +127,11 @@ article img {
 	margin: 20px 0px;
 	border: 1px solid #eee;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+article img.no-shadow {
+	border: none;
+	box-shadow: none;
 }
 
 #wrap-footer {
