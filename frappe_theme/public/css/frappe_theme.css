@@ -24,10 +24,6 @@ blockquote {
 	max-width: 970px;
 }
 
-article a, .page-container a, .content-body a {
-	font-weight: bold;
-}
-
 /* page header */
 
 .page-header {
@@ -132,6 +128,11 @@ article img {
 article img.no-shadow {
 	border: none;
 	box-shadow: none;
+}
+
+.no-shadow img {
+	border: none !important;
+	box-shadow: none !important;
 }
 
 #wrap-footer {
