@@ -8,6 +8,7 @@ app_email = "info@frappe.io"
 app_url = "https://frappe.io"
 app_version = "0.0.1"
 hide_in_installer = True
+home_page = "index"
 
 # Includes in <head>
 # ------------------
@@ -17,7 +18,7 @@ hide_in_installer = True
 # app_include_js = "/assets/frappe_theme/js/frappe_theme.js"
 
 # include js, css files in header of web template
-web_include_css = "/assets/frappe_theme/css/frappe_theme.css"
+# web_include_css = "/assets/frappe_theme/css/frappe_theme.css"
 # web_include_js = "/assets/frappe_theme/js/frappe_theme.js"
 
 # Installation
