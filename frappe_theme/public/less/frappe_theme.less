@@ -7,10 +7,10 @@ Custom CSS
 @import "variables.less";
 
 body {
-    font: 16px/1.4em "omnes-pro", sans-serif;
-    font-weight:400;
+    // font: 16px/1.4em "omnes-pro", sans-serif;
+    // font-weight:400;
+    // letter-spacing:0.2px;
     color: @text-color;
-    letter-spacing:0.2px;
     -webkit-font-smoothing:subpixel-antialiased;
 }
 .container {
@@ -21,7 +21,6 @@ h1 {
     font-weight:600;
 }
 p {
-    color:#6c7680;
     line-height:1.4em;
 }
 p.description, p.description a {
@@ -48,6 +47,22 @@ p a {
 p a:hover {
     color:#242d36;
 }
+
+// frappe
+.page-content {
+	border-right: 1px solid @border-color;
+}
+.page-sidebar {
+	border-left: 1px solid @border-color;
+	padding-left: 15px;
+}
+.sidebar-item {
+	margin: 0px;
+	padding: 5px 0px;
+	border: none;
+}
+// custom
+
 .button {
     display: inline-block;
     border-radius:4px;
@@ -75,7 +90,6 @@ p a:hover {
     background: #5b5be5;
 }
 .white.button {
-    color:#6c7680;
     border:1px solid @border-color;
 }
 .white.button:hover {
@@ -85,8 +99,14 @@ p a:hover {
     padding:20px 8px 20px 0;
     border-bottom:1px solid @border-color;
     height:70px;
+	// background-color: @navbar-bg;
 }
-
+.brand, .brand:hover, .brand:visited, .brand:focus {
+	font-size: 120%;
+	text-decoration: none;
+	color: @text-color;
+	font-weight: bold;
+}
 .nav-bar ul, .nav-bar li {
     list-style-type: none;
     display:inline-block;
@@ -149,6 +169,7 @@ p a:hover {
 }
 .group {
    border-bottom:1px solid @border-color;
+   padding-bottom: 70px;
 }
 .row.section {
     padding:70px 0 0;
@@ -183,50 +204,51 @@ p a:hover {
     font-weight:400;
 }
 footer {
-    color:#8d99a6;
-    font-size:14px;
-    text-align:center;
+    color: @text-muted;
+    font-size:12px;
     padding:3px 0;
     border-top:1px solid @border-color;
-	margin-top: 70px;
 }
-footer h1 {
-    font-size:1.42em;
-    margin:0;
+// footer h1 {
+//     font-size:1.42em;
+//     margin:0;
+// }
+// footer p {
+//     margin:0;
+//     padding: 2px 0 10px;
+//     color:#8d99a6;
+// }
+// footer ul, footer ul li {
+//     margin:0;
+//     padding:0;
+//     list-style-type: none;
+//     text-align: center;
+// }
+footer ul {
+	margin-top: 20px;
 }
-footer p {
-    margin:0;
-    padding: 2px 0 10px;
-    color:#8d99a6;
-}
-footer ul, footer ul li {
-    margin:0;
-    padding:0;
-    list-style-type: none;
-    text-align: center;
+footer li {
+	margin-right: 20px;
+	display: inline-block;
 }
 footer li a {
-    display:block;
-    width: 150px;
-    margin:50px auto 30px;
+    // display:block;
+    // width: 150px;
+    // margin:50px auto 30px;
+	font-size: 12px;
     text-decoration: none;
     opacity:0.8;
-    color:#8d99a6;
+    color: @text-muted;
 }
 footer li a.active {
-    color:#36414c;
+    color: @text-color;
 }
 footer li a:hover {
-    color:#242d36;
+    color: @text-color;
     text-decoration: none;
 }
-footer li a:hover p, footer li a.active p {
-    color:#6c7680;
-}
-footer li a.active p {
-    border-bottom: 2px solid #7575ff;
-}
 .copyright {
+	font-size: 12px;
     padding-bottom:50px;
 }
 // .container {
@@ -372,7 +394,7 @@ Frappé
     margin:0 0 40px;
 }
 .team-description {
-    margin:40px 0 60px;
+    margin: 40px 0 0;
     color:#b8b8ff;
 }
 .team-description a {
