@@ -4,8 +4,43 @@ Custom CSS
 
 ---------------------------------------*/
 body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   color: #36414c;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+}
+article {
+  font: 18px "freight-text-pro", serif;
+  letter-spacing: 0.01rem;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.lead,
+.page-sidebar,
+.breadcrumb {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.page-content hr {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-sidebar,
+.breadcrumb {
+  line-height: 1.5em;
+}
+footer {
+  font-size: 14px;
+  line-height: 1.42857143;
 }
 .container {
   max-width: 900px;
@@ -87,7 +122,7 @@ p a:hover {
   background: #fafbfc;
 }
 .nav-bar {
-  padding: 20px 8px 20px 0;
+  padding: 25px 8px 25px 0;
   border-bottom: 1px solid #d1d8dd;
   height: 70px;
 }
@@ -95,7 +130,7 @@ p a:hover {
 .brand:hover,
 .brand:visited,
 .brand:focus {
-  font-size: 120%;
+  font-size: 16px;
   text-decoration: none;
   color: #36414c;
   font-weight: bold;
