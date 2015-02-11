@@ -46,7 +46,6 @@ footer {
 	max-width: 900px;
 }
 h1 {
-    font-size:1.8em;
     font-weight:600;
 }
 p {
@@ -64,17 +63,9 @@ p.description a:hover {
 a {
     transition:color 0.3s, border 0.3s, background-color 0.3s;
     text-decoration:underline;
-    color:#7575ff;
 }
 a:hover {
     text-decoration:underline;
-    color:#4d4da8;
-}
-p a {
-    color:inherit;
-}
-p a:hover {
-    color:#242d36;
 }
 
 // frappe
@@ -89,6 +80,9 @@ p a:hover {
 	margin: 0px;
 	padding: 5px 0px;
 	border: none;
+}
+.border-bottom {
+	border-bottom: 1px solid @border-color;
 }
 // custom
 
@@ -125,7 +119,7 @@ p a:hover {
     background:#fafbfc;
 }
 .nav-bar{
-    padding:25px 8px 25px 0;
+    padding:25px 0px;
     border-bottom:1px solid @border-color;
     height:70px;
 	// background-color: @navbar-bg;
