@@ -27,7 +27,10 @@ h5,
 h6,
 .lead,
 .page-sidebar,
-.breadcrumb {
+.breadcrumb,
+.label,
+.h6,
+.sans {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .page-content hr {
@@ -43,7 +46,7 @@ footer {
   line-height: 1.42857143;
 }
 .container {
-  max-width: 900px;
+  max-width: 800px;
 }
 h1 {
   font-weight: 600;
