@@ -52,8 +52,8 @@
             </div> -->
     		<div class="page-container" id="page-{{ name or page_name }}">
     			<div class="row">
-    				<div class="col-sm-3 col-sm-push-9 page-sidebar hidden-xs"
-                        data-html-block="sidebar" style="left: calc(75% - 1px);">
+    				<div class="col-sm-2 col-sm-push-10 page-sidebar hidden-xs"
+                        data-html-block="sidebar" style="left: calc(83.34% - 1px);">
     					{%- block sidebar -%}
     					{%- if sidebar is defined -%}
     						{{ sidebar }}
@@ -61,7 +61,7 @@
     					{%- endif -%}
     					{%- endblock -%}
     				</div>
-    				<div class="col-sm-9 col-sm-pull-3 page-content">
+    				<div class="col-sm-10 col-sm-pull-2 page-content">
             			<div data-html-block="header">
             				{%- if header is defined -%}{% if header %}{{ header }}{% endif %}{%- endif -%}
             			</div>
