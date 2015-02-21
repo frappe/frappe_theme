@@ -1,0 +1,23 @@
+{% macro render_navbar_items(nav_links) -%}
+	{%- for label, href in nav_links %}
+		<li><a href="{{ href }}" {% if (href or "").startswith("http") -%}target="_blank"{%- endif %}>
+			{{ label }}</a></li>
+	{% endfor -%}
+{%- endmacro %}
+
+<div class="nav-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <a href="{{ nav_home or '/' }}" class="brand">{{ nav_brand and nav_brand[0] or "" }}</a>
+				<a class="pull-right toggle-sidebar visible-xs">
+					<i class="octicon octicon-three-bars"></i>
+				</a>
+            </div>
+            <ul class="col-sm-8 hidden-xs links">
+				{{ render_navbar_items(nav_links) }}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
