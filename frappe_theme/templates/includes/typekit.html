@@ -1,2 +1,4 @@
-<script src="//use.typekit.net/ioc2xoj.js"></script>
+{% if typekit_kit_id -%}
+<script src="//use.typekit.net/{{ typekit_kit_id }}.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
+{%- endif %}
