@@ -44,7 +44,7 @@ footer {
 }
 
 .container {
-	max-width: 800px;
+	max-width: 900px;
 }
 h1 {
     font-weight:600;
@@ -61,6 +61,7 @@ p.description, p.description a {
 p.description a:hover {
     text-decoration: underline;
 }
+
 a {
     transition:color 0.3s, border 0.3s, background-color 0.3s;
     text-decoration:underline;
@@ -69,7 +70,14 @@ a {
 a:hover {
     text-decoration:underline;
 }
-a.close {
+
+a.close,
+a.btn {
+	text-decoration: none;
+}
+
+.navbar a, .sidebar-navbar-items a {
+	color: inherit;
 	text-decoration: none;
 }
 
@@ -123,7 +131,7 @@ a.close {
 .white.button:hover {
     background:#fafbfc;
 }
-.nav-bar{
+.navbar{
     padding:25px 0px;
     border-bottom:1px solid @border-color;
     height:70px;
@@ -135,40 +143,41 @@ a.close {
 	color: @text-color;
 	font-weight: bold;
 }
-.nav-bar ul, .nav-bar li {
+.navbar ul, .navbar li {
     list-style-type: none;
     display:inline-block;
     padding:0;
     margin:0;
 }
-.nav-bar .links {
+.navbar .links {
     font-size:14px;
     text-align:right;
     padding-top:4px;
 }
-.nav-bar .links a {
+.navbar .links a {
     color:#8d99a6;
     text-decoration:none;
     margin: 0 0 0 50px;
 }
-.nav-bar .links a:hover {
+.navbar .links a:hover,
+.navbar .links a.active {
     color:#36414c;
 }
-.nav-bar .links .button {
+.navbar .links .button {
     border:1px solid @border-color;
 }
-.nav-bar .links .button:hover {
+.navbar .links .button:hover {
     background:#fafbfc;
 }
 
 @media (max-width: 767px) {
-	.nav-bar {
+	.navbar {
 		height: auto;
 	}
-	.nav-bar .links a {
+	.navbar .links a {
 	    margin: 0;
 	}
-	.nav-bar li {
+	.navbar li {
 		padding: 0 15px;
 	}
 }
@@ -197,10 +206,9 @@ a.close {
 }
 .group {
    border-bottom:1px solid @border-color;
-   padding-bottom: 70px;
 }
 .row.section {
-    padding:70px 0 0;
+    padding: 70px 0 70px;
 }
 .content {
     padding:24px 40px 0;
@@ -447,4 +455,21 @@ Frappé
 }
 .contact .content {
     margin-top:-40px;
+}
+
+.page-padding {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.half-width {
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 767px) {
+	.half-width {
+		max-width: 90%;
+	}
 }
