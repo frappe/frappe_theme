@@ -75,6 +75,18 @@ a.btn {
   color: inherit;
   text-decoration: none;
 }
+a.text-muted,
+a.text-extra-muted {
+  text-decoration: underline;
+  border-bottom: none;
+}
+a.text-muted:hover,
+a.text-muted:focus,
+a.text-extra-muted:hover,
+a.text-extra-muted:focus {
+  color: inherit !important;
+  border-bottom: none;
+}
 .page-content {
   border-right: 1px solid #d1d8dd;
 }
@@ -435,8 +447,16 @@ Frappé
   margin-left: auto;
   margin-right: auto;
 }
+.width-75 {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media (max-width: 767px) {
   .half-width {
     max-width: 90%;
+  }
+  .width-75 {
+    max-width: 100%;
   }
 }
