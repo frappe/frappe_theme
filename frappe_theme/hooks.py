@@ -1,6 +1,6 @@
 app_name = "frappe_theme"
 app_title = "Frappe Theme"
-app_publisher = "Web Notes"
+app_publisher = "Frappe"
 app_description = "Theme for Frappe sites"
 app_icon = "icon-globe"
 app_color = "orange"
