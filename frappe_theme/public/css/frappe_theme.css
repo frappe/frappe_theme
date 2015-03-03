@@ -87,6 +87,14 @@ a.text-extra-muted:focus {
   color: inherit !important;
   border-bottom: none;
 }
+a.grey {
+  text-decoration: underline;
+  border-bottom: none;
+}
+a.grey:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
 .page-content {
   border-right: 1px solid #d1d8dd;
 }

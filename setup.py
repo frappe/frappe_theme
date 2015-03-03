@@ -7,7 +7,7 @@ setup(
     name='frappe_theme',
     version=version,
     description='Theme for Frappe sites',
-    author='Web Notes',
+    author='Frappe',
     author_email='https://frappe.io',
     packages=find_packages(),
     zip_safe=False,
