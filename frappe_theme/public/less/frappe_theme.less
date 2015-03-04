@@ -25,13 +25,13 @@ p.lead {
 	.sans-serif();
 }
 
-h1, h2, h3, h4, h5, h6, .lead, .page-sidebar, .breadcrumb, .label, .h6, .sans {
+h1, h2, h3, h4, h5, h6, .lead, .page-sidebar, .breadcrumb, .label, .h6, .sans,
+	button, .button, .btn, blockquote{
 	.sans-serif();
 }
 
-.page-content hr {
-	margin-left: -15px;
-	margin-right: -15px;
+article button, article .button, article .btn, blockquote {
+	font-size: 14px;
 }
 
 .page-sidebar, .breadcrumb {
@@ -48,9 +48,6 @@ footer {
 }
 h1 {
     font-weight:600;
-}
-p {
-    line-height:1.4em;
 }
 p.description, p.description a {
     color:#b8c2cc;
@@ -110,19 +107,42 @@ a.grey:hover {
 .page-content {
 	border-right: 1px solid @border-color;
 }
-.page-sidebar {
-	border-left: 1px solid @border-color;
-	padding-left: 15px;
+
+article .screenshot {
+	border: 2px solid @border-color;
+	box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+	margin: 15px 0px;
 }
-.sidebar-item {
-	margin: 0px;
-	padding: 5px 0px;
-	border: none;
-}
-.border-bottom {
-	border-bottom: 1px solid @border-color;
-}
+
 // custom
+
+blockquote {
+	border-left: 5px solid @btn-bg;
+	background-color: @light-bg;
+	margin-top: 15px;
+}
+
+.article-hero {
+	margin-right: -30px;
+}
+
+.article-hero .cover {
+	max-width: none;
+	width: 100%;
+}
+
+.article-hero h1 {
+	margin-top: -120px;
+	margin-bottom: 100px;
+	color: black;
+	padding: 15px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.article-hero h1.white {
+	color: white;
+}
 
 .button {
     display: inline-block;
@@ -507,4 +527,9 @@ Frappé
 	.width-75 {
 		max-width: 100%;
 	}
+}
+
+.media-object {
+	max-width: 120px;
+	margin-right: 15px;
 }
