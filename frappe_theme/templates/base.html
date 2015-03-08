@@ -1,138 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=1050">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="icon" href="/assets/frappe_theme/img/favicon.ico">
+{% extends "frappe/templates/base.html" %}
 
-        <title>{{ title }}</title>
+{% block favicon %}
+    <link rel="icon" href="/assets/frappe_theme/img/favicon.ico">
+    <link rel="shortcut icon" href="/assets/frappe_theme/img/favicon.ico">
+{% endblock %}
 
-        <!--jQuery-->
-        <script type="text/javascript"
-		    src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+{% block head_include %}
+    {% include "templates/includes/typekit.html" %}
+    <link href="/assets/frappe_theme/css/frappe_theme.css" rel="stylesheet">
+    <style>{% include "templates/includes/custom.css" %}</style>
+{% endblock %}
 
-        <!-- Fonts -->
-        {% include "templates/includes/typekit.html" %}
+{% block page_header %}&nbsp;{% endblock %}
+{% block breadcrumbs %}&nbsp;{% endblock %}
 
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-		{%- for link in web_include_css %}
-		<link type="text/css" rel="stylesheet" href="{{ link }}">
-		{%- endfor -%}
-
-		{%- block style %}
-			<style data-html-block="style">
-			{%- if style is defined -%}{{ style }}{%- endif -%}
-			</style>
-		{%- endblock -%}
-
-		{%- for link in web_include_js %}
-		<script type="text/javascript" src="{{ link }}"></script>
-		{%- endfor -%}
-
-        <!-- Styles -->
-        <link href="/assets/frappe_theme/css/frappe_theme.css" rel="stylesheet">
-        <style>{% include "templates/includes/custom.css" %}</style>
-
-    </head>
-    <body>
-		<div class="offcanvas-container">
-			<div class="offcanvas">
-				<div class="offcanvas-main-section">
-			        <!-- Navigation -->
-			        {% block navbar %}
-			        {% include "templates/includes/navbar.html" %}
-			        {% endblock %}
-			        <div class="container">
-			    		<div class="page-container" id="page-{{ name or page_name }}">
-			    			<div class="row">
-			    				<div class="col-sm-10 page-content">
-			            			<div class="page-header-block" data-html-block="header">
-			            				{%- if header is defined -%}{% if header %}{{ header }}{% endif %}{%- endif -%}
-			            			</div>
-			                        <div class="page-content-block" data-html-block="content">
-			    					{%- block content -%}{{ content or "" }}{%- endblock -%}
-			                        </div>
-			    				</div>
-			    				<div class="col-sm-2 page-sidebar hidden-xs" data-html-block="sidebar">
-			    					{%- block sidebar -%}
-			    					{%- if sidebar is defined -%}
-			    						{{ sidebar }}
-			    					{%- endif -%}
-			    					{%- endblock -%}
-			    				</div>
-			    			</div>
-			    		</div>
-			        </div>
-			        <!--Footer-->
-			        <footer>
-			            <div class="container">
-			                <ul class="list-unstyled">
-			                    <li>
-			                        <a href="https://erpnext.com">ERPNext</a>
-			                    </li>
-			                    <li>
-			                        <a href="https://frappe.io">Developers</a>
-			                    </li>
-			                    <li>
-			                        <a href="https://erpnext.com/terms">Terms</a>
-			                    </li>
-			                    <li>
-			                        <a href="https://team.frappe.io">About</a>
-			                    </li>
-			                    <li>
-			                        <a href="https://blog.frappe.io/blog">Blog</a>
-			                    </li>
-			                    <li>
-			                        <a href="https://erpnext.com/sitemap">Sitemap</a>
-			                    </li>
-			                </ul>
-			                <div class="copyright">
-			                    <p>
-			                        <!-- &copy;<span id="year"></span> Frappé Technologies Pvt. Ltd.  -->
-			                        Content licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>.</p>
-			                </div>
-			            </div>
-			        </footer>
-				</div>
-				<div class="modal-backdrop offcanvas-main-section-overlay"></div>
-				<div class="sidebar sidebar-right visible-xs">
-					{% block offcanvas_sidebar -%}
-					<div class="sidebar-navbar-items">
-						{%- from "frappe_theme/templates/includes/navbar.html" import render_navbar_items -%}
-						<ul class="list-unstyled sidebar-menu">
-						{{ render_navbar_items(nav_links) }}
-						</ul>
-					</div>
-					<div class="sidebar-page-sidebar" data-html-block="sidebar">
-						{%- if sidebar is defined -%}
-							{{ sidebar }}
-						{%- endif -%}
-					</div>
-					{%- endblock %}
-				</div>
-			</div>
-		</div>
-        <!--Javascript-->
-        <script src="/assets/frappe_theme/js/main.js"></script>
-
-	{%- block script %}
-		<script data-html-block="script">
-		{%- if script is defined -%}{{ script }}{%- endif -%}
-		</script>
-	{%- endblock %}
-
-	{%- block script_lib %}
-		<script data-html-block="script_lib" data-path="{{ name }}">
-		{%- if script_lib is defined -%}{{ script_lib }}{%- endif -%}
-		</script>
-	{%- endblock -%}
-
-    </body>
-</html>
+{% block footer %}
+    <footer>
+        <div class="container">
+            <ul class="list-unstyled">
+                <li>
+                    <a href="https://erpnext.com">ERPNext</a>
+                </li>
+                <li>
+                    <a href="https://frappe.io">Developers</a>
+                </li>
+                <li>
+                    <a href="https://erpnext.com/terms">Terms</a>
+                </li>
+                <li>
+                    <a href="https://team.frappe.io">About</a>
+                </li>
+                <li>
+                    <a href="https://blog.frappe.io/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="https://erpnext.com/sitemap">Sitemap</a>
+                </li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    <!-- &copy;<span id="year"></span> Frappé Technologies Pvt. Ltd.  -->
+                    Content licensed under
+                    <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>.</p>
+            </div>
+        </div>
+    </footer>
+    <!--Javascript-->
+    <script src="/assets/frappe_theme/js/main.js"></script>
+{% endblock %}

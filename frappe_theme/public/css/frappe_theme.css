@@ -58,16 +58,12 @@ p.description a {
   margin: 12px 0 0;
   text-decoration: none;
 }
-p.description a:hover {
-  text-decoration: underline;
-}
-a {
-  transition: color 0.3s, border 0.3s, background-color 0.3s;
-  text-decoration: underline;
-  color: #5e64ff;
-}
+a,
+a:focus,
 a:hover {
-  text-decoration: underline;
+  transition: color 0.3s, border 0.3s, background-color 0.3s;
+  color: #5e64ff;
+  border-color: #5e64ff;
 }
 a.close,
 a.btn {
@@ -77,26 +73,7 @@ a.btn {
 .sidebar-navbar-items a {
   color: inherit;
   text-decoration: none;
-}
-a.text-muted,
-a.text-extra-muted {
-  text-decoration: underline;
-  border-bottom: none;
-}
-a.text-muted:hover,
-a.text-muted:focus,
-a.text-extra-muted:hover,
-a.text-extra-muted:focus {
-  color: inherit !important;
-  border-bottom: none;
-}
-a.grey {
-  text-decoration: underline;
-  border-bottom: none;
-}
-a.grey:hover {
-  border-bottom: none;
-  text-decoration: underline;
+  border-color: inherit;
 }
 .page-content {
   border-right: 1px solid #d1d8dd;
@@ -162,55 +139,22 @@ blockquote {
   background: #fafbfc;
 }
 .navbar {
-  padding: 25px 0px;
+  padding: 10px 0px;
   border-bottom: 1px solid #d1d8dd;
-  height: 70px;
+  background-color: #fff;
 }
-.brand,
-.brand:hover,
-.brand:visited,
-.brand:focus {
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:visited,
+.navbar-brand:focus {
   font-size: 16px;
   text-decoration: none;
   color: #36414c;
   font-weight: bold;
 }
-.navbar ul,
-.navbar li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-.navbar .links {
-  font-size: 14px;
-  text-align: right;
-  padding-top: 4px;
-}
-.navbar .links a {
-  color: #8d99a6;
-  text-decoration: none;
-  margin: 0 0 0 50px;
-}
-.navbar .links a:hover,
-.navbar .links a.active {
-  color: #36414c;
-}
-.navbar .links .button {
-  border: 1px solid #d1d8dd;
-}
-.navbar .links .button:hover {
-  background: #fafbfc;
-}
 @media (max-width: 767px) {
   .navbar {
     height: auto;
-  }
-  .navbar .links a {
-    margin: 0;
-  }
-  .navbar li {
-    padding: 0 15px;
   }
 }
 .hero {
@@ -302,21 +246,6 @@ footer li a:hover {
 }
 .center {
   text-align: center;
-}
-input[type=text],
-textarea {
-  display: inline-block;
-  border-radius: 4px;
-  height: 28px;
-  border: 1px solid #ced5db;
-  width: 100%;
-  padding: 0 8px;
-  font-size: 14px;
-}
-input:focus,
-textarea:focus {
-  outline: 0;
-  box-shadow: 0 0 5px #d8dfe5;
 }
 /*-------------------------------------
 
@@ -468,6 +397,9 @@ Frappé
 .page-padding {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.page-breadcrumbs {
+  display: none !important;
 }
 .half-width {
   max-width: 50%;
