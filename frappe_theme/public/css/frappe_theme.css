@@ -75,6 +75,9 @@ a:hover {
   transition: color 0.3s, border 0.3s, background-color 0.3s;
   color: #5e64ff;
 }
+a.grey {
+  color: #36414c;
+}
 a.close,
 a.btn {
   text-decoration: none;
@@ -117,23 +120,15 @@ blockquote {
   background-color: #fafbfc;
   margin-top: 15px;
 }
-.article-hero {
-  margin-right: -30px;
+.page-hero {
+  padding: 130px 0px 100px;
+  margin-top: -60px;
 }
-.article-hero .cover {
-  max-width: none;
-  width: 100%;
+.page-hero h1 {
+  font-size: 1.5em;
 }
-.article-hero h1 {
-  margin-top: -120px;
-  margin-bottom: 100px;
-  color: black;
-  padding: 15px;
-  font-size: 40px;
-  text-align: center;
-}
-.article-hero h1.white {
-  color: white;
+.navbar {
+  background-color: transparent;
 }
 .button {
   display: inline-block;
@@ -170,7 +165,6 @@ blockquote {
 .navbar {
   padding: 10px 0px;
   border-bottom: 1px solid #d1d8dd;
-  background-color: #fff;
 }
 .navbar-brand,
 .navbar-brand:hover,
