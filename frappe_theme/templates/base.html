@@ -11,8 +11,11 @@
     <style>{% include "templates/includes/custom.css" %}</style>
 {% endblock %}
 
-{% block page_header %}&nbsp;{% endblock %}
-{% block breadcrumbs %}&nbsp;{% endblock %}
+{% block content %}
+<div class="container page-padding" data-html-block="content">
+{{ content }}
+</div>
+{% endblock %}
 
 {% block footer %}
     <footer>

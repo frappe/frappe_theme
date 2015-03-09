@@ -48,8 +48,19 @@ footer {
 .container {
   max-width: 900px;
 }
-h1 {
-  font-weight: 600;
+@media (min-width: 768px) {
+  .narrow {
+    max-width: 75%;
+    margin: auto;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 p.description,
 p.description a {
@@ -63,7 +74,6 @@ a:focus,
 a:hover {
   transition: color 0.3s, border 0.3s, background-color 0.3s;
   color: #5e64ff;
-  border-color: #5e64ff;
 }
 a.close,
 a.btn {
@@ -77,6 +87,25 @@ a.btn {
 }
 .page-content {
   border-right: 1px solid #d1d8dd;
+}
+.page-title {
+  text-align: center;
+  margin-top: 30px;
+}
+.page-sub-title {
+  color: #8d99a6;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 45px;
+  font-weight: 300;
+}
+.btn-white {
+  background-color: #fff;
+  color: #36414c;
+  border-color: #d1d8dd;
+}
+.btn-white:hover {
+  background-color: #fafbfc;
 }
 article .screenshot {
   border: 2px solid #d1d8dd;
