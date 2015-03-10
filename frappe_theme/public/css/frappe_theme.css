@@ -92,7 +92,7 @@ a.btn {
   border-right: 1px solid #d1d8dd;
 }
 .page-padding,
-.page-content-block {
+.page-content-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
 }
