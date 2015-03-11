@@ -41,10 +41,6 @@ blockquote {
 .breadcrumb {
   line-height: 1.5em;
 }
-footer {
-  font-size: 14px;
-  line-height: 1.42857143;
-}
 .container {
   max-width: 900px;
 }
@@ -203,6 +199,7 @@ blockquote {
 .hero-content p {
   width: 80%;
   margin: 0 auto 24px;
+  line-height: 1.4;
 }
 .hero-content p.description {
   margin-top: 16px;
@@ -271,6 +268,22 @@ footer li a:hover {
 .copyright {
   font-size: 12px;
   padding-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .footer-list {
+    margin-top: 15px;
+  }
+  .footer-list li {
+    display: block;
+    margin-top: 7px;
+    padding: 0px 15px;
+  }
+  .footer-list li a {
+    font-size: 14px;
+  }
+  .copyright {
+    padding: 15px;
+  }
 }
 .center {
   text-align: center;
