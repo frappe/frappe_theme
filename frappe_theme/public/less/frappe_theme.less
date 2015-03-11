@@ -38,10 +38,6 @@ article button, article .button, article .btn, blockquote {
 	line-height: 1.5em;
 }
 
-footer {
-    font-size: 14px;
-    line-height: 1.42857143;
-}
 
 .container {
 	max-width: 900px;
@@ -214,6 +210,7 @@ blockquote {
 .hero-content p {
     width:80%;
     margin:0 auto 24px;
+	line-height: 1.4;
 }
 .hero-content p.description {
     margin-top:16px;
@@ -253,27 +250,15 @@ blockquote {
     font-size:18px;
     font-weight:400;
 }
+
+
 footer {
     color: @text-muted;
     font-size:12px;
     padding:3px 0;
     border-top:1px solid @border-color;
 }
-// footer h1 {
-//     font-size:1.42em;
-//     margin:0;
-// }
-// footer p {
-//     margin:0;
-//     padding: 2px 0 10px;
-//     color:#8d99a6;
-// }
-// footer ul, footer ul li {
-//     margin:0;
-//     padding:0;
-//     list-style-type: none;
-//     text-align: center;
-// }
+
 footer ul {
 	margin-top: 20px;
 }
@@ -297,10 +282,30 @@ footer li a:hover {
     color: @text-color;
     text-decoration: none;
 }
+
 .copyright {
 	font-size: 12px;
     padding-bottom:50px;
 }
+
+@media (max-width: 767px) {
+	.footer-list {
+		margin-top: 15px;
+
+		li {
+			display: block;
+			margin-top: 7px;
+			padding: 0px 15px;
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+	.copyright {
+		padding: 15px;
+	}
+}
+
 // .container {
 //     max-width:960px;
 // }
