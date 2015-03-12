@@ -7,7 +7,7 @@ body {
   font-family: "proxima-nova", sans-serif;
   font-size: 16px;
   color: #36414c;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility !important;
   line-height: 1.5em;
 }
 p.lead {
@@ -171,7 +171,6 @@ h1 {
   font-size: 18px;
   text-decoration: none;
   color: #36414c;
-  font-weight: bold;
 }
 @media (max-width: 767px) {
   .navbar {
