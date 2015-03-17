@@ -147,7 +147,9 @@ h1 {
     line-height:1;
     text-decoration: none;
 }
-.button:hover {
+.button:hover,
+.button:active,
+.button:focus {
     text-decoration: none;
 }
 .large.button {
@@ -167,6 +169,7 @@ h1 {
     background: #5b5be5;
 }
 .white.button {
+	color: #6C7680;
     border:1px solid @border-color;
 }
 .white.button:hover {
@@ -395,7 +398,8 @@ Frappé for Developers
     height:19px;
 }
 .erp-framework {
-    width:353px;
+    width: 70%;
+	margin: 40px auto;
 }
 .get-involved {
     color:#36414c;
