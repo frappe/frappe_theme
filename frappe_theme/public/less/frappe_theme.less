@@ -34,10 +34,22 @@ article button, article .button, article .btn, blockquote {
 	font-size: 14px;
 }
 
+
+
 .page-sidebar, .breadcrumb {
 	line-height: 1.5em;
 }
 
+.breadcrumb {
+	background-color: transparent;
+	padding: 10px 0px;
+}
+
+.breadcrumb {
+	a, a:hover, a:focus, a:visited  {
+		color: inherit;
+	}
+}
 
 .container {
 	max-width: 900px;
@@ -113,7 +125,7 @@ a.btn {
 	background-color: @light-bg;
 }
 
-article .screenshot {
+.screenshot {
 	border: 2px solid @border-color;
 	box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
 	margin: 15px 0px;
@@ -125,6 +137,10 @@ blockquote {
 	border-left: 5px solid @btn-bg;
 	background-color: @light-bg;
 	margin-top: 15px;
+}
+
+blockquote p {
+	margin: 0px;
 }
 
 .page-hero {
@@ -569,3 +585,6 @@ Frappé
 	}
 }
 
+.cover {
+	width: 100%;
+}
