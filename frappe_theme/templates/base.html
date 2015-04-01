@@ -14,8 +14,12 @@
 {% block content %}
 <div class="container" data-html-block="content">
 {{ content }}
-{% if custom_footer is defined %}{{ custom_footer }}{% endif %}
 </div>
+{% if custom_footer is defined -%}
+<div class="container">
+    {{ custom_footer }}
+</div>
+{%- endif %}
 {% endblock %}
 
 {% block footer %}
