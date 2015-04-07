@@ -5,8 +5,8 @@ Custom CSS
 ---------------------------------------*/
 body {
   font-family: "proxima-nova", sans-serif;
-  font-size: 16px;
-  color: #36414c;
+  font-size: 15px;
+  color: #6c7680;
   text-rendering: optimizeLegibility !important;
   line-height: 1.5em;
 }
@@ -30,12 +30,26 @@ button,
 .btn,
 blockquote {
   font-family: "proxima-nova", sans-serif;
+  color: #36414c;
 }
 article button,
 article .button,
 article .btn,
 blockquote {
-  font-size: 14px;
+  font-size: 0.93em;
+}
+article ul > li,
+article ol > li {
+  margin: 10px 0px;
+}
+figcaption {
+  font-size: 0.8em;
+  color: #b8c2cc;
+  padding: 10px 0px;
+  line-height: 1.3em;
+}
+.text-extra-muted {
+  color: #b8c2cc !important;
 }
 .page-sidebar,
 .breadcrumb {
@@ -51,8 +65,11 @@ blockquote {
 .breadcrumb a:visited {
   color: inherit;
 }
-.container {
+.container,
+.navbar,
+footer {
   max-width: 900px;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .narrow {
@@ -71,9 +88,19 @@ h6 {
 p.description,
 p.description a {
   color: #b8c2cc;
-  font-size: 18px;
+  font-size: 1.06em;
   margin: 12px 0 0;
   text-decoration: none;
+}
+.hero-content p.description,
+.page-hero p.description,
+.hero-content p.description a,
+.page-hero p.description a {
+  font-size: 0.8em;
+}
+.hero-content .x-large.button,
+.page-hero .x-large.button {
+  font-size: 1em;
 }
 a,
 a:focus,
@@ -95,7 +122,7 @@ a.btn {
   border-color: inherit;
 }
 .page-padding,
-.page-content-wrapper {
+.page-content {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -136,7 +163,7 @@ blockquote p {
   margin-top: -60px;
 }
 h1 {
-  font-size: 32px;
+  font-size: 2.13em;
 }
 .navbar {
   background-color: transparent;
@@ -154,12 +181,12 @@ h1 {
   text-decoration: none;
 }
 .large.button {
-  font-size: 20px;
+  font-size: 1.33em;
   padding: 12px 24px 10px;
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 .x-large.button {
-  font-size: 24px;
+  font-size: 1.6em;
   padding: 16px 40px;
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
@@ -185,7 +212,7 @@ h1 {
 .navbar-brand:hover,
 .navbar-brand:visited,
 .navbar-brand:focus {
-  font-size: 18px;
+  font-size: 1.2em;
   text-decoration: none;
   color: #36414c;
 }
@@ -195,8 +222,9 @@ h1 {
   }
 }
 .hero {
-  padding: 100px 0;
-  font-size: 24px;
+  margin-top: -30px;
+  padding: 70px 0;
+  font-size: 1.6em;
   font-weight: 300;
   border-bottom: 1px solid #d1d8dd;
   text-align: center;
@@ -216,6 +244,7 @@ h1 {
 }
 .hero-content p.description {
   margin-top: 16px;
+  margin-bottom: 0px;
 }
 .group {
   border-bottom: 1px solid #d1d8dd;
@@ -242,7 +271,7 @@ h1 {
 }
 .tiny-content {
   margin-bottom: 40px;
-  font-size: 15px;
+  font-size: 1em;
 }
 .tiny-content h1 {
   color: #36414c;
@@ -252,7 +281,7 @@ h1 {
   color: #858d95;
 }
 .tiny-content h1 {
-  font-size: 18px;
+  font-size: 1.2em;
   font-weight: 400;
 }
 footer {
@@ -260,33 +289,55 @@ footer {
   padding: 3px 0;
   border-top: 1px solid #d1d8dd;
 }
-footer ul {
-  margin-top: 20px;
+footer h1 {
+  color: #36414c;
+  font-size: 1.42em;
+  margin: 0;
 }
-footer li {
-  margin-right: 20px;
-  display: inline-block;
+footer p {
+  margin: 0;
+  padding: 2px 0 10px;
+  color: #6c7680;
+}
+footer ul,
+footer ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
 }
 footer li a {
   text-decoration: none;
-  opacity: 0.8;
-  color: #8d99a6;
+  color: #6c7680;
 }
-footer li a.active {
-  color: #36414c;
-}
-footer li a:hover {
+footer li a:hover,
+footer li a:active,
+footer li a:focus {
   color: #36414c;
   text-decoration: none;
 }
-.copyright {
-  text-align: center;
-  font-size: 12px;
-  padding-bottom: 50px;
-}
 .footer-list {
   text-align: center;
-  margin: 30px 0 15px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.footer-list ul {
+  margin-top: 20px;
+}
+.footer-list li {
+  margin: 0px 15px;
+  display: inline-block;
+}
+.copyright {
+  font-size: 0.8em;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.copyright p {
+  padding-bottom: 0px;
+  color: #b8c2cc;
 }
 .center {
   text-align: center;
@@ -355,7 +406,7 @@ ERPNext
   padding: 40px 0 16px;
 }
 .feature p {
-  font-size: 18px;
+  font-size: 1.13em;
   padding-bottom: 24px;
 }
 /*-------------------------------------
@@ -370,12 +421,15 @@ Frappé for Developers
   height: 19px;
 }
 .erp-framework {
-  width: 70%;
-  margin: 40px auto;
+  width: 80%;
+  margin: 30px auto;
+}
+@media (max-width: 767px) {
+  width: 50%;
 }
 .get-involved {
   color: #36414c;
-  font-size: 18px;
+  font-size: 1.2em;
   text-align: center;
 }
 .get-involved p {
@@ -423,7 +477,7 @@ Frappé
 .input-label {
   margin: 16px 0 3px;
   color: #8d99a6;
-  font-size: 14px;
+  font-size: 0.93em;
 }
 #message {
   height: 150px;
@@ -522,4 +576,23 @@ Frappé
 }
 .cover {
   width: 100%;
+}
+.underline {
+  color: inherit;
+  text-decoration: underline;
+}
+.underline:hover,
+.underline:focus,
+.underline:active {
+  color: #36414c;
+}
+.spacer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+article h3 {
+  margin-top: 40px;
+}
+article hr + h3 {
+  margin-top: 0px;
 }
