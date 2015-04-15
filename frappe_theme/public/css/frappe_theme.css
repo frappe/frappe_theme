@@ -25,12 +25,20 @@ h6,
 .label,
 .h6,
 .sans,
-button,
-.button,
-.btn,
 blockquote {
   font-family: "proxima-nova", sans-serif;
   color: #36414c;
+}
+button,
+.button,
+.btn {
+  font-family: "proxima-nova", sans-serif;
+}
+.btn-primary {
+  background-color: #7575ff;
+}
+.btn-primary :hover {
+  background-color: #5b5be5;
 }
 article button,
 article .button,
