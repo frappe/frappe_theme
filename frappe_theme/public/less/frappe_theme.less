@@ -83,7 +83,6 @@ figcaption {
 	margin: auto;
 }
 
-
 @media (min-width: 768px) {
 	.narrow {
 		max-width: 75%;
@@ -100,6 +99,14 @@ p.description, p.description a {
     font-size:1.06em;
     margin:12px 0 0;
     text-decoration: none;
+}
+
+p.description a& {
+	&:focus,
+	&:active,
+	&:hover {
+		color: @text-color;
+	}
 }
 
 .hero-content,
@@ -604,7 +611,6 @@ Frappé
 	margin-right: 15px;
 }
 
-
 // fake frames
 .browser-image {
 	border: 1px solid #d1d8dd;
@@ -612,14 +618,15 @@ Frappé
 
 .fake-browser-frame {
 	position: relative;
-	margin: 60px auto 160px;
+	margin: 40px auto;
+	max-width: 600px;
 }
 
 .fake-browser-frame::before {
 	content: "";
-	height: 36px;
+	height: 24px;
 	position: absolute;
-	top: -36px;
+	top: -24px;
 	left: 0px;
 	right: 0px;
 	border: 1px solid #d1d8dd;
@@ -632,12 +639,12 @@ Frappé
 	content: '\f052  \f052  \f052';
 	position: absolute;
 	color: #d1d8dd;
-	top: -25px;
-	left: 15px;
+	top: -17px;
+	left: 8px;
 
 
 	/* octicon */
-    font: normal normal 16px octicons;
+    font: normal normal 12px octicons;
     line-height: 1;
     display: inline-block;
     text-decoration: none;
