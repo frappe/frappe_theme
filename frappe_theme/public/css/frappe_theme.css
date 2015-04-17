@@ -353,6 +353,17 @@ footer li a:focus {
   padding-bottom: 0px;
   color: #b8c2cc;
 }
+@media (max-width: 767px) {
+  .footer-list li {
+    margin: 15px 0px;
+    display: block;
+    text-align: left;
+  }
+  .copyright {
+    text-align: left;
+    padding-bottom: 65px;
+  }
+}
 .center {
   text-align: center;
 }

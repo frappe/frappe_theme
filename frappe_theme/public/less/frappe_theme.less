@@ -83,7 +83,7 @@ figcaption {
 	margin: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @screen-sm-min) {
 	.narrow {
 		max-width: 75%;
 		margin: auto;
@@ -250,7 +250,7 @@ h1 {
 	// font-weight: bold;
 }
 
-@media (max-width: 767px) {
+@media (max-width: @screen-xs-max) {
 	.navbar {
 		height: auto;
 	}
@@ -388,7 +388,6 @@ footer li a& {
 	}
 }
 
-
 .copyright {
 	font-size: 0.8em;
 	text-align: center;
@@ -400,26 +399,21 @@ footer li a& {
 	}
 }
 
+@media (max-width: @screen-xs-max) {
+	.footer-list {
+		li {
+			margin: 15px 0px;
+			display: block;
+			text-align: left;
+		}
+	}
 
-// @media (max-width: 767px) {
-// 	.footer-list {
-// 		li {
-// 			display: block;
-// 			margin-top: 7px;
-// 			padding: 0px 15px;
-// 			a {
-// 				font-size: 14px;
-// 			}
-// 		}
-// 	}
-// 	.copyright {
-// 		padding: 15px;
-// 	}
-// }
+	.copyright {
+		text-align: left;
+		padding-bottom: 65px;
+	}
+}
 
-// .container {
-//     max-width:960px;
-// }
 .center {
     text-align: center;
 }
@@ -507,7 +501,7 @@ Frappé for Developers
     width: 80%;
 	margin: 30px auto;
 }
-@media (max-width: 767px) {
+@media (max-width: @screen-xs-max) {
 	width: 50%;
 }
 
@@ -596,7 +590,7 @@ Frappé
 	margin-right: auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: @screen-xs-max) {
 	.half-width {
 		max-width: 90%;
 	}
@@ -671,7 +665,7 @@ Frappé
 	border-radius: 15px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: @screen-xs-max) {
 	.fake-iphone-frame {
 		display: inline-block;
 		margin-bottom: 60px;
