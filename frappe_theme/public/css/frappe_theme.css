@@ -354,6 +354,9 @@ footer li a:focus {
   color: #b8c2cc;
 }
 @media (max-width: 767px) {
+  .footer-list {
+    margin-top: 40px;
+  }
   .footer-list li {
     margin: 15px 0px;
     display: block;
@@ -361,7 +364,7 @@ footer li a:focus {
   }
   .copyright {
     text-align: left;
-    padding-bottom: 65px;
+    padding-bottom: 55px;
   }
 }
 .center {
