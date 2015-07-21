@@ -212,6 +212,8 @@ h1 {
 .blue.button {
   color: #fff;
   background: #7575ff;
+  border: 0px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 .blue.button:hover {
   background: #5b5be5;
