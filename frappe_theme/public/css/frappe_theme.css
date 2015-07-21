@@ -261,6 +261,17 @@ h1 {
   margin: 0 auto 24px;
   line-height: 1.4;
 }
+@media (max-width: 767px) {
+  .hero {
+    font-size: 1.2em;
+  }
+  .hero-content h1 {
+    font-size: 1.2em;
+  }
+  .hero-content p {
+    width: 100%;
+  }
+}
 .hero-content p.description {
   margin-top: 16px;
   margin-bottom: 0px;
@@ -645,4 +656,15 @@ article hr + h3 {
 }
 .page-content-wrapper > .row:first-of-type > .col-sm-4 {
   width: 0%;
+}
+.large-description {
+  line-height: 1.5;
+  font-size: 1.5em;
+  font-weight: 200;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .large-description {
+    font-size: 1.2em;
+  }
 }
