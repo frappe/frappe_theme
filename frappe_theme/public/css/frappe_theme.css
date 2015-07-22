@@ -653,12 +653,6 @@ article hr + h3 {
   margin-right: 7px;
   margin-top: -3px;
 }
-.page-content-wrapper > .row:first-of-type > .col-sm-8 {
-  width: 100%;
-}
-.page-content-wrapper > .row:first-of-type > .col-sm-4 {
-  width: 0%;
-}
 .large-description {
   line-height: 1.5;
   font-size: 1.5em;
