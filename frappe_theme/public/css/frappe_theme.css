@@ -209,6 +209,9 @@ h1 {
   padding: 16px 40px;
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
+.small.button {
+  padding-top: 11px;
+}
 .blue.button {
   color: #fff;
   background: #7575ff;
