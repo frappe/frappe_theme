@@ -110,7 +110,7 @@ p.description a:hover {
 .page-hero p.description,
 .hero-content p.description a,
 .page-hero p.description a {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .hero-content .x-large.button,
 .page-hero .x-large.button {
@@ -139,11 +139,6 @@ a.btn {
 .page-content {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-@media (max-width: 767px) {
-  .page-content {
-    padding-top: 0px;
-  }
 }
 .page-title {
   text-align: center;
@@ -240,17 +235,11 @@ h1 {
   text-decoration: none;
   color: #36414c;
 }
-@media (max-width: 767px) {
-  .navbar {
-    height: auto;
-  }
-}
 .hero {
-  margin-top: -30px;
   padding: 70px 0;
   font-size: 1.6em;
   font-weight: 300;
-  border-bottom: 1px solid #d1d8dd;
+  border-bottom: 1px solid #e1e9f0;
   text-align: center;
 }
 .hero-content {
@@ -265,17 +254,6 @@ h1 {
   width: 80%;
   margin: 0 auto 24px;
   line-height: 1.4;
-}
-@media (max-width: 767px) {
-  .hero {
-    font-size: 1.2em;
-  }
-  .hero-content h1 {
-    font-size: 1.2em;
-  }
-  .hero-content p {
-    width: 100%;
-  }
 }
 .hero-content p.description {
   margin-top: 16px;
@@ -373,20 +351,6 @@ footer li a:focus {
   padding-bottom: 0px;
   color: #b8c2cc;
 }
-@media (max-width: 767px) {
-  .footer-list {
-    margin-top: 40px;
-  }
-  .footer-list li {
-    margin: 15px 0px;
-    display: block;
-    text-align: left;
-  }
-  .copyright {
-    text-align: left;
-    padding-bottom: 55px;
-  }
-}
 .center {
   text-align: center;
 }
@@ -403,6 +367,7 @@ ERPNext
 .erp-hero {
   width: 500px;
   margin: auto;
+  margin-top: 70px;
 }
 .tabs {
   text-align: center;
@@ -471,9 +436,6 @@ Frappé for Developers
 .erp-framework {
   width: 80%;
   margin: 30px auto;
-}
-@media (max-width: 767px) {
-  width: 50%;
 }
 .get-involved {
   color: #36414c;
@@ -555,14 +517,6 @@ Frappé
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 767px) {
-  .half-width {
-    max-width: 90%;
-  }
-  .width-75 {
-    max-width: 100%;
-  }
-}
 .media-object {
   max-width: 120px;
   margin-right: 15px;
@@ -617,12 +571,6 @@ Frappé
   border: 1px solid #d1d8dd;
   border-radius: 15px;
 }
-@media (max-width: 767px) {
-  .fake-iphone-frame {
-    display: inline-block;
-    margin-bottom: 60px;
-  }
-}
 .cover {
   width: 100%;
 }
@@ -663,8 +611,54 @@ article hr + h3 {
   display: inline-block;
 }
 @media (max-width: 767px) {
+  .navbar {
+    height: auto;
+  }
+  .hero {
+    font-size: 1.2em;
+  }
   .large-description {
     font-size: 1.2em;
+  }
+  .hero-content h1 {
+    font-size: 1.2em;
+  }
+  .hero-content p {
+    width: 100%;
+  }
+  .small-content {
+    padding-top: 70px;
+  }
+  .small-content:first-child {
+    padding-top: 0px;
+  }
+  .page-content {
+    padding-top: 0px;
+  }
+  .footer-list {
+    margin-top: 40px;
+  }
+  .footer-list li {
+    margin: 15px 0px;
+    display: block;
+    text-align: left;
+  }
+  .copyright {
+    text-align: left;
+    padding-bottom: 55px;
+  }
+  .half-width {
+    max-width: 90%;
+  }
+  .width-75 {
+    max-width: 100%;
+  }
+  .fake-iphone-frame {
+    display: inline-block;
+    margin-bottom: 60px;
+  }
+  .erp-hero {
+    margin-bottom: 1px;
   }
 }
 .website-list .result {

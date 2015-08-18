@@ -113,7 +113,7 @@ p.description a& {
 .page-hero {
 	p.description,
 	p.description a {
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
 
 	.x-large.button {
@@ -147,12 +147,6 @@ a.btn {
 .page-content {
 	padding-top: 30px;
 	padding-bottom: 30px;
-}
-
-@media (max-width: @screen-xs-max) {
-	.page-content {
-		padding-top: 0px;
-	}
 }
 
 .page-title {
@@ -261,18 +255,11 @@ h1 {
 	// font-weight: bold;
 }
 
-@media (max-width: @screen-xs-max) {
-	.navbar {
-		height: auto;
-	}
-}
-
 .hero {
-	margin-top: -30px;
     padding: 70px 0;
     font-size:1.6em;
     font-weight:300;
-    border-bottom:1px solid @border-color;
+    border-bottom:1px solid @light-border-color;
     text-align:center;
 }
 .hero-content {
@@ -287,20 +274,6 @@ h1 {
     width:80%;
     margin:0 auto 24px;
 	line-height: 1.4;
-}
-
-@media (max-width: @screen-xs-max) {
-	.hero {
-		font-size: 1.2em;
-	}
-
-	.hero-content h1 {
-		font-size: 1.2em;
-	}
-
-	.hero-content p {
-		width: 100%;
-	}
 }
 
 .hero-content p.description {
@@ -425,22 +398,6 @@ footer li a& {
 	}
 }
 
-@media (max-width: @screen-xs-max) {
-	.footer-list {
-		margin-top: 40px;
-		li {
-			margin: 15px 0px;
-			display: block;
-			text-align: left;
-		}
-	}
-
-	.copyright {
-		text-align: left;
-		padding-bottom: 55px;
-	}
-}
-
 .center {
     text-align: center;
 }
@@ -457,6 +414,7 @@ ERPNext
 .erp-hero {
     width: 500px;
     margin: auto;
+	margin-top: 70px
 }
 .tabs {
     text-align:center;
@@ -527,9 +485,6 @@ Frappé for Developers
 .erp-framework {
     width: 80%;
 	margin: 30px auto;
-}
-@media (max-width: @screen-xs-max) {
-	width: 50%;
 }
 
 .get-involved {
@@ -617,16 +572,6 @@ Frappé
 	margin-right: auto;
 }
 
-@media (max-width: @screen-xs-max) {
-	.half-width {
-		max-width: 90%;
-	}
-
-	.width-75 {
-		max-width: 100%;
-	}
-}
-
 .media-object {
 	max-width: 120px;
 	margin-right: 15px;
@@ -692,13 +637,6 @@ Frappé
 	border-radius: 15px;
 }
 
-@media (max-width: @screen-xs-max) {
-	.fake-iphone-frame {
-		display: inline-block;
-		margin-bottom: 60px;
-	}
-}
-
 .cover {
 	width: 100%;
 }
@@ -750,9 +688,69 @@ article {
 }
 
 @media (max-width: @screen-xs-max) {
+	.navbar {
+		height: auto;
+	}
+
+	.hero {
+		font-size: 1.2em;
+	}
+
 	.large-description {
 		font-size: 1.2em;
 	}
+
+	.hero-content h1 {
+		font-size: 1.2em;
+	}
+
+	.hero-content p {
+		width: 100%;
+	}
+
+	.small-content {
+		padding-top: 70px;
+	}
+
+	.small-content:first-child {
+		padding-top: 0px;
+	}
+
+	.page-content {
+		padding-top: 0px;
+	}
+
+	.footer-list {
+		margin-top: 40px;
+		li {
+			margin: 15px 0px;
+			display: block;
+			text-align: left;
+		}
+	}
+
+	.copyright {
+		text-align: left;
+		padding-bottom: 55px;
+	}
+
+	.half-width {
+		max-width: 90%;
+	}
+
+	.width-75 {
+		max-width: 100%;
+	}
+
+	.fake-iphone-frame {
+		display: inline-block;
+		margin-bottom: 60px;
+	}
+
+	.erp-hero {
+		margin-bottom: 1px;
+	}
+
 }
 
 .website-list .result {
