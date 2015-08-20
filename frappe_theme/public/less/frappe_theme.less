@@ -362,7 +362,7 @@ footer li a {
 // 	}
 // }
 
-footer li a& {
+footer a& {
 	&:hover,
 	&:active,
 	&:focus {
@@ -384,6 +384,15 @@ footer li a& {
 	li {
 		margin: 0px 15px;
 		display: inline-block;
+	}
+}
+
+.footer-link& {
+	color: @text-extra-light;
+
+	&:hover,
+	&:focus {
+		color: @text-muted;
 	}
 }
 

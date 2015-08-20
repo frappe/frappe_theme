@@ -322,9 +322,9 @@ footer li a {
   text-decoration: none;
   color: #6c7680;
 }
-footer li a:hover,
-footer li a:active,
-footer li a:focus {
+footer a:hover,
+footer a:active,
+footer a:focus {
   color: #36414c;
   text-decoration: none;
 }
@@ -341,6 +341,13 @@ footer li a:focus {
 .footer-list li {
   margin: 0px 15px;
   display: inline-block;
+}
+.footer-link {
+  color: #b8c2cc;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: #8d99a6;
 }
 .copyright {
   font-size: 0.8em;
