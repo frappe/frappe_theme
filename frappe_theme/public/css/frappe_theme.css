@@ -322,9 +322,9 @@ footer li a {
   text-decoration: none;
   color: #6c7680;
 }
-footer a:hover,
-footer a:active,
-footer a:focus {
+footer li a:hover,
+footer li a:active,
+footer li a:focus {
   color: #36414c;
   text-decoration: none;
 }
