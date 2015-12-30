@@ -27,7 +27,7 @@ h6,
 .sans,
 blockquote {
   font-family: "proxima-nova", sans-serif;
-  color: #36414c;
+  color: #36414C;
 }
 button,
 .button,
@@ -53,12 +53,12 @@ article ol > li {
 }
 figcaption {
   font-size: 0.8em;
-  color: #b8c2cc;
+  color: #B8C2CC;
   padding: 10px 0px;
   line-height: 1.3em;
 }
 .text-extra-muted {
-  color: #b8c2cc !important;
+  color: #B8C2CC !important;
 }
 .page-sidebar,
 .breadcrumb {
@@ -96,7 +96,7 @@ h6 {
 }
 p.description,
 p.description a {
-  color: #b8c2cc;
+  color: #B8C2CC;
   font-size: 1.06em;
   margin: 12px 0 0;
   text-decoration: none;
@@ -104,7 +104,7 @@ p.description a {
 p.description a:focus,
 p.description a:active,
 p.description a:hover {
-  color: #36414c;
+  color: #36414C;
 }
 .hero-content p.description,
 .page-hero p.description,
@@ -116,14 +116,16 @@ p.description a:hover {
 .page-hero .x-large.button {
   font-size: 1em;
 }
+a {
+  color: #5E64FF;
+}
 a,
 a:focus,
 a:hover {
   transition: color 0.3s, border 0.3s, background-color 0.3s;
-  color: #5e64ff;
 }
 a.grey {
-  color: #36414c;
+  color: #36414C;
 }
 a.close,
 a.btn {
@@ -145,7 +147,7 @@ a.btn {
   margin-top: 30px;
 }
 .page-sub-title {
-  color: #8d99a6;
+  color: #8D99A6;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 45px;
@@ -153,7 +155,7 @@ a.btn {
 }
 .btn-white {
   background-color: #fff;
-  color: #36414c;
+  color: #36414C;
   border-color: #d1d8dd;
 }
 .btn-white:hover {
@@ -165,7 +167,7 @@ a.btn {
   margin: 15px 0px;
 }
 blockquote {
-  border-left: 5px solid #f0f4f7;
+  border-left: 5px solid #F0F4F7;
   background-color: #fafbfc;
   margin-top: 15px;
 }
@@ -233,7 +235,7 @@ h1 {
 .navbar-brand:focus {
   font-size: 1.2em;
   text-decoration: none;
-  color: #36414c;
+  color: #36414C;
 }
 .hero {
   padding: 70px 0;
@@ -297,12 +299,12 @@ h1 {
   font-size: 1.2em;
 }
 footer {
-  color: #8d99a6;
+  color: #8D99A6;
   padding: 3px 0;
   border-top: 1px solid #d1d8dd;
 }
 footer h1 {
-  color: #36414c;
+  color: #36414C;
   font-size: 1.42em;
   margin: 0;
 }
@@ -325,7 +327,7 @@ footer li a {
 footer li a:hover,
 footer li a:active,
 footer li a:focus {
-  color: #36414c;
+  color: #36414C;
   text-decoration: none;
 }
 .footer-list {
@@ -343,11 +345,11 @@ footer li a:focus {
   display: inline-block;
 }
 .footer-link {
-  color: #b8c2cc;
+  color: #B8C2CC;
 }
 .footer-link:hover,
 .footer-link:focus {
-  color: #8d99a6;
+  color: #8D99A6;
 }
 .copyright {
   font-size: 0.8em;
@@ -356,7 +358,7 @@ footer li a:focus {
 }
 .copyright p {
   padding-bottom: 0px;
-  color: #b8c2cc;
+  color: #B8C2CC;
 }
 .center {
   text-align: center;
@@ -587,7 +589,7 @@ Frappé
 .underline:hover,
 .underline:focus,
 .underline:active {
-  color: #36414c;
+  color: #36414C;
 }
 .spacer {
   margin-top: 40px;
