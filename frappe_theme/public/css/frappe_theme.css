@@ -9,6 +9,8 @@ body {
   color: #6c7680;
   text-rendering: optimizeLegibility !important;
   line-height: 1.5em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 p.lead {
   font-family: "proxima-nova", sans-serif;
