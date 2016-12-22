@@ -5,7 +5,7 @@ def get_data():
 	return {
 		"Frappe Theme": {
 			"color": "orange",
-			"icon": "icon-globe",
+			"icon": "fa fa-globe",
 			"label": _("Frappe Theme")
 		}
 	}
