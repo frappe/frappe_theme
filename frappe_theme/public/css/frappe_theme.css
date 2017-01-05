@@ -680,3 +680,6 @@ article hr + h3 {
 .website-list .result {
   border: none;
 }
+.with-sidebar .page-content-wrapper {
+  padding-bottom: 30px;
+}
