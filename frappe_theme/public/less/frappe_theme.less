@@ -103,6 +103,11 @@ figcaption {
     text-decoration: none;
 }
 
+.btn-link {
+	color:@blue-btn-background;
+	font-size:18px;
+}
+
 .x-large.button {
     font-size: 20px;
     padding: 16px 40px;
@@ -125,6 +130,9 @@ figcaption {
 .cl-blue {
 	color: #5E64FF;
 }
+.cl-black {
+	color: #36414c;
+}
 
 .fnt-34 {
 	font-size: 34px;
@@ -137,52 +145,52 @@ figcaption {
 }
 
 .bg-blue {
-	background : #fff;
+	background : @bg-blue;
 }
 .bg-white {
-	background: #fff;
+	background: @bg-white;
 }
 .bg-gray {
-	background: #f9f9f9;
+	background: @bg-gray;
 }
 .bg-orange {
-	background-color: #f39c12;
+	background-color: @bg-orange;
 }
 .bg-blue1 {
-	background-color: #3498db;
+	background-color: @bg-blue1;
 }
 .bg-green {
-	background-color: #1abc9c;
+	background-color: @bg-green;
 }
 .bg-red {
-	background-color: #c0392b;
+	background-color: @bg-red;
 }
 .bg-crm {
-	background-color: #EF4DB6;
+	background-color: @bg-crm;
 }
 .bg-tools {
-	background-color: #FFF5A7;
+	background-color: @bg-tools;
 }
 .bg-hr {
-	background-color: #2ecc71;
+	background-color: @bg-hr;
 }
 .bg-projects {
-	background-color: #8e44ad;
+	background-color: @bg-projects;
 }
 .bg-support {
-	background-color: #2c3e50;
+	background-color: @bg-support;
 }
 .bg-profit {
-	background-color: #3498db;
+	background-color: @bg-profit;
 }
 .bg-website {
-	background-color: #16a085;
+	background-color: @bg-website;
 }
 .bg-maintenance {
-	background-color: #FF888B;
+	background-color: @bg-maintenance;
 }
 .bg-explore {
-	background-color: #7578f6;
+	background-color: @bg-explore;
 }
 
 .padd-0 {
@@ -203,7 +211,7 @@ figcaption {
 }
 
 .blue-btn {
-	background: #7574ff;
+	background: @blue-btn-background;
 	color: #fff;
 	border: 0px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.2);
@@ -211,7 +219,7 @@ figcaption {
 }
 .blue-btn:hover {
 	text-decoration: none;
-	background: #7574ff;
+	background: @blue-btn-hover;
 	color: #fff;
 	border-bottom: 3px solid rgba(117, 116, 255, 0.2);
 }
@@ -509,7 +517,7 @@ h1 {
 }
 .navbar{
     padding: 10px 0px;
-    border-bottom:1px solid @border-color;
+    border-bottom:0px solid @border-color;
 }
 .navbar-brand, .navbar-brand:hover, .navbar-brand:visited, .navbar-brand:focus {
 	font-size: 1.2em;
