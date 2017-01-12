@@ -277,7 +277,6 @@ figcaption {
 .case-wrapper {
     position: relative;
     margin: 0px;
-    float: left;
     width: 138px;
     height: 140px;
 }
@@ -311,6 +310,12 @@ figcaption {
 	max-width: 970px;
     margin: auto;
     text-align:center;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
 }
 
 #icon-grid svg {
