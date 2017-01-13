@@ -15,6 +15,9 @@ body {
 .navbar-brand {
   width: 155px;
 }
+.heading {
+  font-weight: 500;
+}
 p.lead {
   font-family: 'Open Sans', sans-serif;
 }
@@ -89,12 +92,19 @@ footer {
   max-width: 900px;
   margin: auto;
 }
+.pricing-section .container {
+  padding-bottom: 75px;
+}
 .button {
   display: inline-block;
   border-radius: 4px;
   padding: 7px 12px 9px;
   line-height: 1;
   text-decoration: none;
+}
+.btn-link {
+  color: #7575ff;
+  font-size: 18px;
 }
 .x-large.button {
   font-size: 20px;
@@ -114,6 +124,9 @@ footer {
 }
 .cl-blue {
   color: #5E64FF;
+}
+.cl-black {
+  color: #36414c;
 }
 .fnt-34 {
   font-size: 34px;
@@ -188,7 +201,7 @@ footer {
   border-bottom: 3px solid rgba(117, 116, 255, 0.2);
 }
 .blue-btn {
-  background: #7574ff;
+  background: #7575ff;
   color: #fff;
   border: 0px;
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
@@ -196,9 +209,28 @@ footer {
 }
 .blue-btn:hover {
   text-decoration: none;
-  background: #7574ff;
+  background: #5b5be5;
   color: #fff;
   border-bottom: 3px solid rgba(117, 116, 255, 0.2);
+}
+.main-heading {
+  color: black;
+  font-weight: 300;
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+.standard-features {
+  max-width: 600px;
+  margin: auto;
+  padding-left: 60px;
+}
+.standard-features .indicator {
+  font-weight: 400;
+  font-size: 16px;
+}
+.standard-features .indicator::before {
+  margin: 0px 8px 1px 0px;
 }
 .mar-t-0 {
   margin-top: 0;
@@ -242,9 +274,9 @@ footer {
 .case-wrapper {
   position: relative;
   margin: 0px;
-  float: left;
   width: 138px;
   height: 140px;
+  display: inline-block;
 }
 .app-icon {
   padding: 17px 20px 17px 20px;
@@ -274,6 +306,7 @@ footer {
 #icon-grid {
   max-width: 970px;
   margin: auto;
+  text-align: center;
 }
 #icon-grid svg {
   fill: #fff;
@@ -321,6 +354,14 @@ footer li a {
   .narrow {
     max-width: 75%;
     margin: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .heading {
+    font-size: 30px;
+  }
+  .footer-list li {
+    margin: 0px 8px;
   }
 }
 h1,
@@ -464,7 +505,7 @@ h1 {
 }
 .navbar {
   padding: 10px 0px;
-  border-bottom: 1px solid #d1d8dd;
+  border: 0px;
 }
 .navbar-brand,
 .navbar-brand:hover,
@@ -937,7 +978,9 @@ article hr + h3 {
     font-size: 16px;
   }
   .case-wrapper {
-    width: 110px;
+    width: 150px;
+    display: inline-block;
+    float: none;
   }
   footer {
     padding: 0 15px;
@@ -956,6 +999,9 @@ article hr + h3 {
   hr.mar-t-50 {
     margin-top: 0;
   }
+  .pricing-section .container {
+    padding-bottom: 25px;
+  }
 }
 .website-list .result {
   border: none;
@@ -966,5 +1012,8 @@ article hr + h3 {
 @media screen and (max-width: 480px) {
   .x-large.button {
     display: block;
+  }
+  .case-wrapper {
+    width: 107px;
   }
 }
