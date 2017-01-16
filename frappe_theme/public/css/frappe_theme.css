@@ -279,6 +279,9 @@ footer {
   margin-top: 40px;
   clear: both;
 }
+.testimonial_name.text-left , .testimonial_name.text-right {
+  margin-top: 15px;
+}
 .overflow-h {
   overflow:hidden;
 }
