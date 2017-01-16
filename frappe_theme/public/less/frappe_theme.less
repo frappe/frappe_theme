@@ -5,6 +5,8 @@ Custom CSS
 ---------------------------------------*/
 @import "variables.less";
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .sans-serif() {
 	font-family: "proxima-nova", sans-serif;
 }
@@ -31,6 +33,15 @@ body {
 
 .heading {
 	font-weight:500;
+}
+
+.navbar-nav .caret {
+	margin-left:10px;
+}
+
+.navbar-right .dropdown-menu {
+	left:0;
+	right:auto;
 }
 
 p.lead {
@@ -906,7 +917,7 @@ Frappé
 
 .fake-browser-frame {
 	position: relative;
-	margin: 40px auto;
+	margin: 40px auto 0;
 	max-width: 600px;
 }
 
