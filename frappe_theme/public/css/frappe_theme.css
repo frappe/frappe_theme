@@ -264,13 +264,25 @@ footer {
 }
 .testimonial-img {
   margin: auto;
-  max-width: 150px;
+    max-width: 150px;
+}
+.testimonial-img-left {
+  margin:0;
+}
+.testimonial-img-right {
+  float:right;
+  clear:both;
 }
 .testimonial_name {
   color: #36414c;
   font-size: 18px;
   margin-top: 40px;
+  clear: both;
 }
+.overflow-h {
+  overflow:hidden;
+}
+
 .case-wrapper {
   position: relative;
   margin: 0px;
