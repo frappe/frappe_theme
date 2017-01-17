@@ -530,6 +530,9 @@ h1 {
   text-decoration: none;
   color: #36414C;
 }
+.hero-and-content {
+  border-top: 1px solid #ccc;
+}
 .hero {
   padding: 70px 0;
   font-size: 1.6em;
