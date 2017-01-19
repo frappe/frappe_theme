@@ -6,5 +6,10 @@ frappe.ready(function(){
 	// footer-link
 	$(".footer-link.active").removeClass("active");
 	$(".footer-link[href='"+ location.pathname+"']").addClass("active");
+
+	$(".toggle-sidebar").click(function(){
+		$(".navbar-nav").parent().toggleClass('show');
+	});
+
 });
 
