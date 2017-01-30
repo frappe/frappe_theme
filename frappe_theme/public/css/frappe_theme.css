@@ -330,6 +330,7 @@ footer .row {
   font-size: 18px;
   margin-top: 40px;
   clear: both;
+  font-weight: bold;
 }
 .testimonial_name.text-left,
 .testimonial_name.text-right {
