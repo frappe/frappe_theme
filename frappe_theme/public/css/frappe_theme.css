@@ -297,11 +297,9 @@ footer .row {
 .cl-light-gray {
   color: #b8c2cc;
 }
-.testimonial-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 250px;
+.testimonial .p,
+.testimonial-content .p {
+  margin: 0;
 }
 .section-block {
   padding: 75px 0;
@@ -328,7 +326,7 @@ footer .row {
 .testimonial_name {
   color: #36414c;
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 10px;
   clear: both;
   font-weight: bold;
 }
