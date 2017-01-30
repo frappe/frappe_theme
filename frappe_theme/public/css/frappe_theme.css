@@ -3,6 +3,7 @@
 Custom CSS
 
 ---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -18,8 +19,23 @@ body {
 .heading {
   font-weight: 500;
 }
+.navbar-nav .caret {
+  margin-left: 10px;
+}
+.navbar-right .dropdown-menu {
+  left: 0;
+  right: auto;
+}
 p.lead {
   font-family: 'Open Sans', sans-serif;
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+p.plan-users {
+  margin-top: 20px;
+}
+.erpnext-paid-plans p:last-child {
+  margin-bottom: 20px;
 }
 h1,
 h2,
@@ -94,6 +110,9 @@ footer {
 }
 .pricing-section .container {
   padding-bottom: 75px;
+}
+.retail-cta-section .container {
+  padding-bottom: 0;
 }
 .button {
   display: inline-block;
@@ -238,6 +257,9 @@ footer {
 .mar-t-20 {
   margin-top: 20px;
 }
+.mar-b-35 {
+  margin-bottom: 35px;
+}
 .mar-t-50 {
   margin-top: 50px;
 }
@@ -245,22 +267,26 @@ footer {
   margin-bottom: 50px;
 }
 .mobile-apps {
-  width:104px;
+  width: 104px;
+}
+.mar-l-r-15 {
+  margin: 0 15px;
 }
 .hero-content h1.heading-h1 {
   font-size: 2.13em;
 }
 .width-fluid {
-  width:100%;
+  width: 100%;
 }
 footer .row {
-  margin:0;
+  margin: 0;
 }
-.h2 {
+.h2,
+.hero-content .h2 {
   font-size: 26px;
   color: #36414c;
   line-height: 30px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 .p {
   font-size: 18px;
@@ -273,23 +299,31 @@ footer .row {
 }
 .testimonial-content {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 250px;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
 }
 .section-block {
   padding: 75px 0;
 }
+.section-block img {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  max-width: 800px;
+  margin: auto;
+}
 .testimonial-img {
   margin: auto;
-    max-width: 150px;
+  max-width: 150px;
 }
 .testimonial-img-left {
-  margin:0;
+  margin: auto;
 }
 .testimonial-img-right {
-  float:right;
-  clear:both;
+  clear: both;
 }
 .testimonial_name {
   color: #36414c;
@@ -297,13 +331,19 @@ footer .row {
   margin-top: 40px;
   clear: both;
 }
-.testimonial_name.text-left , .testimonial_name.text-right {
+.testimonial_name.text-left,
+.testimonial_name.text-right {
   margin-top: 15px;
 }
-.overflow-h {
-  overflow:hidden;
+.border-top-1 {
+  border-top: 1px solid #ccc;
 }
-
+.border-bottom-1 {
+  border-bottom: 1px solid #ccc;
+}
+.overflow-h {
+  overflow: hidden;
+}
 .case-wrapper {
   position: relative;
   margin: 0px;
@@ -450,7 +490,7 @@ a.btn {
 }
 .page-padding,
 .page-content {
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 30px;
 }
 .page-title {
@@ -564,9 +604,10 @@ h1 {
   margin-top: 12px;
 }
 .hero-content h1 {
-  padding-top: 24px;
+  padding-top: 0px;
   font-size: 40px;
   font-weight: 400;
+  color: #000;
 }
 .hero-content p {
   width: 80%;
@@ -621,6 +662,7 @@ footer {
   color: #8D99A6;
   padding: 3px 0;
   border-top: 1px solid #d1d8dd;
+  max-width: 100%;
 }
 footer h1 {
   color: #36414C;
@@ -662,6 +704,25 @@ footer li a:focus {
 .footer-list li {
   margin: 0px 15px;
   display: inline-block;
+}
+.mobile-app {
+  text-align: center;
+  margin: 15px 0;
+}
+.mobile-app span {
+  font-size: 16px;
+  color: #6c7680;
+  text-transform: capitalize;
+}
+.mobile-app ul {
+  display: inline-block;
+}
+.mobile-app ul li {
+  display: inline-block;
+}
+small,
+.small {
+  font-weight: 700;
 }
 .footer-link {
   color: #B8C2CC;
@@ -850,10 +911,15 @@ Frappé
 .browser-image {
   border: 1px solid #d1d8dd;
 }
+.feature-image {
+  max-width: 800px;
+  margin: auto;
+}
 .fake-browser-frame {
   position: relative;
-  margin: 40px auto;
-  max-width: 600px;
+  margin: 40px auto 0;
+  max-width: 800px;
+  margin: auto;
 }
 .fake-browser-frame::before {
   content: "";
@@ -1039,6 +1105,9 @@ article hr + h3 {
   }
   .pricing-section .container {
     padding-bottom: 25px;
+  }
+  img {
+    max-width: 100%;
   }
 }
 .website-list .result {
