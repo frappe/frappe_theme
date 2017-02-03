@@ -296,7 +296,7 @@ figcaption {
 }
 
 .mar-t-50 {
-	margin-top: 50px;
+	margin-top: 50px !important;
 }
 .mar-t-70 {
 	margin-top:70px;
@@ -319,6 +319,10 @@ figcaption {
 
 footer .row {
 	margin:0;
+}
+
+.benefits {
+	margin-top:50px;
 }
 
 .h2,
@@ -353,17 +357,20 @@ footer .row {
 	padding: 75px 0;
 }
 .section-block img {
-	box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.05);
+	/*box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.05);*/
+	box-shadow:0 2px 5px rgba(0,0,0,0.25);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     max-width:800px;
     margin: auto;
+    border-radius: 10px;
 }
 .testimonial-img {
 	margin: auto;
     max-width: 120px !important;
+    border-radius:50% !important;
 }
 .testimonial-img-left {
 	margin:auto;
@@ -571,6 +578,11 @@ a.btn {
 	margin-top: 30px;
 }
 
+.page-hero .main-heading {
+	margin-top:0;
+	font-size:40px;
+}
+
 .page-sub-title {
 	color: @text-muted;
 	text-align: center;
@@ -683,6 +695,9 @@ h1 {
     font-weight:300;
     border-bottom:1px solid @light-border-color;
     text-align:center;
+}
+.hero-top-0 {
+	padding-top:0;
 }
 .hero-content {
     font-weight:300;
