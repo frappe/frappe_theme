@@ -969,6 +969,10 @@ article h3 {
 article hr + h3 {
   margin-top: 0px;
 }
+article p,
+article li {
+  line-height: 1.7;
+}
 .negative-margin {
   margin-left: -15px;
   margin-right: -15px;
