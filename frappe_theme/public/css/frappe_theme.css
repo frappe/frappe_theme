@@ -30,7 +30,7 @@ body {
   font-size: 15px;
 }
 .dropdown-menu li a {
-  font-size: 13px;
+  font-size: 15px;
 }
 p.lead {
   margin: 10px 0 20px;
@@ -333,6 +333,11 @@ footer .row {
   text-align: center;
   border-radius: 16px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.app-list .app-icon {
+  padding: 0;
+  width: 30px;
+  height: 30px;
 }
 .case-label {
   font-size: 12px;
