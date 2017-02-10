@@ -266,6 +266,9 @@ footer {
 .mar-b-35 {
   margin-bottom: 35px;
 }
+.mar-t-40 {
+  margin-top: 40px;
+}
 .mar-t-50 {
   margin-top: 50px !important;
 }
@@ -299,6 +302,7 @@ footer .row {
   color: #36414c;
   line-height: 30px;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 .p {
   font-size: 18px;
@@ -1142,6 +1146,17 @@ article hr + h3 {
   }
   img {
     max-width: 100%;
+  }
+  .main-heading,
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+  .feature-image,
+  .section-block img {
+    max-width: 100%;
+  }
+  .mar-t-70 {
+    margin-top: 20px;
   }
 }
 .website-list .result {
