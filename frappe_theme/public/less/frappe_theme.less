@@ -18,7 +18,7 @@ Custom CSS
 body {
 	.open-sans();
     font-size: 15px;
-	color: @text-light;
+	color: @text-color;
 	text-rendering: optimizeLegibility !important;
 	line-height: 1.5em;
 	-moz-osx-font-smoothing: grayscale;
@@ -44,13 +44,20 @@ body {
 	right:auto;
 }
 .dropdown-menu {
-	font-size:15px;
+	font-size: 15px;
+}
+
+.dropdown-menu li a {
+	font-size: 13px;
 }
 
 p.lead {
-	.open-sans();
 	margin: 10px 0 20px;
     font-size: 18px;
+}
+
+.plan p.lead {
+	font-size: 16px;
 }
 
 p.plan-users {
@@ -178,55 +185,6 @@ figcaption {
     margin-top: -3px;
 }
 
-.bg-blue {
-	background : @bg-blue;
-}
-.bg-white {
-	background: @bg-white;
-}
-.bg-gray {
-	background: @bg-gray;
-}
-.bg-orange {
-	background-color: @bg-orange;
-}
-.bg-blue1 {
-	background-color: @bg-blue1;
-}
-.bg-green {
-	background-color: @bg-green;
-}
-.bg-red {
-	background-color: @bg-red;
-}
-.bg-crm {
-	background-color: @bg-crm;
-}
-.bg-tools {
-	background-color: @bg-tools;
-}
-.bg-hr {
-	background-color: @bg-hr;
-}
-.bg-projects {
-	background-color: @bg-projects;
-}
-.bg-support {
-	background-color: @bg-support;
-}
-.bg-profit {
-	background-color: @bg-profit;
-}
-.bg-website {
-	background-color: @bg-website;
-}
-.bg-maintenance {
-	background-color: @bg-maintenance;
-}
-.bg-explore {
-	background-color: @bg-explore;
-}
-
 .padd-0 {
 	padding: 0;
 }
@@ -263,7 +221,7 @@ figcaption {
 	color: black;
 	font-weight: 300;
 	font-size: 40px;
-	margin-top: 120px;
+	margin-top: 50px;
 	margin-bottom: 10px;
 }
 
@@ -271,6 +229,7 @@ figcaption {
 	max-width: 600px;
 	margin: auto;
 	padding-left: 60px;
+	margin-top: 50px;
 
 	.indicator {
 		font-weight: 400;
@@ -328,13 +287,11 @@ footer .row {
 .h2,
 .hero-content .h2{
 	font-size: 26px;
-	color: #36414c;
 	line-height: 30px;
 	margin-bottom: 20px;
 }
 .p {
 	font-size: 18px;
-    color: #6c7680;
     line-height: 30px;
     margin-bottom: 35px;
 }
@@ -342,6 +299,7 @@ footer .row {
 .cl-light-gray {
 	color: #b8c2cc;
 }
+
 .testimonial-content {
 	 display: flex;
 	 align-items: center;
@@ -356,14 +314,14 @@ footer .row {
 .section-block {
 	padding: 75px 0;
 }
-.section-block img {
+.screenshot {
 	/*box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.05);*/
 	box-shadow:0 2px 5px rgba(0,0,0,0.25);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    max-width:800px;
+    width: 800px;
     margin: auto;
 }
 .testimonial-img {
@@ -568,7 +526,7 @@ a.btn {
 
 .page-padding,
 .page-content {
-	padding-top: 0px;
+	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
@@ -578,8 +536,7 @@ a.btn {
 }
 
 .page-hero .main-heading {
-	margin-top:0;
-	font-size:40px;
+	font-size: 40px;
 }
 
 .page-sub-title {
@@ -600,12 +557,6 @@ a.btn {
 	background-color: @light-bg;
 }
 
-.screenshot {
-	border: 2px solid @border-color;
-	box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
-	margin: 15px 0px;
-}
-
 // custom
 
 blockquote {
@@ -624,7 +575,7 @@ blockquote p {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 2em;
 	font-weight:400;
 }
 
@@ -1049,7 +1000,7 @@ Frappé
 	border: 1px solid #d1d8dd;
 }
 .feature-image {
-	max-width: 800px;
+	width: 800px;
     margin: auto;
 }
 
@@ -1279,7 +1230,7 @@ article {
 	.pricing-section .container {
 	    padding-bottom: 25px;
 	}
-	
+
 	img {
 		max-width:100%;
 	}
@@ -1313,4 +1264,8 @@ article {
 	.case-wrapper {
 	    width: 107px;
 	}
+}
+
+.feature-section:nth-child(even) {
+	background-color: @light-bg;
 }

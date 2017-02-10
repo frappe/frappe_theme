@@ -7,7 +7,7 @@ Custom CSS
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  color: #6c7680;
+  color: #36414C;
   text-rendering: optimizeLegibility !important;
   line-height: 1.5em;
   -moz-osx-font-smoothing: grayscale;
@@ -29,10 +29,15 @@ body {
 .dropdown-menu {
   font-size: 15px;
 }
+.dropdown-menu li a {
+  font-size: 13px;
+}
 p.lead {
-  font-family: 'Open Sans', sans-serif;
   margin: 10px 0 20px;
   font-size: 18px;
+}
+.plan p.lead {
+  font-size: 16px;
 }
 p.plan-users {
   margin-top: 20px;
@@ -158,54 +163,6 @@ footer {
   margin-right: 7px;
   margin-top: -3px;
 }
-.bg-blue {
-  background: #5f5fce;
-}
-.bg-white {
-  background: #fff;
-}
-.bg-gray {
-  background: #f9f9f9;
-}
-.bg-orange {
-  background-color: #f39c12;
-}
-.bg-blue1 {
-  background-color: #3498db;
-}
-.bg-green {
-  background-color: #1abc9c;
-}
-.bg-red {
-  background-color: #c0392b;
-}
-.bg-crm {
-  background-color: #EF4DB6;
-}
-.bg-tools {
-  background-color: #FFF5A7;
-}
-.bg-hr {
-  background-color: #2ecc71;
-}
-.bg-projects {
-  background-color: #8e44ad;
-}
-.bg-support {
-  background-color: #2c3e50;
-}
-.bg-profit {
-  background-color: #3498db;
-}
-.bg-website {
-  background-color: #16a085;
-}
-.bg-maintenance {
-  background-color: #FF888B;
-}
-.bg-explore {
-  background-color: #7578f6;
-}
 .padd-0 {
   padding: 0;
 }
@@ -239,13 +196,14 @@ footer {
   color: black;
   font-weight: 300;
   font-size: 40px;
-  margin-top: 120px;
+  margin-top: 50px;
   margin-bottom: 10px;
 }
 .standard-features {
   max-width: 600px;
   margin: auto;
   padding-left: 60px;
+  margin-top: 50px;
 }
 .standard-features .indicator {
   font-weight: 400;
@@ -296,13 +254,11 @@ footer .row {
 .h2,
 .hero-content .h2 {
   font-size: 26px;
-  color: #36414c;
   line-height: 30px;
   margin-bottom: 20px;
 }
 .p {
   font-size: 18px;
-  color: #6c7680;
   line-height: 30px;
   margin-bottom: 35px;
 }
@@ -322,14 +278,14 @@ footer .row {
 .section-block {
   padding: 75px 0;
 }
-.section-block img {
+.screenshot {
   /*box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.05);*/
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  max-width: 800px;
+  width: 800px;
   margin: auto;
 }
 .testimonial-img {
@@ -517,7 +473,7 @@ a.btn {
 }
 .page-padding,
 .page-content {
-  padding-top: 0px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .page-title {
@@ -525,7 +481,6 @@ a.btn {
   margin-top: 30px;
 }
 .page-hero .main-heading {
-  margin-top: 0;
   font-size: 40px;
 }
 .page-sub-title {
@@ -543,11 +498,6 @@ a.btn {
 .btn-white:hover {
   background-color: #fafbfc;
 }
-.screenshot {
-  border: 2px solid #d1d8dd;
-  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
-  margin: 15px 0px;
-}
 blockquote {
   border-left: 5px solid #F0F4F7;
   background-color: #fafbfc;
@@ -561,7 +511,7 @@ blockquote p {
   margin-top: -60px;
 }
 h1 {
-  font-size: 40px;
+  font-size: 2em;
   font-weight: 400;
 }
 .navbar {
@@ -946,7 +896,7 @@ Frappé
   border: 1px solid #d1d8dd;
 }
 .feature-image {
-  max-width: 800px;
+  width: 800px;
   margin: auto;
 }
 .fake-browser-frame {
@@ -1157,4 +1107,7 @@ article hr + h3 {
   .case-wrapper {
     width: 107px;
   }
+}
+.feature-section:nth-child(even) {
+  background-color: #fafbfc;
 }
