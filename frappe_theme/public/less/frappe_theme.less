@@ -25,7 +25,7 @@ body {
 }
 
 .navbar-brand {
-	width: 155px;
+	width: 190px;
 }
 
 // .heading {
@@ -121,20 +121,18 @@ figcaption {
 
 .breadcrumb {
 	a, a:hover, a:focus, a:visited  {
+		background-color: transparent;
 		color: inherit;
+		font-size: 12px;
+	}
+	span {
+		font-size: 12px;
 	}
 }
 
 .container, .navbar, footer {
 	max-width: 920px;
 	margin: auto;
-}
-
-.pricing-section .container {
-	padding-bottom:75px;
-}
-.retail-cta-section .container {
-	padding-bottom:0;
 }
 
 .button {
@@ -166,20 +164,6 @@ figcaption {
 	display: block !important;
 }
 
-.cl-white {
-	color: #fff;
-}
-.cl-blue {
-	color: #5E64FF;
-}
-.cl-black {
-	color: #36414c;
-}
-
-.fnt-34 {
-	font-size: 34px;
-}
-
 .navbar-icon {
     width: 24px;
     margin-right: 7px;
@@ -190,20 +174,6 @@ figcaption {
 	padding: 0;
 }
 
-.white-btn {
-	background: #fff;
-	color: #7574ff;
-	border: 0px;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-    font-size: 1em;
-}
-.white-btn:hover {
-	text-decoration: none;
-	background: #7574ff;
-	color: #fff;
-	border-bottom: 3px solid rgba(117, 116, 255, 0.2);
-}
-
 .blue-btn {
 	background: @blue-btn-background;
 	color: #fff;
@@ -211,6 +181,7 @@ figcaption {
     border-bottom: 3px solid rgba(0, 0, 0, 0.2);
     font-size: 1em;
 }
+
 .blue-btn:hover {
 	text-decoration: none;
 	background: @blue-btn-hover;
@@ -242,19 +213,6 @@ figcaption {
 	}
 }
 
-.mar-t-0 {
-	margin-top: 0;
-}
-.mar-t-20 {
-	margin-top: 20px;
-}
-.mar-t-26 {
-	margin-top:26px;
-}
-.mar-b-35 {
-	margin-bottom:35px;
-}
-
 .mar-t-50 {
 	margin-top: 50px !important;
 }
@@ -264,17 +222,8 @@ figcaption {
 .mar-b-50 {
 	margin-bottom: 50px;
 }
-.mobile-apps {
-	width:104px;
-}
-.mar-l-r-15 {
-	margin:0 15px;
-}
 .hero-content h1.heading-h1 {
 	font-size: 2.13em;
-}
-.width-fluid {
-	width:100%;
 }
 
 footer .row {
@@ -348,42 +297,10 @@ footer .row {
   margin-top: 15px;
 }
 
-.border-top-1 {
-	border-top: 1px solid #ccc;
-}
-.border-bottom-1 {
-	border-bottom: 1px solid #ccc;
-}
-
 .overflow-h {
 	overflow:hidden;
 }
 
-.case-wrapper {
-    position: relative;
-    margin: 0px;
-    width: 138px;
-    height: 140px;
-    display:inline-block;
-}
-.app-icon {
-    padding: 17px 20px 17px 20px;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-    border-radius: 16px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-}
-.case-label {
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    color: #36414c;
-    text-align: center;
-    margin-top: 10px;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-}
 .ellipsis {
     white-space: nowrap;
     overflow: hidden;
@@ -514,10 +431,18 @@ a.btn {
 	text-decoration: none;
 }
 
-.navbar a, .sidebar-navbar-items a {
+.navbar a {
 	color: inherit;
 	text-decoration: none;
 	border-color: inherit;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	border: none;
+	background-color: inherit;
+	padding: 5px;
 }
 
 // frappe
@@ -577,6 +502,12 @@ h1 {
 	font-weight:400;
 }
 
+.page_content {
+	h1:first-child {
+		margin-top: 0px;
+	}
+}
+
 .navbar {
 	background-color: transparent;
 }
@@ -630,7 +561,6 @@ h1 {
 	font-size: 1.2em;
 	text-decoration: none;
 	color: @text-color;
-	// font-weight: bold;
 }
 
 .hero-and-content {
@@ -736,18 +666,6 @@ footer li a {
     color: @text-light;
 }
 
-// footer li a.footer-large-link& {
-//     display:block;
-//     width: 150px;
-//     margin: 50px auto 15px;
-//
-// 	&:hover p,
-// 	&:focus p,
-// 	&:active p {
-// 		color: @text-color;
-// 	}
-// }
-
 footer li a& {
 	&:hover,
 	&:active,
@@ -770,32 +688,6 @@ footer li a& {
 	li {
 		margin: 0px 15px;
 		display: inline-block;
-	}
-}
-
-.mobile-app {
-	text-align: center;
-    margin: 15px 0;
-
-    span {
-    	font-size: 16px;
-	    color: #6c7680;
-	    text-transform: capitalize;
-    }
-    ul {
-    	display:inline-block;
-    	li {
-    		display:inline-block;
-    	}
-    }
-}
-
-.footer-link& {
-	color: @text-extra-light;
-
-	&:hover,
-	&:focus {
-		color: @text-muted;
 	}
 }
 
@@ -890,14 +782,6 @@ Frappé for Developers
 .developers-hero {
     width:313px;
 }
-.developers-logo {
-    height:19px;
-}
-.erp-framework {
-    width: 80%;
-	margin: 30px auto;
-}
-
 .get-involved {
     color:#36414c;
     font-size: 1.2em;
@@ -923,20 +807,11 @@ Frappé
 .frappe-hero {
     width:385px;
 }
-.frappe-logo {
-    height:19px;
-}
 .open-source {
     text-align:center;
 }
 .open-source img {
     width:325px;
-}
-.team-picture {
-    text-align: center;
-}
-.team-picture h1 {
-    margin:0 0 40px;
 }
 .team-description {
 	text-align: center;
@@ -964,22 +839,6 @@ Frappé
 }
 .contact .content {
     margin-top:-40px;
-}
-
-.page-breadcrumbs {
-	display: none !important;
-}
-
-.half-width {
-	max-width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.width-75 {
-	max-width: 75%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .media-object {
@@ -1091,13 +950,6 @@ article {
 	}
 }
 
-.negative-margin {
-	margin-left: -15px;
-	margin-right: -15px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
 .navbar-icon {
 	width: 24px;
 	margin-right: 7px;
@@ -1158,14 +1010,6 @@ article {
 		padding-bottom: 55px;
 	}
 
-	.half-width {
-		max-width: 90%;
-	}
-
-	.width-75 {
-		max-width: 100%;
-	}
-
 	.fake-iphone-frame {
 		display: inline-block;
 		margin-bottom: 60px;
@@ -1204,11 +1048,6 @@ article {
 	.large.button {
 		font-size: 16px;
 	}
-	.case-wrapper {
-	    width: 150px;
-	    display: inline-block;
-	    float: none;
-	}
 
 	footer {
 		padding: 0 15px;
@@ -1221,15 +1060,8 @@ article {
 	    width: 23%;
 	    text-align: left;
 	}
-	.pricing-section {
-		padding-left: 0;
-		padding-right: 0;
-	}
 	hr.mar-t-50 {
 		margin-top: 0;
-	}
-	.pricing-section .container {
-	    padding-bottom: 25px;
 	}
 
 	img {
@@ -1261,9 +1093,6 @@ article {
 {
 	.x-large.button {
 		display: block;
-	}
-	.case-wrapper {
-	    width: 107px;
 	}
 }
 
