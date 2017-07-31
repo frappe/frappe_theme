@@ -1,6 +1,6 @@
-# Frappe Theme
+# Frappé Theme
 
-Theme for Frappe Sites
+Theme for Frappé Sites
 
 Contains:
 
