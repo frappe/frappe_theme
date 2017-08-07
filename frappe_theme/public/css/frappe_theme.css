@@ -225,16 +225,6 @@ footer .row {
 .cl-light-gray {
   color: #b8c2cc;
 }
-.testimonial-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 150px;
-}
-.testimonial .p,
-.testimonial-content .p {
-  margin: 0;
-}
 .section-block {
   padding: 75px 0;
 }
@@ -248,28 +238,6 @@ footer .row {
 .screenshot {
   width: 800px;
   margin: auto;
-}
-.testimonial-img {
-  margin: auto;
-  max-width: 120px !important;
-  border-radius: 50% !important;
-}
-.testimonial-img-left {
-  margin: auto;
-}
-.testimonial-img-right {
-  clear: both;
-}
-.testimonial_name {
-  color: #36414c;
-  font-size: 18px;
-  margin-top: 10px;
-  clear: both;
-  font-weight: bold;
-}
-.testimonial_name.text-left,
-.testimonial_name.text-right {
-  margin-top: 15px;
 }
 .overflow-h {
   overflow: hidden;
@@ -312,14 +280,10 @@ footer li a {
   color: #36414c;
   font-size: 16px;
 }
-.copyright {
+.social {
   font-size: 14px;
   text-align: center;
-  padding-bottom: 50px;
-}
-.copyright p {
-  padding-bottom: 0px;
-  color: #B8C2CC;
+  padding: 15px;
 }
 .underline {
   color: inherit;
@@ -620,9 +584,9 @@ footer li a:focus {
   display: inline-block;
 }
 .copyright {
-  font-size: 0.8em;
+  font-size: 14px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 .copyright p {
   padding-bottom: 0px;
@@ -893,9 +857,12 @@ article li {
     display: block;
     text-align: left;
   }
+  .footer-list li a {
+    font-size: 14px;
+  }
   .copyright {
     text-align: left;
-    padding-bottom: 55px;
+    padding-bottom: 30px;
   }
   .fake-iphone-frame {
     display: inline-block;
