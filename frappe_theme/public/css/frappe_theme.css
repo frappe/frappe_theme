@@ -359,6 +359,10 @@ a.btn {
   font-weight: inherit;
   font-size: inherit;
 }
+.navbar a .indicator {
+  margin-top: -3px;
+  display: inline-block;
+}
 .navbar a .indicator::before {
   margin: 0px 6px 1px 0px;
 }
