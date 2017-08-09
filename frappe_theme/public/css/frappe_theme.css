@@ -351,10 +351,16 @@ a.close,
 a.btn {
   text-decoration: none;
 }
-.navbar a {
+.navbar a,
+.navbar a .indicator {
   color: inherit;
   text-decoration: none;
   border-color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+.navbar a .indicator::before {
+  margin: 0px 6px 1px 0px;
 }
 .navbar-default .navbar-toggle,
 .navbar-default .navbar-toggle:hover,
