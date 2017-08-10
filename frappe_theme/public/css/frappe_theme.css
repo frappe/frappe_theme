@@ -355,13 +355,13 @@ a.btn {
 .navbar a .indicator {
   color: inherit;
   text-decoration: none;
-  border-color: inherit;
-  font-weight: inherit;
-  font-size: inherit;
 }
 .navbar a .indicator {
   margin-top: -3px;
   display: inline-block;
+  border-color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 .navbar a .indicator::before {
   margin: 0px 6px 1px 0px;
