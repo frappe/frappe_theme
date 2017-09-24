@@ -225,7 +225,7 @@ footer .row {
 .section-block {
   padding: 75px 0;
 }
-.blog-list-item img,
+img.blog-cover-image,
 .blog-text img,
 .screenshot {
   /*box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.05);*/
