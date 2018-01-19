@@ -270,6 +270,9 @@ footer ul li {
 .footer-list li {
   margin: 0px 15px;
 }
+.inline li {
+  display: inline-block;
+}
 footer li a {
   text-decoration: none;
   color: #36414c;
@@ -577,7 +580,6 @@ footer li a:focus {
 .footer-list {
   text-align: left;
   width: 100%;
-  margin-top: 50px;
   margin-bottom: 10px;
 }
 .footer-list ul {

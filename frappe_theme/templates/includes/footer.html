@@ -1,5 +1,8 @@
-            <div class="clearfix">
-            <div class="col-sm-3 col-xs-6">
+        {% if sitename == 'erpnext' %}
+        
+         {# show erpnext footer #}
+           <div class="clearfix">
+            <div class="col-sm-3 col-xs-12">
                 <ul class="list-unstyled footer-list">
                     <li>
                         <a href="https://erpnext.com">ERPNext</a>
@@ -12,7 +15,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-sm-3 col-xs-12">
                 <ul class="list-unstyled footer-list">
                     <li>
                         <a href="https://erpnext.com/reseller">Reseller</a>
@@ -25,7 +28,7 @@
                     </li>
                 </ul>
             </div>
-             <div class="col-sm-3 col-xs-6">
+             <div class="col-sm-3 col-xs-12">
                 <ul class="list-unstyled footer-list">
                  <li>
                     <a href="https://frappe.io/blog">Blog</a>
@@ -38,18 +41,49 @@
                 </li>
             </ul>
             </div>
-             <div class="col-sm-3 col-xs-6">
+             <div class="col-sm-3 col-xs-12">
                 <ul class="list-unstyled footer-list">
                  <li>
                     <a href="https://erpnext.com/uae-ksa-vat">UAE/KSA VAT</a>
                 </li>
                 <li>
-                    <a href="https://frappe.io/about">GST For India</a>
+                    <a href="https://erpnext.com//india-gst">GST For India</a>
+                </li>
+                </ul>
+             </div>
+             </div>
+            {% else %}
+            {# show frappe footer #}
+            <ul class="list-unstyled footer-list inline">
+                <li>
+                    <a href="https://erpnext.com">ERPNext</a>
+                </li>
+                <li>
+                    <a href="https://frappe.io">Frappé</a>
+                </li>
+                <li>
+                    <a href="https://frappe.io/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="https://erpnext.com/reseller">Reseller</a>
+                </li>
+                <li>
+                    <a href="https://discuss.erpnext.com">Forum</a>
+                </li>
+                <li>
+                    <a href="https://github.com/frappe">GitHub</a>
+                </li>
+                 <li>
+                    <a href="https://erpnext.com/mobile">Mobile Apps</a>
+                </li>
+                <li>
+                    <a href="https://frappe.io/about">About</a>
+                </li>
+                <li>
+                    <a href="https://frappe.io/about#contact">Contact</a>
                 </li>
             </ul>
-            </div>
-            
-            </div>
+            {% endif %}
             <div class="social">
                 <p>Find us on
 					<a class="underline" href="https://twitter.com/erpnext"
