@@ -255,8 +255,7 @@ img.blog-cover-image,
   fill: #fff;
 }
 .footer-list {
-  text-align: center;
-  display: inline-block;
+  text-align: left;
   width: 100%;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -270,6 +269,8 @@ footer ul li {
 }
 .footer-list li {
   margin: 0px 15px;
+}
+.inline li {
   display: inline-block;
 }
 footer li a {
@@ -577,10 +578,8 @@ footer li a:focus {
   text-decoration: none;
 }
 .footer-list {
-  text-align: center;
-  display: inline-block;
+  text-align: left;
   width: 100%;
-  margin-top: 50px;
   margin-bottom: 10px;
 }
 .footer-list ul {
@@ -588,7 +587,6 @@ footer li a:focus {
 }
 .footer-list li {
   margin: 0px 15px;
-  display: inline-block;
 }
 .copyright {
   font-size: 14px;
@@ -913,8 +911,6 @@ article li {
   .footer-list li {
     margin: 0px 15px 20px;
     display: block;
-    float: left;
-    width: 23%;
     text-align: left;
   }
   hr.mar-t-50 {
