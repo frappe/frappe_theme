@@ -255,10 +255,8 @@ img.blog-cover-image,
   fill: #fff;
 }
 .footer-list {
-  text-align: left;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin: 60px 0;
 }
 footer ul,
 footer ul li {
@@ -268,7 +266,7 @@ footer ul li {
   text-align: center;
 }
 .footer-list li {
-  margin: 0px 15px;
+  margin: 15px;
 }
 .inline li {
   display: inline-block;
@@ -279,9 +277,7 @@ footer li a {
   font-size: 16px;
 }
 .social {
-  font-size: 14px;
   text-align: center;
-  padding: 15px;
 }
 .underline {
   color: inherit;
@@ -299,9 +295,6 @@ footer li a {
 @media screen and (max-width: 1023px) {
   .heading {
     font-size: 30px;
-  }
-  .footer-list li {
-    margin: 0px 8px;
   }
 }
 p.description,
@@ -577,19 +570,7 @@ footer li a:focus {
   color: #36414C;
   text-decoration: none;
 }
-.footer-list {
-  text-align: left;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.footer-list ul {
-  margin-top: 20px;
-}
-.footer-list li {
-  margin: 0px 15px;
-}
 .copyright {
-  font-size: 14px;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -855,7 +836,7 @@ article li {
     padding-top: 0px;
   }
   .footer-list {
-    margin-top: 40px;
+    margin: 40px 0;
   }
   .footer-list li {
     margin: 15px 0px;
@@ -865,9 +846,13 @@ article li {
   .footer-list li a {
     font-size: 14px;
   }
+  .social {
+    text-align: left;
+    padding: 0 15px;
+  }
   .copyright {
     text-align: left;
-    padding-bottom: 30px;
+    padding: 0 15px 30px;
   }
   .fake-iphone-frame {
     display: inline-block;
@@ -909,7 +894,7 @@ article li {
     padding: 0 15px;
   }
   .footer-list li {
-    margin: 0px 15px 20px;
+    margin: 20px 0;
     display: block;
     text-align: left;
   }
