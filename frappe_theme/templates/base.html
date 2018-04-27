@@ -46,13 +46,12 @@
 	</div>
 	{% block base_scripts %}
 	<!-- js should be loaded in body! -->
-	<script type="text/javascript"
-	src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript"
-	src="/assets/js/frappe-web.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="/assets/bootstrap-4/js/bootstrap.min.js"></script>
-{% endblock %}
+	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/assets/frappe_theme/bootstrap-4/js/bootstrap.min.js"></script>
+	{% endblock %}
 {%- if js_globals is defined %}
 <script>
 	{%- for key, value in js_globals.iteritems() %}
