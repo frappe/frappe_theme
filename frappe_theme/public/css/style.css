@@ -1,3 +1,16 @@
+a {
+	color: #6c757d;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.dark-link {
+	color: #000;
+}
+
 .navbar {
 	padding: 0.5rem 0;
 }
@@ -147,7 +160,7 @@ img,
 }
 
 .inline-block {
-    display: inline-block;
+	display: inline-block;
 }
 
 .comment-row h6 {
@@ -155,5 +168,13 @@ img,
 }
 
 .hidden {
-	display:none;
+	display: none;
+}
+
+.section-padding {
+	margin: 6rem 0;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
