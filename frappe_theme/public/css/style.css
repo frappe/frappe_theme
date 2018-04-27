@@ -178,3 +178,38 @@ img,
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.greyscale {
+	filter: grayscale(100);
+	transition: filter .3s ease-in;
+}
+
+.greyscale:hover {
+	filter: grayscale(0);
+}
+
+.frappe-hero {
+	max-width: 375px;
+	width: 100%;
+}
+
+/* added to make iframe responsive */
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
