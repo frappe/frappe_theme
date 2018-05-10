@@ -16,7 +16,6 @@
 	{% endblock %}
 	{%- block head -%}
 	{% block meta_block %}{% endblock %}
-	<link href="/assets/frappe_theme/bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/assets/frappe_theme/css/style.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/hljs.css">
 	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font-awesome.css">
@@ -37,19 +36,19 @@
 	</script>
 </head>
 <body data-path="{{ path }}">
+	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 	<div class="container">
-		{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 		{% block content %}
 		{{ content }}
 		{% endblock %}
-		{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
 	</div>
+	{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
+
 	{% block base_scripts %}
 	<!-- js should be loaded in body! -->
 	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-	    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/assets/frappe_theme/bootstrap-4/js/popper.min.js"></script>
 	<script type="text/javascript" src="/assets/frappe_theme/bootstrap-4/js/bootstrap.min.js"></script>
 	{% endblock %}
 {%- if js_globals is defined %}

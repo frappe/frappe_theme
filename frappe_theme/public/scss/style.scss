@@ -1,0 +1,398 @@
+$gray-100: #fafbfc;
+$gray-200: #f7fafc;
+$gray-300: #d1d8dd;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #8d99a6;
+$gray-700: #495057;
+$gray-800: #36414c;
+$gray-900: #2e3338;
+$black: #000;
+
+$body-color: $gray-800;
+$link-color: $black;
+$yiq-contrasted-threshold: 180;
+
+$navbar-light-color:                rgba($body-color, .5);
+$navbar-light-hover-color:          rgba($body-color, .7);
+$navbar-light-active-color:         rgba($body-color, .9);
+$navbar-light-disabled-color:       rgba($body-color, .3);
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-border-color: rgba($body-color, .1);
+
+
+@import "../bootstrap-4/scss/bootstrap";
+
+body {
+	font-size: 14px;
+}
+
+.container {
+	max-width: 840px !important;
+}
+
+.navbar {
+	background-color: $gray-100;
+	border-bottom: 1px solid $border-color;
+	padding: 0.5rem 0;
+}
+
+.navbar-brand {
+	margin-left: 15px;
+}
+
+.card-body {
+	line-height: 2;
+}
+
+//.card {
+//	background-color: $gray-100;
+//}
+
+@media (min-width: 768px) {
+	.page-content-wrapper {
+		padding-left: 15px;
+	}
+}
+
+a.btn, a.card {
+	text-decoration: none !important;
+}
+
+.page-content-wrapper {
+	min-height: 500px;
+	line-height: 2;
+
+	a {
+		text-decoration: underline;
+	}
+
+	h1:first-child {
+		margin-top: 1rem;
+	}
+
+	h2, h3, h4 {
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.lead {
+	font-weight: 400;
+}
+
+footer {
+	padding-bottom: 3rem;
+}
+
+/*****************/
+
+
+/* indicators */
+
+$indicator-blue:		#5e64ff;
+$indicator-red:			#ff5858;
+$indicator-green:		#98d85b;
+$indicator-orange:		#ffa00a;
+$indicator-purple:		#743ee2;
+$indicator-darkgrey:		#b8c2cc;
+$indicator-yellow:		#feef72;
+$indicator-light-blue:		#7cd6fd;
+
+.indicator,
+.indicator-right {
+    background: none;
+    vertical-align: middle;
+}
+
+.indicator::before,
+.indicator-right::after {
+    content:'';
+    display:inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius:0.5rem;
+}
+
+.indicator::before {
+	margin: 0 0.4rem 0.1rem 0px;
+}
+
+.indicator-right::after {
+	margin: 0 0 0.1rem 0.4rem;
+}
+
+
+.indicator.grey::before,
+.indicator-right.grey::after {
+    background: $gray-200;
+}
+.indicator.blue::before,
+.indicator-right.blue::after {
+    background: $indicator-blue;
+}
+.indicator.red::before,
+.indicator-right.red::after {
+    background: $indicator-red;
+}
+.indicator.green::before,
+.indicator-right.green::after {
+    background: $indicator-green;
+}
+.indicator.orange::before,
+.indicator-right.orange::after {
+    background: $indicator-orange;
+}
+.indicator.purple::before,
+.indicator-right.purple::after {
+    background: $indicator-purple;
+}
+.indicator.darkgrey::before,
+.indicator-right.darkgrey::after {
+    background: $indicator-darkgrey;
+}
+
+.indicator.black::before,
+.indicator-right.black::after {
+    background: $body-color;
+}
+
+.indicator.yellow::before,
+.indicator-right.yellow::after {
+    background: $indicator-yellow;
+}
+
+.indicator.light-blue::before,
+.indicator-right.light-blue::after {
+    background: $indicator-light-blue;
+}
+
+.indicator.lightblue::before,
+.indicator-right.lightblue::after {
+    background: $indicator-light-blue;
+}
+
+.modal-header .indicator {
+	float: left;
+	margin-top: 7.5px;
+	margin-right: 3px;
+}
+
+
+/* other */
+
+.media-img {
+	max-width: 150px;
+}
+
+.stars {
+	width: 125px;
+}
+
+.breadcrumb {
+	background-color: #fff;
+	margin: 0 -1rem;
+}
+
+img,
+.img {
+	max-width: 100%;
+}
+
+/* avatar */
+
+.avatar {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+}
+
+.avatar-frame {
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	padding: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 4px;
+}
+
+.avatar img {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 4px;
+}
+
+.avatar-empty {
+	border: 1px dashed #d1d8dd;
+	border-radius: 4px;
+}
+
+.avatar-small {
+	margin-right: 5px;
+	width: 24px;
+	height: 24px;
+}
+
+.avatar-small .standard-image {
+	font-size: 14px;
+}
+
+.avatar-small .avatar-frame {
+	border-radius: 3px;
+}
+
+.avatar-medium {
+	margin-right: 5px;
+	width: 36px;
+	height: 36px;
+}
+
+.avatar-medium .standard-image {
+	font-size: 18px;
+}
+
+.avatar-large {
+	margin-right: 10px;
+	width: 72px;
+	height: 72px;
+}
+
+.avatar-large .standard-image {
+	font-size: 36px;
+}
+
+.avatar-xl {
+	margin-right: 10px;
+	width: 108px;
+	height: 108px;
+}
+
+.avatar-xl .standard-image {
+	font-size: 72px;
+}
+
+.avatar-xs {
+	margin-right: 3px;
+	margin-top: -2px;
+	width: 17px;
+	height: 17px;
+	border: none;
+	border-radius: 3px;
+}
+
+.avatar-xs .standard-image {
+	font-size: 9px;
+}
+
+.avatar-text {
+	display: inline;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.standard-image {
+	width: 100%;
+	height: 0;
+	padding: 50% 0;
+	display: inline-block;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 0;
+	color: #d1d8dd;
+	border: 1px solid #d1d8dd;
+	font-weight: normal;
+	margin-top: -1px;
+}
+
+/* comments */
+
+.comment-header {
+	border-bottom: 1px solid #ebeff2;
+	padding: 30px 0 15px;
+}
+
+.comment-row {
+	margin: 0 -15px;
+	padding: 15px;
+}
+
+.pull-right {
+	float: right;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.comment-row h6 {
+	font-size: 0.75rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.section-padding {
+	margin: 6rem 0;
+}
+
+.box-shadow {
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.greyscale {
+	filter: grayscale(100);
+	transition: filter 0.3s ease-in;
+}
+
+.greyscale:hover {
+	filter: grayscale(0);
+}
+
+.frappe-hero {
+	max-width: 375px;
+	width: 100%;
+}
+
+.lead-max {
+	max-width: 100%;
+}
+
+@media (min-width: 576px) {
+	.lead-max {
+		max-width: 75%;
+	}
+}
+
+/* added to make iframe responsive */
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/**/
+
+.screenshot {
+	border: 1px solid #d1d8dd;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}

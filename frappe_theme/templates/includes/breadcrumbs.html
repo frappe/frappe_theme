@@ -1,5 +1,5 @@
 {% if parents and parents|length > 0 %}
-<ul class="breadcrumb mb-4" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 	{% for parent in parents %}
 		<li class="breadcrumb-item">
 			<a href="{{ url_prefix }}{{ parent.route | abs_url }}" itemprop="url">
