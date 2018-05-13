@@ -55,7 +55,7 @@ body {
 	}
 }
 
-a.btn, a.card {
+a.btn, a.card, a.no-decoration {
 	text-decoration: none !important;
 }
 
@@ -125,8 +125,19 @@ $indicator-light-blue:		#7cd6fd;
 
 .indicator.grey::before,
 .indicator-right.grey::after {
-    background: $gray-200;
+    background: $gray-600;
 }
+
+.indicator.light-gray::before,
+.indicator-right.light-gray::after {
+    background: $gray-300;
+}
+
+.indicator.gray::before,
+.indicator-right.gray::after {
+    background: $gray-600;
+}
+
 .indicator.blue::before,
 .indicator-right.blue::after {
     background: $indicator-blue;
@@ -339,6 +350,16 @@ img,
 
 .section-padding {
 	margin: 6rem 0;
+
+	.lead {
+		color: $text-muted;
+		max-width: 100%;
+		margin: auto;
+
+		@media (min-width: 576px) {
+			max-width: 75%;
+		}
+	}
 }
 
 .box-shadow {

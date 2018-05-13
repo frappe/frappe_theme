@@ -1,4 +1,4 @@
-<ul class="nav-bar nav ml-auto mt-2 mt-lg-0">
+<div class="dropdown-menu">
 {% if top_bar_items -%}
 	{%- for page in top_bar_items -%}
 		{% if not page.parent_label and not page.right -%}
@@ -14,4 +14,4 @@
 {% block navbar_right_extension %}{% endblock %}
 {% include "templates/includes/navbar/navbar_search.html" %}
 {% include "templates/includes/navbar/dropdown_login.html" %}
-</ul>
+</div>
