@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:400,600");
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -6039,7 +6040,8 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #ddd !important; } }
 
 body {
-  font-size: 14px; }
+  font-family: 'Hind';
+  font-size: 16px; }
 
 .container {
   max-width: 840px !important; }
@@ -6049,11 +6051,17 @@ body {
   border-bottom: 1px solid #d1d8dd;
   padding: 0.5rem 0; }
 
+.logged-in {
+  margin: -2px 0px; }
+
 .navbar-brand {
   margin-left: 15px; }
 
 .card-body {
-  line-height: 2; }
+  line-height: 1.8; }
+
+.mt-large {
+  margin-top: 10rem !important; }
 
 @media (min-width: 768px) {
   .page-content-wrapper {
@@ -6064,17 +6072,25 @@ a.btn, a.card, a.no-decoration {
 
 .page-content-wrapper {
   min-height: 500px;
+  margin-bottom: 5rem;
   line-height: 2; }
   .page-content-wrapper a {
     text-decoration: underline; }
-  .page-content-wrapper h1:first-child {
-    margin-top: 1rem; }
+  .page-content-wrapper h1:first-child, .page-content-wrapper section:first-child {
+    margin-top: 7rem; }
   .page-content-wrapper h2, .page-content-wrapper h3, .page-content-wrapper h4 {
     margin-top: 2.5rem;
     margin-bottom: 1rem; }
 
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #8d99a6; }
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #495057; }
+
 .lead {
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 1.5; }
 
 footer {
   padding-bottom: 3rem; }
@@ -6338,3 +6354,26 @@ img,
   border: 1px solid #d1d8dd;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+
+.card-flip {
+  background: none;
+  border: none;
+  padding: 0; }
+  .card-flip .card {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0; }
+  .card-flip .card:first-of-type {
+    tranform: rotateY(0deg); }
+  .card-flip .card:last-of-type {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    display: flex; }
+  .card-flip:hover .card:first-of-type {
+    transform: rotateY(-180deg); }
+  .card-flip:hover .card:last-of-type {
+    transform: rotateY(0deg); }

@@ -5,9 +5,9 @@
   	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{ item.label }}
   </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  <div class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
 	  {% for child in item.child_items %}
-		  <a class="dropdown-item small" href="{{ (child.url or '')|abs_url }}"
+		  <a class="dropdown-item text-white small" href="{{ (child.url or '')|abs_url }}"
 			  {{ child.target or ''}}>
 			  {{ child.label }}</a>
 	  {% endfor %}

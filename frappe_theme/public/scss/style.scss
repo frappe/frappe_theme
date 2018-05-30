@@ -20,11 +20,12 @@ $navbar-light-disabled-color:       rgba($body-color, .3);
 $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border-color: rgba($body-color, .1);
 
-
+@import url('https://fonts.googleapis.com/css?family=Hind:400,600');
 @import "../bootstrap-4/scss/bootstrap";
 
 body {
-	font-size: 14px;
+	font-family: 'Hind';
+	font-size: 16px;
 }
 
 .container {
@@ -37,17 +38,25 @@ body {
 	padding: 0.5rem 0;
 }
 
+.logged-in {
+	margin: -2px 0px;
+}
+
 .navbar-brand {
 	margin-left: 15px;
 }
 
 .card-body {
-	line-height: 2;
+	line-height: 1.8;
 }
 
-//.card {
-//	background-color: $gray-100;
-//}
+.card {
+//	border-top-width: 7px;
+}
+
+.mt-large {
+	margin-top: 10rem !important;
+}
 
 @media (min-width: 768px) {
 	.page-content-wrapper {
@@ -61,14 +70,15 @@ a.btn, a.card, a.no-decoration {
 
 .page-content-wrapper {
 	min-height: 500px;
+	margin-bottom: 5rem;
 	line-height: 2;
 
 	a {
 		text-decoration: underline;
 	}
 
-	h1:first-child {
-		margin-top: 1rem;
+	h1:first-child, section:first-child {
+		margin-top: 7rem;
 	}
 
 	h2, h3, h4 {
@@ -77,8 +87,18 @@ a.btn, a.card, a.no-decoration {
 	}
 }
 
+.dropdown-item:hover, .dropdown-item:focus {
+	background-color: $gray-600;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	background-color: $gray-700;
+}
+
 .lead {
 	font-weight: 400;
+	line-height: 1.5;
 }
 
 footer {
@@ -416,4 +436,42 @@ img,
 	border: 1px solid #d1d8dd;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+
+.card-flip {
+
+   background: none;
+   border: none;
+   padding: 0;
+
+   .card {
+      backface-visibility: hidden;
+      transition: transform 300ms;
+      transition-timing-function: linear;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+   }
+
+   .card:first-of-type {
+      tranform: rotateY(0deg);
+   }
+
+   .card:last-of-type {
+      transform: rotateY(180deg);
+      // Put this in face with the larger content
+      position: absolute;
+      top: 0;
+      display: flex;
+   }
+
+   &:hover {
+      .card:first-of-type  {
+         transform: rotateY(-180deg);
+      }
+      .card:last-of-type {
+         transform: rotateY(0deg);
+      }
+   }
+
 }
