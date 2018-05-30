@@ -6056,6 +6056,8 @@ body {
 
 .navbar-brand {
   margin-left: 15px; }
+  .navbar-brand span {
+    line-height: 1.7; }
 
 .card-body {
   line-height: 1.8; }
@@ -6076,8 +6078,6 @@ a.btn, a.card, a.no-decoration {
   line-height: 2; }
   .page-content-wrapper a {
     text-decoration: underline; }
-  .page-content-wrapper h1:first-child, .page-content-wrapper section:first-child {
-    margin-top: 7rem; }
   .page-content-wrapper h2, .page-content-wrapper h3, .page-content-wrapper h4 {
     margin-top: 2.5rem;
     margin-bottom: 1rem; }

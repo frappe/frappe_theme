@@ -44,6 +44,10 @@ body {
 
 .navbar-brand {
 	margin-left: 15px;
+
+	span {
+		line-height: 1.7;
+	}
 }
 
 .card-body {
@@ -75,10 +79,6 @@ a.btn, a.card, a.no-decoration {
 
 	a {
 		text-decoration: underline;
-	}
-
-	h1:first-child, section:first-child {
-		margin-top: 7rem;
 	}
 
 	h2, h3, h4 {
