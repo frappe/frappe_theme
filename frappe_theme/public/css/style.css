@@ -6062,6 +6062,10 @@ body {
 .card-body {
   line-height: 1.8; }
 
+.w-400 {
+  max-width: 400px;
+  margin: auto; }
+
 .mt-large {
   margin-top: 10rem !important; }
 
@@ -6086,7 +6090,7 @@ a.btn, a.card, a.no-decoration {
   background-color: #8d99a6; }
 
 .dropdown-item.active, .dropdown-item:active {
-  background-color: #495057; }
+  background-color: #adb5bd; }
 
 .lead {
   font-weight: 400;
@@ -6301,15 +6305,20 @@ img,
 .hidden {
   display: none; }
 
-.section-padding {
+.section-padding, .top-section {
   margin: 6rem 0; }
-  .section-padding .lead {
+  .section-padding .lead, .top-section .lead {
     color: #8d99a6;
     max-width: 100%;
     margin: auto; }
     @media (min-width: 576px) {
-      .section-padding .lead {
+      .section-padding .lead, .top-section .lead {
         max-width: 75%; } }
+
+.top-section {
+  text-align: center; }
+  .top-section img {
+    margin-top: 2rem; }
 
 .box-shadow {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }

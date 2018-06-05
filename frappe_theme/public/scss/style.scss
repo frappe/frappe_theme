@@ -54,6 +54,11 @@ body {
 	line-height: 1.8;
 }
 
+.w-400 {
+	max-width: 400px;
+	margin: auto;
+}
+
 .card {
 //	border-top-width: 7px;
 }
@@ -93,7 +98,7 @@ a.btn, a.card, a.no-decoration {
 
 .dropdown-item.active,
 .dropdown-item:active {
-	background-color: $gray-700;
+	background-color: $gray-500;
 }
 
 .lead {
@@ -368,7 +373,7 @@ img,
 	display: none;
 }
 
-.section-padding {
+.section-padding, .top-section {
 	margin: 6rem 0;
 
 	.lead {
@@ -379,6 +384,14 @@ img,
 		@media (min-width: 576px) {
 			max-width: 75%;
 		}
+	}
+}
+
+.top-section {
+	text-align: center;
+
+	img {
+		margin-top: 2rem;
 	}
 }
 
