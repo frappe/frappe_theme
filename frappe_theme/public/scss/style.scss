@@ -373,6 +373,21 @@ img,
 	display: none;
 }
 
+.square-img {
+	    position:relative;
+	    overflow:hidden;
+	    padding-bottom:100%;
+
+		img {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+}
+
 .section-padding, .top-section {
 	margin: 6rem 0;
 
