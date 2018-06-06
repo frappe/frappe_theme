@@ -45,6 +45,13 @@
 				<div class="page_content">
 					{%- block page_content -%}{%- endblock -%}
 				</div>
+				<div class="page-footer">
+					<div class="page-next-prev-links">
+						{% if add_next_prev_links %}
+						{% include 'templates/includes/next-prev-links.html' %}
+						{% endif %}
+					</div>
+				</div>
 			</div>
 			<!-- sidebar ends -->
 		</div>
