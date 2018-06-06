@@ -22,6 +22,7 @@ $navbar-light-toggler-border-color: rgba($body-color, .1);
 
 @import url('https://fonts.googleapis.com/css?family=Hind:400,600');
 @import "../bootstrap-4/scss/bootstrap";
+@import "~highlight.js/styles/github.css";
 
 body {
 	font-family: 'Hind';
@@ -502,4 +503,33 @@ img,
       }
    }
 
+}
+
+/* documentation styles */
+
+body[data-path*="docs/"] {
+	.page-content-wrapper {
+		line-height: 1.7;
+	}
+
+	h1 {
+		font-size: 2.2rem;
+
+		&:first-child {
+			margin-top: 1rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.65rem;
+	}
+
+	h1:first-child + p {
+		margin-top: 2rem;
+	}
+
+	.hljs {
+		padding: 1.25rem 1.5rem;
+		border-radius: 4px;
+	}
 }
