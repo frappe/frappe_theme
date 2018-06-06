@@ -2,16 +2,29 @@
 {% block meta_block %}
 	{% include "templates/includes/meta_block.html" %}
 {% endblock %}
+
+{% from "templates/includes/media.html" import media %}
+
 {% block page_content %}
+<section class='top-section'>
+	<h1>{{ title }}</h1>
+	<p class='lead'>{{ blog_intro }}</p>
+</section>
 <article class="blog-content" itemscope itemtype="http://schema.org/BlogPosting">
     <!-- begin blog content -->
     <div class="blog-info">
-	<h1 itemprop="headline" class="blog-header">{{ title }}</h1>
-	<p class="post-by text-muted">
-	    <a href="/blog?blogger={{ blogger }}" class="no-decoration">{{ _("By") }} {{ blogger_info and blogger_info.full_name or full_name }}</a>
-	    <i class="spacer-dot"></i> {{ frappe.format_date(published_on) }}
-	    <i class="spacer-dot"></i> <a href="/blog?blog_category={{ blog_category }}" class="no-decoration">{{ category.title }}</a>
-	    <i class="spacer-dot"></i> {{ comment_text }}
+	<p class="post-by text-center text-muted">
+	    <span class="indicator gray mx-3">
+			<a href="/blog?blogger={{ blogger }}" class="no-decoration text-muted">
+			{{ _("By") }} {{ blogger_info and blogger_info.full_name or full_name }}</a>
+		</span>
+	    <span class="indicator gray mx-3"> {{ frappe.format_date(published_on) }}</span>
+	    <span class="indicator gray mx-3">
+			<a href="/blog?blog_category={{ blog_category }}"
+				class="no-decoration text-muted">
+			{{ category.title }}</a>
+		</span>
+	    <span class="indicator gray mx-3"> {{ comment_text }}</span>
 	</p>
     </div>
     <div itemprop="articleBody" class="longform blog-text">
@@ -20,7 +33,12 @@
     <!-- end blog content -->
 </article>
 {% if blogger_info %}
-{% include "templates/includes/blog/blogger.html" %}
+{{ media(
+		blogger_info.full_name,
+		blogger_info.bio,
+		blogger_info.avatar or "/assets/frappe/images/default-avatar.png",
+	)
+}}
 {% endif %}
 <div class="border-top mt-4 pt-4 blog-comments">
     {% include 'templates/includes/comments/comments.html' %}
