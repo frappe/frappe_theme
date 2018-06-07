@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5 {
 	font-weight: 600;
 }
 
+p, .page-content-wrapper li {
+	font-size: 18px;
+}
+
 .lead {
 	line-height: 1.5;
 }
@@ -92,13 +96,17 @@ a.btn, a.card, a.no-decoration {
 .page-content-wrapper {
 	min-height: 500px;
 	margin-bottom: 5rem;
-	line-height: 2;
+	line-height: 1.8;
+	p, li {
+		font-size: 18px;
+	}
 
 	a {
 		text-decoration: underline;
 	}
 
 	h2, h3, h4 {
+		line-height: 1.8;
 		margin-top: 2.5rem;
 		margin-bottom: 1rem;
 	}
@@ -396,10 +404,10 @@ img,
 }
 
 .section-padding, .top-section {
-	margin: 5rem 0;
+	margin: 7rem 0;
 
 	.lead {
-		color: $gray-700;
+		color: $text-muted;
 		max-width: 100%;
 		margin: auto;
 

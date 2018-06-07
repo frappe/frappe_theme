@@ -44,9 +44,12 @@
     {% include 'templates/includes/comments/comments.html' %}
 </div>
 
+<style>
+	.blog-text {
+		font-size: 18px;
+	}
+</style>
 <script>
     frappe.ready(function() { frappe.set_search_path("/blog"); })
 </script>
-{% endblock %}
-{% block style %}
 {% endblock %}
