@@ -1,0 +1,5 @@
+{
+    "css/frappe-theme-bs4.css": [
+        "public/scss/style.scss"
+    ]
+}
