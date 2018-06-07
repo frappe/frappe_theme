@@ -10,6 +10,7 @@ $gray-900: #2e3338;
 $black: #000;
 
 $body-color: $gray-800;
+$text-muted: $gray-600;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
@@ -25,8 +26,17 @@ $navbar-light-toggler-border-color: rgba($body-color, .1);
 @import "~highlight.js/styles/github.css";
 
 body {
+	font-weight: 300;
 	font-family: 'Hind';
 	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 600;
+}
+
+.lead {
+	line-height: 1.5;
 }
 
 .container {
@@ -45,6 +55,7 @@ body {
 
 .navbar-brand {
 	margin-left: 15px;
+	font-weight: 600;
 
 	span {
 		line-height: 1.7;
@@ -100,11 +111,6 @@ a.btn, a.card, a.no-decoration {
 .dropdown-item.active,
 .dropdown-item:active {
 	background-color: $gray-500;
-}
-
-.lead {
-	font-weight: 400;
-	line-height: 1.5;
 }
 
 footer {
@@ -390,10 +396,10 @@ img,
 }
 
 .section-padding, .top-section {
-	margin: 6rem 0;
+	margin: 5rem 0;
 
 	.lead {
-		color: $text-muted;
+		color: $gray-700;
 		max-width: 100%;
 		margin: auto;
 
@@ -416,12 +422,12 @@ img,
 }
 
 .greyscale {
-	filter: grayscale(100);
-	transition: filter 0.3s ease-in;
+//	filter: grayscale(100);
+//	transition: filter 0.3s ease-in;
 }
 
 .greyscale:hover {
-	filter: grayscale(0);
+//	filter: grayscale(0);
 }
 
 .frappe-hero {
