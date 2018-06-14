@@ -1,5 +1,5 @@
 {% macro media(title, content, image, website=None, website_link=None) %}
-	<div class='card my-5'>
+	<div class='card my-5 text-left'>
 		<div class='card-body'>
 			<div class="media ">
 			  <img class="mr-3 greyscale rounded-circle"
@@ -7,7 +7,7 @@
 			  	alt="{{ title }}" style='max-width: 100px'>
 			  <div class="media-body">
 			    <h5 class="mt-0">{{ title }}{% if website %},
-					<a href='{{ website_link }}'>{{ website }}</a>
+					<a class='small' href='{{ website_link }}'>{{ website }}</a>
 					{% endif %}
 				</h5>
 				"{{ content}}"
