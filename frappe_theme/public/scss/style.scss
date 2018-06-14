@@ -72,6 +72,12 @@ p, .page-content-wrapper li {
 	}
 }
 
+@media (max-width: 840px) {
+	.navbar-brand {
+		margin-left: 15px;
+	}
+}
+
 .img-box {
 	width: 100px;
 	height: 100px;
