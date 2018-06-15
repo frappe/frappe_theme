@@ -55,6 +55,7 @@ p, .page-content-wrapper li {
 
 .navbar-brand {
 	font-weight: 600;
+	margin-left: -15px;
 
 	img {
 		width: 30px;
@@ -67,7 +68,12 @@ p, .page-content-wrapper li {
 
 @media (max-width: 840px) {
 	.navbar-brand {
-		margin-left: 15px;
+		margin-left: 1rem;
+	}
+
+	.page-content-wrapper {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 }
 
