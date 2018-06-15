@@ -102,11 +102,18 @@ p, .page-content-wrapper li {
 }
 
 .splash {
+	background-color: $gray-400;
 	background-position: center;
 	background-size: cover;
 	filter: grayscale(1);
 	min-height: 300px;
+	transition: filter 0.3s ease-in;
 }
+
+.splash:hover {
+	filter: grayscale(0);
+}
+
 
 .top-section.after-splash, .section-padding.after-splash {
 	padding-top: 3rem;
