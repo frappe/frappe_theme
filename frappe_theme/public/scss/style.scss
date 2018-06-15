@@ -16,13 +16,6 @@ $text-muted: $gray-600;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
-$navbar-light-color:                rgba($body-color, .5);
-$navbar-light-hover-color:          rgba($body-color, .7);
-$navbar-light-active-color:         rgba($body-color, .9);
-$navbar-light-disabled-color:       rgba($body-color, .3);
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-light-toggler-border-color: rgba($body-color, .1);
-
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
@@ -52,8 +45,7 @@ p, .page-content-wrapper li {
 }
 
 .navbar {
-	background-color: $gray-100;
-	border-bottom: 1px solid $border-color;
+	border-bottom: 0;
 	padding: 0.5rem 0;
 }
 
@@ -101,6 +93,16 @@ p, .page-content-wrapper li {
 			max-width: 75%;
 		}
 	}
+}
+
+.splash {
+	background-size: cover;
+	filter: grayscale(1);
+	min-height: 300px;
+}
+
+.top-section.after-splash, .section-padding.after-splash {
+	padding-top: 3rem;
 }
 
 .section-bg {
@@ -155,12 +157,7 @@ a.btn, a.card, a.no-decoration {
 
 	h2, h3, h4 {
 		line-height: 1.8;
-		margin-bottom: 1rem;
 	}
-}
-
-.dropdown-item:hover, .dropdown-item:focus {
-	background-color: $gray-600;
 }
 
 .dropdown-item.active,
@@ -460,12 +457,12 @@ img,
 }
 
 .greyscale {
-//	filter: grayscale(100);
-//	transition: filter 0.3s ease-in;
+	filter: grayscale(100);
+	transition: filter 0.3s ease-in;
 }
 
 .greyscale:hover {
-//	filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 .frappe-hero {
@@ -554,6 +551,11 @@ img,
 body[data-path*="docs/"] {
 	.page-content-wrapper {
 		line-height: 1.7;
+		padding-bottom: 3rem;
+	}
+
+	.navbar {
+		border-bottom: 1px solid $border-color;
 	}
 
 	h1 {
@@ -572,6 +574,10 @@ body[data-path*="docs/"] {
 		margin-top: 2rem;
 	}
 
+	.breadcrumb {
+		padding-left: 0px;
+	}
+
 }
 
 #page-search_docs,
@@ -580,12 +586,13 @@ body[data-path*="docs/"] {
 div[source-type="Generator"][data-doctype="Blog Post"],  {
 	max-width: 840px !important;
 	margin: auto;
-	padding: 3rem 15px;
+	padding-bottom: 3rem;
 
 	.breadcrumb {
 		margin-left: -15px;
 	}
 }
+
 
 #page-search_docs, {
 	.page-content-wrapper {
