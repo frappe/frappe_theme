@@ -87,7 +87,7 @@ p, .page-content-wrapper li {
 	margin-bottom: 2rem;
 }
 
-.section-padding, .top-section {
+section, .section-padding, .top-section {
 	padding: 5rem 0 5rem 0;
 
 	.lead {
@@ -105,13 +105,13 @@ p, .page-content-wrapper li {
 	background-color: $gray-400;
 	background-position: center;
 	background-size: cover;
-	filter: grayscale(1);
+//	filter: grayscale(1);
 	min-height: 300px;
 	transition: filter 0.3s ease-in;
 }
 
 .splash:hover {
-	filter: grayscale(0);
+//	filter: grayscale(0);
 }
 
 
@@ -441,7 +441,7 @@ img,
 	font-size: 0.75rem;
 }
 
-.hidden {
+.hidden, .hide {
 	display: none;
 }
 
