@@ -1,0 +1,21 @@
+{% set next_item = None %}
+{% for item in sidebar_items %}
+    {% set prev_item = sidebar_items[loop.index - 2] or None %}
+    {% set next_item = sidebar_items[loop.index] or None %}
+
+    {% if item.route == '/' + route %}
+    <div class="d-flex justify-content-between">
+        <span>
+            {% if prev_item and not loop.first %}
+            ← <a href="{{ prev_item.route  }}">{{ prev_item.title }} </a>
+            {% endif %}
+        </span>
+
+        <span>
+            {% if next_item and not loop.last %}
+            <a href="{{ next_item.route  }}">{{ next_item.title }} </a> →
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+{% endfor %}

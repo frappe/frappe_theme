@@ -1,0 +1,54 @@
+{% macro render_item(item) %}
+{% if item.child_items %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+  	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ item.label }}
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	  {% for child in item.child_items %}
+		  <a class="dropdown-item small" href="{{ (child.url or '')|abs_url }}"
+			  {{ child.target or ''}}>
+			  {{ child.label }}</a>
+	  {% endfor %}
+  </div>
+
+<li>
+{% else %}
+	<li class="nav-item">
+		<a class="nav-link" href="{{ (item.url or '')|abs_url }}"
+			{{ item.target or ''}}>
+			{{ item.label }}
+		</a>
+	</li>
+{% endif %}
+
+{% endmacro %}
+
+<nav class="navbar navbar-expand-lg navbar-light">
+	<div class="container">
+	<a class="navbar-brand" href="{{ url_prefix }}{{ home_page or "/"}}">
+		<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
+	</a>
+	<button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+  <div class="collapse navbar-collapse mx-3" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+		{%- for item in top_bar_items -%}
+			{% if not item.right and not item.parent_label -%}
+				{{ render_item(item) }}
+			{% endif %}
+		{%- endfor %}
+	</ul>
+    <ul class="navbar-nav ml-auto justify-content-end">
+		{%- for item in top_bar_items -%}
+			{% if item.right and not item.parent_label -%}
+				{{ render_item(item) }}
+			{% endif %}
+		{%- endfor %}
+		{% include("frappe_theme/templates/includes/navbar/navbar_login.html") %}
+	</ul>
+  </div>
+</nav>

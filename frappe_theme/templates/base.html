@@ -1,15 +1,69 @@
-{% extends "frappe/templates/base.html" %}
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
+	<meta name="generator" content="frappe">
+	{% block favicon %}
+	<link rel="shortcut icon"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		type="image/x-icon">
+	<link rel="icon"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		type="image/x-icon">
+	{% endblock %}
+	{%- block head -%}
+	{% block meta_block %}{% endblock %}
+	<link href="/assets/css/frappe-theme-bs4.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font-awesome.css">
+	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/octicons/octicons.css">
+	<link type="text/css" rel="stylesheet" href="/assets/frappe_theme/css/github.css">
+	{% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
+	<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+	{% endif %}
+	<style>
+		{% include "templates/includes/custom.css" %}
+	</style>
+	{%- endblock -%}
+	{%- block head_include %}{{ head_include or "" }}{% endblock -%}
+	{%- block style %}{%- endblock -%}
+	<script>
+	window.frappe = {};
+	frappe.ready_events = [];
+	frappe.ready = function(fn) {
+	frappe.ready_events.push(fn);
+	}
+	window.dev_server = {{ dev_server }};
+	</script>
+</head>
+<body data-path="{{ path }}">
+	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
+	{% block content %}
+	{{ content }}
+	{% endblock %}
+	{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
 
-{% block favicon %}
-    <link rel="icon" href="{{ favicon }}">
-    <link rel="shortcut icon" href="{{ favicon }}">
-{% endblock %}
-
-{% block head_include %}
-    <link href="/assets/frappe_theme/css/frappe_theme.css" rel="stylesheet">
-    <style>{% include "templates/includes/custom.css" %}</style>
-{% endblock %}
-
-{% block content %}
-{{ content }}
-{% endblock %}
+	{% block base_scripts %}
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/assets/frappe_theme/bootstrap-4/js/popper.min.js"></script>
+	<script type="text/javascript" src="/assets/frappe_theme/bootstrap-4/js/bootstrap.min.js"></script>
+	{% endblock %}
+{%- if js_globals is defined %}
+<script>
+	{%- for key, value in js_globals.iteritems() %}
+window.{{ key }} = "{{ value[0] }}";
+{%- endfor -%}
+</script>
+{% endif -%}
+{%- for link in web_include_js %}
+<script type="text/javascript" src="{{ link|abs_url }}"></script>
+{%- endfor -%}
+{%- block script %}{%- endblock %}
+<!-- csrf_token -->
+{%- block body_include %}{{ body_include or "" }}{% endblock -%}
+</body>
+</html>

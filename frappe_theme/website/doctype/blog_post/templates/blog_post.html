@@ -1,0 +1,58 @@
+{% extends "templates/web.html" %}
+{% block meta_block %}
+	{% include "templates/includes/meta_block.html" %}
+{% endblock %}
+
+{% from "templates/includes/media.html" import media %}
+
+{% block page_content %}
+<style>
+	.page-head {display: none;}
+</style>
+<section class='top-section'>
+	<h1>{{ title }}</h1>
+	<p class='lead'>{{ blog_intro }}</p>
+</section>
+<article class="blog-content" itemscope itemtype="http://schema.org/BlogPosting">
+    <!-- begin blog content -->
+    <div class="blog-info">
+	<p class="post-by text-center text-muted">
+	    <span class="indicator gray mx-3">
+			<a href="/blog?blogger={{ blogger }}" class="no-decoration text-muted">
+			{{ _("By") }} {{ blogger_info and blogger_info.full_name or full_name }}</a>
+		</span>
+	    <span class="indicator gray mx-3"> {{ frappe.format_date(published_on) }}</span>
+	    <span class="indicator gray mx-3">
+			<a href="/blog?blog_category={{ blog_category }}"
+				class="no-decoration text-muted">
+			{{ category.title }}</a>
+		</span>
+	    <span class="indicator gray mx-3"> {{ comment_text }}</span>
+	</p>
+    </div>
+    <div itemprop="articleBody" class="longform blog-text">
+	{{ content }}
+    </div>
+    <!-- end blog content -->
+</article>
+{% if blogger_info %}
+{{ media(
+		blogger_info.full_name,
+		blogger_info.bio,
+		blogger_info.avatar or "/assets/frappe/images/default-avatar.png",
+	)
+}}
+{% endif %}
+<div class="border-top mt-4 pt-4 blog-comments">
+    {% include 'templates/includes/comments/comments.html' %}
+</div>
+
+<style>
+	.blog-text {
+		font-size: 18px;
+	}
+</style>
+<script>
+    frappe.ready(function() { frappe.set_search_path("/blog"); })
+</script>
+{% endblock %}

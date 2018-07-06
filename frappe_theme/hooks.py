@@ -11,9 +11,6 @@ app_version = "0.0.1"
 hide_in_installer = True
 home_page = "index"
 
-web_include_css = ["assets/frappe/css/hljs.css"]
-web_include_js = "/assets/frappe/js/lib/highlight.pack.js"
-
 website_context = {
 	"disable_website_theme": True
 }

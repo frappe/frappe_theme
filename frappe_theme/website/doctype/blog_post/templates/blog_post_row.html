@@ -1,0 +1,18 @@
+{%- set post = doc -%}
+<div class="blog-list-item mb-4 col-sm-12">
+
+	<h4 class='mb-0'>
+		<a class="no-decoration" href="/{{ post.route }}">{{ post.title }}</a>
+	</h4>
+	<p class="post-description">{{ post.intro }}</p>
+
+	<div>
+		<p class="small">
+			<a href="/blog?blogger={{ post.blogger }}" class='mr-2 small'>{{ post.full_name }}</a>
+			<span class="text-muted small">{{ frappe.format_date(post.published_on) }}</span>
+		</p>
+	</div>
+
+</div>
+
+
