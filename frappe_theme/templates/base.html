@@ -20,9 +20,9 @@
 	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font-awesome.css">
 	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/octicons/octicons.css">
 	<link type="text/css" rel="stylesheet" href="/assets/frappe_theme/css/github.css">
-	{% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
+	<!-- {% if path == 'login' or template == 'website/doctype/web_form/templates/web_form.html' %}
 	<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
-	{% endif %}
+	{% endif %} -->
 	<style>
 		{% include "templates/includes/custom.css" %}
 	</style>
@@ -65,5 +65,6 @@ window.{{ key }} = "{{ value[0] }}";
 {%- block script %}{%- endblock %}
 <!-- csrf_token -->
 {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+<script type="text/javascript" src="/assets/frappe_theme/js/frappe_theme.js"></script>
 </body>
 </html>

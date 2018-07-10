@@ -522,44 +522,6 @@ img,
 	margin-bottom: 1rem;
 }
 
-.card-flip {
-
-   background: none;
-   border: none;
-   padding: 0;
-
-   .card {
-      backface-visibility: hidden;
-      transition: transform 300ms;
-      transition-timing-function: linear;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-   }
-
-   .card:first-of-type {
-      tranform: rotateY(0deg);
-   }
-
-   .card:last-of-type {
-      transform: rotateY(180deg);
-      // Put this in face with the larger content
-      position: absolute;
-      top: 0;
-      display: flex;
-   }
-
-   &:hover {
-      .card:first-of-type  {
-         transform: rotateY(-180deg);
-      }
-      .card:last-of-type {
-         transform: rotateY(0deg);
-      }
-   }
-
-}
-
 /* documentation styles */
 
 body[data-path*="docs/"] {
@@ -597,7 +559,8 @@ body[data-path*="docs/"] {
 #page-search_docs,
 #page-list,
 .from-markdown,
-div[source-type="Generator"][data-doctype="Blog Post"],  {
+div[source-type="Generator"][data-doctype="Blog Post"],
+div[source-type="Generator"][data-doctype="Web Form"],  {
 	max-width: 840px !important;
 	margin: auto;
 	padding-bottom: 3rem;
@@ -607,6 +570,37 @@ div[source-type="Generator"][data-doctype="Blog Post"],  {
 	}
 }
 
+div[source-type="Generator"][data-doctype="Web Form"],  {
+	.page-header-actions-block {
+		text-align: right;
+	}
+	.page-content-wrapper {
+		@extend .card;
+		@extend .p-4;
+		@extend .my-5;
+		@extend .w-500;
+
+		.help-box {
+			font-size: 14px;
+		}
+	}
+
+	h1 {
+		@extend h3;
+	}
+
+	.btn-default {
+		@extend .btn-secondary;
+	}
+	.btn-primary {
+		@extend .btn-primary;
+	}
+	.like-disabled-input {
+		@extend .p-2;
+		background-color: $gray-200;
+		border-radius: 0.25rem;
+	}
+}
 
 #page-search_docs, {
 	.page-content-wrapper {
@@ -614,4 +608,12 @@ div[source-type="Generator"][data-doctype="Blog Post"],  {
 			font-size: 24px;
 		}
 	}
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 }
