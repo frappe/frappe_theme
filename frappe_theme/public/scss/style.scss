@@ -19,7 +19,7 @@ $yiq-contrasted-threshold: 180;
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
-@import url('https://fonts.googleapis.com/css?family=Hind:400,600');
+@import url('https://fonts.googleapis.com/css?family=Hind:400,500,600');
 @import "../bootstrap-4/scss/bootstrap";
 
 body {
@@ -161,9 +161,9 @@ a.btn, a.card, a.no-decoration {
 .page-content-wrapper {
 	min-height: 500px;
 	line-height: 1.8;
-	p, li {
-		font-size: 18px;
-	}
+	// p, li {
+	// 	font-size: 18px;
+	// }
 
 	a {
 		text-decoration: underline;
@@ -524,36 +524,50 @@ img,
 
 /* documentation styles */
 
-body[data-path*="docs/"] {
-	.page-content-wrapper {
-		line-height: 1.7;
-		padding-bottom: 3rem;
+body[data-path*="docs"] {
+	.container {
+		max-width: 1024px !important;
 	}
+
+	.page_content {
+		line-height: 1.7;
+		padding-left: 5rem;
+		padding-bottom: 3rem;
+
+		a {
+			font-weight: 600;
+			color: var(--primary);
+			text-decoration: none;
+		}
+	}
+
 
 	.navbar {
 		border-bottom: 1px solid $border-color;
 	}
 
-	h1 {
-		font-size: 2.2rem;
+	.navbar-brand img {
+		margin-left: 0.5rem;
+	}
 
-		&:first-child {
-			margin-top: 1rem;
-		}
+	h1 {
+		font-size: 2em;
+		margin: 0 0 1em;
+	}
+
+	h2, h3 {
+		margin-top: 2em;
+		margin-bottom: 1em;
 	}
 
 	h2 {
-		font-size: 1.65rem;
+		font-size: 1.5em;
+		border-bottom: 1px solid $border-color;
 	}
 
-	h1:first-child + p {
-		margin-top: 2rem;
+	h3 {
+		font-size: 1.17em;
 	}
-
-	.breadcrumb {
-		padding-left: 0px;
-	}
-
 }
 
 #page-search_docs,
