@@ -30,6 +30,10 @@ body {
 
 h1, h2, h3, h4, h5 {
 	font-weight: 600;
+
+	a {
+		text-decoration: none !important;
+	}
 }
 
 p, .page-content-wrapper li {
@@ -185,6 +189,10 @@ a.btn, a.card, a.no-decoration {
 
 footer {
 	padding-bottom: 3rem;
+}
+
+.bg-light-yellow {
+	background-color: #fffce7;
 }
 
 /*****************/
