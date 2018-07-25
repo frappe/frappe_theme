@@ -536,7 +536,7 @@ img,
 
 /* documentation styles */
 
-body[data-path*="docs"], body[data-path="docs"] {
+body[data-path*="docs"], body[data-path="docs"], body[data-path*="help"] {
 	.page-content-wrapper {
 		line-height: 1.7;
 		padding-bottom: 3rem;
