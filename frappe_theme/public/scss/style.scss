@@ -555,6 +555,10 @@ body[data-path*="docs"] {
 		margin: 0 0 1em;
 	}
 
+	h1:first-child {
+		margin-top: 1em;
+	}
+
 	h2, h3 {
 		margin-top: 2em;
 		margin-bottom: 1em;
@@ -567,6 +571,11 @@ body[data-path*="docs"] {
 
 	h3 {
 		font-size: 1.17em;
+	}
+
+	img {
+		border: 1px solid $border-color;
+		max-height: 500px;
 	}
 }
 
