@@ -44,6 +44,11 @@
 				{% if add_next_prev_links %}
 				{% include 'templates/includes/next-prev-links.html' %}
 				{% endif %}
+				{% if show_sidebar and template.endswith('.md') %}
+					<a class='text-muted improve-link' target='_blank'
+						href="https://github.com/{{ repo }}/blob/master/{{ repo.split('/')[1] }}/{{ template }}">
+						Improve this page</a>
+				{% endif %}
 			</div>
 		</div>
 	</div>
