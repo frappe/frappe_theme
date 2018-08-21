@@ -31,11 +31,11 @@
 			{%- block page_content -%}{%- endblock -%}
 		</div>
 		<div class="page-footer">
+			{% if add_next_prev_links %}
 			<div class="page-next-prev-links">
-				{% if add_next_prev_links %}
 				{% include 'templates/includes/next-prev-links.html' %}
-				{% endif %}
 			</div>
+			{% endif %}
 		</div>
 	</div>
 {% endmacro %}

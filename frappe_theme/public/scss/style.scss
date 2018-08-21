@@ -556,6 +556,15 @@ body[data-path*="docs"] {
 		border-color: $gray-200;
 	}
 
+	p code {
+		padding: 0.2em 0.4em;
+		background-color: $gray-100;
+		color: $red;
+		font-size: 0.8em;
+		border-radius: 2px;
+		margin: 0 2px;
+	}
+
 	blockquote {
 		margin: 2em 0;
 		padding: 1em 1em 1em 2em;
@@ -570,10 +579,6 @@ body[data-path*="docs"] {
 	h1 {
 		font-size: 2em;
 		margin: 0 0 1em;
-	}
-
-	h1:first-child {
-		margin-top: 1em;
 	}
 
 	h2, h3 {
