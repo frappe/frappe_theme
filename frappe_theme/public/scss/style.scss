@@ -619,6 +619,11 @@ body[data-path*="docs"] {
 	.navbar-brand img {
 		margin-left: 0.5rem;
 	}
+
+	.doc-edit-link {
+		max-width: 840px;
+		margin: 0 auto;
+	}
 }
 
 #page-search_docs,
