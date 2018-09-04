@@ -170,7 +170,7 @@ a.btn, a.card, a.no-decoration {
 	min-height: 500px;
 	line-height: 1.8;
 	p, li {
-		font-size: 18px;
+		font-size: 16px;
 	}
 
 	a {
@@ -536,7 +536,10 @@ img,
 
 /* documentation styles */
 
-body[data-path*="docs"], body[data-path="docs"], body[data-path*="help"] {
+body[data-path*="docs"],
+body[data-path*="features"],
+body[data-path="docs"],
+body[data-path*="help"] {
 	.page-content-wrapper {
 		line-height: 1.7;
 		padding-bottom: 3rem;
@@ -653,6 +656,7 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 	.page-content-wrapper {
 		h1 {
 			font-size: 24px;
+			margin-top: 2rem;
 		}
 	}
 }
@@ -667,4 +671,14 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 
 .sidebar-item {
 	font-size: 14px;
+}
+
+blockquote {
+	font-size: 16px;
+	padding: 0.5rem;
+	background-color: $gray-200;
+
+	p {
+		margin: 0;
+	}
 }
