@@ -31,6 +31,10 @@ body {
 
 h1, h2, h3, h4, h5 {
 	font-weight: 600;
+
+	a {
+		text-decoration: none !important;
+	}
 }
 
 p, .page-content-wrapper li {
@@ -48,15 +52,19 @@ p, .page-content-wrapper li {
 .navbar {
 	border-bottom: 0;
 	padding: 0.5rem 0;
+
+	.container {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
-.logged-in {
-	margin: -2px 0px;
+.logged-in .avatar {
+	margin-top: -4px;
 }
 
 .navbar-brand {
 	font-weight: 600;
-	margin-left: -15px;
 
 	img {
 		width: 30px;
@@ -194,6 +202,10 @@ a.btn, a.card, a.no-decoration {
 
 footer {
 	padding-bottom: 3rem;
+}
+
+.bg-light-yellow {
+	background-color: #fffce7;
 }
 
 /*****************/
@@ -483,14 +495,14 @@ img,
 	border-radius: 4px;
 }
 
-.greyscale {
-	filter: grayscale(100);
-	transition: filter 0.3s ease-in;
-}
-
-.greyscale:hover {
-	filter: grayscale(0);
-}
+//.greyscale {
+//	filter: grayscale(100);
+//	transition: filter 0.3s ease-in;
+//}
+//
+//.greyscale:hover {
+//	filter: grayscale(0);
+//}
 
 .frappe-hero {
 	max-width: 375px;
@@ -537,12 +549,12 @@ img,
 
 /* documentation styles */
 
-body[data-path*="docs"] {
+body[data-path*="docs"], body[data-path="docs"], body[data-path*="help"] {
 	.container {
 		max-width: 1024px !important;
 	}
 
-	.page_content {
+	.page-content-wrapper {
 		line-height: 1.7;
 	}
 
@@ -620,11 +632,51 @@ body[data-path*="docs"] {
 		margin-left: 0.5rem;
 	}
 
+	.breadcrumb {
+		padding-left: 0px;
+		margin-bottom: -1rem;
+	}
+
+	.breadcrumb-item {
+		font-size: 14px;
+		margin-top: 0.5rem;
+	}
+
 	.doc-edit-link {
 		max-width: 840px;
 		margin: 0 auto;
 	}
+
+	img + em {
+		display: block;
+		text-align: center;
+	}
 }
+
+
+// no sidebar for mobile
+@media (max-width: 576px) {
+	.sidebar-column {
+		display: none;
+	}
+}
+
+// left-padding for sidebar content
+@media (min-width: 577px) {
+	.main-column {
+		.page-content-wrapper {
+			padding-left: 1rem;
+		}
+	}
+}
+
+// no padding for large screens
+@media (min-width: 840px) {
+	.sidebar-column {
+		padding-left: 0px;
+	}
+}
+
 
 #page-search_docs,
 #page-list,
@@ -638,6 +690,10 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 	.breadcrumb {
 		margin-left: -15px;
 	}
+}
+
+.from-markdown {
+	@extend .py-4;
 }
 
 div[source-type="Generator"][data-doctype="Web Form"],  {
@@ -686,4 +742,8 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
+}
+
+.sidebar-item {
+	font-size: 14px;
 }
