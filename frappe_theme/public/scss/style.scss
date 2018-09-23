@@ -568,7 +568,7 @@ body[data-path*="docs"], body[data-path="docs"], body[data-path*="help"] {
 		border-color: $gray-200;
 	}
 
-	p code {
+	p code, li code {
 		padding: 0.2em 0.4em;
 		background-color: $gray-100;
 		color: $red;
