@@ -19,11 +19,11 @@ $yiq-contrasted-threshold: 180;
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
-@import url('https://fonts.googleapis.com/css?family=Hind:400,600');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
 @import "../bootstrap-4/scss/bootstrap";
 
 body {
-	font-family: 'Hind';
+	font-family: 'Fira Sans';
 	font-size: 16px;
 	overflow-x: hidden;
 }
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5 {
 }
 
 p, .page-content-wrapper li {
-	font-size: 16px;
+//	font-size: 16px;
 }
 
 .lead {
@@ -170,7 +170,7 @@ a.btn, a.card, a.no-decoration {
 	min-height: 500px;
 	line-height: 1.8;
 	p, li {
-		font-size: 16px;
+//		font-size: 16px;
 	}
 
 	a {
@@ -571,7 +571,7 @@ body[data-path*="help"] {
 	}
 
 	.breadcrumb-item {
-		font-size: 14px;
+//		font-size: 14px;
 		margin-top: 0.5rem;
 	}
 
@@ -631,7 +631,7 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 		@extend .w-500;
 
 		.help-box {
-			font-size: 14px;
+//			font-size: 14px;
 		}
 	}
 
@@ -655,7 +655,7 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 #page-search_docs, {
 	.page-content-wrapper {
 		h1 {
-			font-size: 24px;
+//			font-size: 24px;
 			margin-top: 2rem;
 		}
 	}
@@ -670,11 +670,11 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 }
 
 .sidebar-item {
-	font-size: 14px;
+//	font-size: 14px;
 }
 
 blockquote {
-	font-size: 16px;
+//	font-size: 16px;
 	padding: 0.5rem;
 	background-color: $gray-200;
 
