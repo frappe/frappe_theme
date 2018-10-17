@@ -24,7 +24,7 @@
 	<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
 	{% endif %} -->
 	<style>
-		{% include "templates/includes/custom.css" %}
+		{% include "templates/includes/custom.css" ignore missing %}
 	</style>
 	{%- endblock -%}
 	{%- block head_include %}{{ head_include or "" }}{% endblock -%}
