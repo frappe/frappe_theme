@@ -20,15 +20,17 @@ $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 @import "../bootstrap-4/scss/bootstrap";
 
 body {
-	font-family: 'Fira Sans';
+	font-family: 'Source Sans Pro';
 	font-size: 16px;
 	overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
+	font-family: 'Fira Sans';
 	font-weight: 600;
 
 	a {
