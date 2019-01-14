@@ -39,7 +39,10 @@
 	</script>
 </head>
 <body data-path="{{ path }}">
-	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
+	{% block navbar %}
+		{% include "templates/includes/navbar/navbar.html" %}
+	{% endblock -%}
+	{% block subnav %}{% endblock %}
 	{% block content %}
 	{{ content }}
 	{% endblock %}
