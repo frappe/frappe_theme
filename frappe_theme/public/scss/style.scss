@@ -1,6 +1,6 @@
 $gray-100: #fafbfc;
 $gray-150: #f5f7fa;
-$gray-200: #E9E9EE;
+$gray-200: #ebecf1;
 $gray-300: #d1d8dd;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
@@ -17,7 +17,8 @@ $text-muted: $gray-600;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
-$card-border-color: $gray-300;
+$border-color: $gray-200;
+$card-border-color: $gray-200;
 $card-cap-bg: $gray-100;
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
@@ -81,6 +82,7 @@ p, .page-content-wrapper li {
 	top: 0;
 	z-index: 500;
 	background-color: $white;
+	border-bottom: 1px solid $gray-200;
 
 	.subnav-title {
 		font-weight: normal;
@@ -90,6 +92,14 @@ p, .page-content-wrapper li {
 	img {
 		width: 30px;
 		height: 30px;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+	}
+
+	.navbar-item {
+		padding-right: 15px;
 	}
 }
 
@@ -160,18 +170,13 @@ section, .section-padding, .top-section {
 }
 
 .section-bg {
-	background-color: $gray-800;
+	background-color: $gray-150;
 
-	color: $gray-100;
-
-	a, .lead, .text-muted {
-		color: $gray-100 !important;
-	}
-
-	.btn-light {
-		color: $body-color !important;
+	code.hljs {
+		background-color: $white;
 	}
 }
+
 
 .top-section {
 	padding: 6rem 0rem;
@@ -179,8 +184,6 @@ section, .section-padding, .top-section {
 }
 
 .card {
-//	border-top-width: 7px;
-	border-color: $gray-800;
 	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -203,6 +206,10 @@ section, .section-padding, .top-section {
 	margin: auto;
 }
 
+.w-600 {
+	max-width: 600px;
+	margin: auto;
+}
 
 .mt-large {
 	margin-top: 10rem !important;
@@ -525,6 +532,7 @@ img,
 }
 
 .hljs {
+	background-color: $gray-100;
 	border: 1px solid $border-color;
 	padding: 1.25rem 1.5rem;
 	border-radius: 4px;
@@ -666,6 +674,12 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 
 .from-markdown {
 	@extend .py-4;
+	padding-bottom: 4rem !important;
+
+	.section-padding {
+		padding-bottom: 1em;
+	}
+
 }
 
 div[source-type="Generator"][data-doctype="Web Form"],  {
@@ -676,7 +690,7 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 		@extend .card;
 		@extend .p-4;
 		@extend .my-5;
-		@extend .w-500;
+		@extend .w-600;
 
 		.help-box {
 //			font-size: 14px;
