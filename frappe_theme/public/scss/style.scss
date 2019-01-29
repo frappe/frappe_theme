@@ -29,6 +29,7 @@ body {
 	font-family: 'Source Sans Pro';
 	font-size: 16px;
 	overflow-x: hidden;
+	background-color: $gray-150;
 }
 
 h1, h2, h3, h4, h5 {
@@ -38,6 +39,10 @@ h1, h2, h3, h4, h5 {
 	a {
 		text-decoration: none !important;
 	}
+}
+
+.page-wrapper {
+	background-color: #fff;
 }
 
 p, .page-content-wrapper li {
@@ -83,6 +88,7 @@ p, .page-content-wrapper li {
 	z-index: 500;
 	background-color: $white;
 	border-bottom: 1px solid $gray-200;
+	padding: 1rem 0;
 
 	.subnav-title {
 		font-weight: normal;
@@ -108,6 +114,7 @@ p, .page-content-wrapper li {
 }
 
 .navbar-brand {
+	padding: 0px;
 	font-weight: 600;
 	font-family: 'Fira Sans';
 
@@ -242,7 +249,7 @@ a.btn, a.card, a.no-decoration {
 
 footer {
 	border-top: 1px solid $border-color;
-	background-color: $gray-100;
+	background-color: $gray-150;
 	padding-bottom: 3rem;
 }
 
@@ -732,7 +739,7 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 }
 
 .sidebar-item {
-//	font-size: 14px;
+	font-size: 14px;
 }
 
 blockquote {
