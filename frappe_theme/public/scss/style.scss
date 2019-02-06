@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Fira Sans';
-	font-weight: 600;
+	font-weight: 700;
 
 	a {
 		text-decoration: none !important;
@@ -178,6 +178,7 @@ section, .section-padding, .top-section {
 
 .section-bg {
 	background-color: $gray-150;
+	border: 1px solid $border-color;
 
 	code.hljs {
 		background-color: $white;
@@ -689,14 +690,15 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 
 }
 
-div[source-type="Generator"][data-doctype="Web Form"],  {
+div[source-type="Generator"][data-doctype="Web Form"] {
+	@extend .py-5;
+
 	.page-header-actions-block {
 		text-align: right;
 	}
 	.page-content-wrapper {
 		@extend .card;
 		@extend .p-4;
-		@extend .my-5;
 		@extend .w-600;
 
 		.help-box {
@@ -728,6 +730,17 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 			margin-top: 2rem;
 		}
 	}
+}
+
+// bs3 -> bs4 for web form
+.has-error {
+	input {
+		@extend .is-invalid;
+	}
+}
+
+.control-value {
+	min-height: 44px;
 }
 
 .centered {

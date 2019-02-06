@@ -6,6 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
 	<meta name="generator" content="frappe">
+
+	{% for key in meta %}
+	{% if meta[key] %}<meta name="{{ key }}" content="{{ meta[key] }}" />{% endif %}
+	{% endfor %}
+
 	{% block favicon %}
 	<link rel="shortcut icon"
 		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
