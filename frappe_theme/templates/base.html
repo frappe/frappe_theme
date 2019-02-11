@@ -7,9 +7,11 @@
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
 	<meta name="generator" content="frappe">
 
-	{% for key in meta %}
-	{% if meta[key] %}<meta name="{{ key }}" content="{{ meta[key] }}" />{% endif %}
-	{% endfor %}
+	{% if meta_tags %}
+		{% for key in meta_tags %}
+		{% if meta_tags[key] %}<meta name="{{ key }}" content="{{ meta_tags[key] }}" />{% endif %}
+		{% endfor %}
+	{% endif %}
 
 	{% block favicon %}
 	<link rel="shortcut icon"
@@ -41,6 +43,7 @@
 	frappe.ready_events.push(fn);
 	}
 	window.dev_server = {{ dev_server }};
+	window.socketio_port = {{ frappe.socketio_port }};
 	</script>
 </head>
 <body data-path="{{ path }}">
