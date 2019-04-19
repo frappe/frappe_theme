@@ -16,6 +16,7 @@
 	{% endblock %}
 	{%- block head -%}
 	{% block meta_block %}{% endblock %}
+	{%- block style %}{%- endblock -%}
 	<link href="/assets/css/frappe-theme-bs4.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font-awesome.css">
 	<link type="text/css" rel="stylesheet" href="/assets/frappe/css/octicons/octicons.css">
@@ -28,7 +29,6 @@
 	</style>
 	{%- endblock -%}
 	{%- block head_include %}{{ head_include or "" }}{% endblock -%}
-	{%- block style %}{%- endblock -%}
 	<script>
 	window.frappe = {};
 	frappe.ready_events = [];
