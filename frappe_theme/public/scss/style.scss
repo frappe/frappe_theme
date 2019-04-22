@@ -21,20 +21,21 @@ $border-color: $gray-200;
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+// @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 @import "../bootstrap-4/scss/bootstrap";
+@import "/assets/frappe_theme/css/inter.css";
 
 body {
-	font-family: 'Source Sans Pro';
-	font-size: 16px;
+	font-family: 'Inter';
+	font-size: 15px;
 	overflow-x: hidden;
-	background-color: $gray-150;
+	font-weight: 400;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Fira Sans';
-	font-weight: 700;
+	font-family: 'Inter';
+	font-weight: 500;
 
 	a {
 		text-decoration: none !important;
@@ -55,6 +56,7 @@ p, .page-content-wrapper li {
 
 .lead {
 	line-height: 1.5;
+	font-weight: 400;
 }
 
 .container {
@@ -72,8 +74,8 @@ p, .page-content-wrapper li {
 }
 
 .mainnav {
-	background-color: $gray-150;
-	border-bottom: 1px solid $gray-200;
+	// background-color: $gray-150;
+	// border-bottom: 1px solid $gray-200;
 
 	img {
 		padding-top: 2px;
@@ -87,6 +89,7 @@ p, .page-content-wrapper li {
 	top: 0;
 	z-index: 500;
 	background-color: $white;
+	border-top: 1px solid $gray-200;
 	border-bottom: 1px solid $gray-200;
 	padding: 1rem 0;
 
@@ -116,7 +119,7 @@ p, .page-content-wrapper li {
 .navbar-brand {
 	padding: 0px;
 	font-weight: 600;
-	font-family: 'Fira Sans';
+	// font-family: 'Fira Sans';
 
 	img {
 		width: 30px;
@@ -196,7 +199,12 @@ section, .section-padding, .top-section {
 }
 
 .card-body {
-	line-height: 1.8;
+	line-height: 1.7;
+	color: $text-muted;
+
+	.card-title, h2, h3, h4, h5, h6 {
+		color: $body-color;
+	}
 }
 
 .w-400 {
@@ -224,9 +232,9 @@ a.btn, a.card, a.no-decoration {
 
 .page-content-wrapper {
 	min-height: 500px;
-	line-height: 1.8;
 	p, li {
 //		font-size: 16px;
+		line-height: 1.8;
 	}
 
 	a {
@@ -234,12 +242,12 @@ a.btn, a.card, a.no-decoration {
 	}
 
 	h2, h3, h4 {
-		line-height: 1.8;
+		line-height: 1.5;
 	}
 }
 
 .dropdown-item {
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .dropdown-item.active,
@@ -680,22 +688,19 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 }
 
 .from-markdown {
-<<<<<<< HEAD
-=======
-	@extend .py-4;
->>>>>>> subnav
 	padding-bottom: 4rem !important;
 
 	.section-padding {
 		padding-bottom: 1em;
 	}
 
-<<<<<<< HEAD
 	h2 {
 		@extend .mt-5;
 	}
-=======
->>>>>>> subnav
+
+	h3, h4, h5 {
+		@extend .mt-4;
+	}
 }
 
 div[source-type="Generator"][data-doctype="Web Form"] {
@@ -765,7 +770,7 @@ div[source-type="Generator"][data-doctype="Web Form"] {
 }
 
 .sidebar-item {
-	font-size: 14px;
+	font-size: 13px;
 }
 
 blockquote {
