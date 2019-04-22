@@ -6,6 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
 	<meta name="generator" content="frappe">
+
+	{% if meta_tags %}
+		{% for key in meta_tags %}
+		{% if meta_tags[key] %}<meta name="{{ key }}" content="{{ meta_tags[key] }}" />{% endif %}
+		{% endfor %}
+	{% endif %}
+
 	{% block favicon %}
 	<link rel="shortcut icon"
 		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
@@ -36,13 +43,19 @@
 	frappe.ready_events.push(fn);
 	}
 	window.dev_server = {{ dev_server }};
+	window.socketio_port = {{ frappe.socketio_port }};
 	</script>
 </head>
 <body data-path="{{ path }}">
-	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
+	{% block navbar %}
+		{% include "templates/includes/navbar/navbar.html" %}
+	{% endblock -%}
+	{% block subnav %}{% endblock %}
+	<div class='page-wrapper'>
 	{% block content %}
 	{{ content }}
 	{% endblock %}
+	</div>
 	{%- block footer -%}{% include "templates/includes/footer/footer.html" %}{%- endblock -%}
 
 	{% block base_scripts %}
