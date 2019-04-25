@@ -1,5 +1,6 @@
 $gray-100: #fafbfc;
-$gray-200: #E9E9EE;
+$gray-150: #f5f7fa;
+$gray-200: #ebecf1;
 $gray-300: #d1d8dd;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
@@ -16,34 +17,43 @@ $text-muted: $gray-600;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
+$border-color: $gray-200;
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 @import "../bootstrap-4/scss/bootstrap";
+@import "/assets/frappe_theme/css/inter.css";
 
 body {
-	font-family: 'Source Sans Pro';
-	font-size: 16px;
+	font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-size: 15px;
 	overflow-x: hidden;
+	font-weight: 400;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Fira Sans';
-	font-weight: 600;
+	font-weight: 500;
 
 	a {
 		text-decoration: none !important;
 	}
 }
 
+.page-wrapper {
+	background-color: #fff;
+}
+
 p, .page-content-wrapper li {
 //	font-size: 16px;
 }
 
+.btn:hover {
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .11), 0 5px 10px 0 rgba(0, 0, 0, .08);
+}
+
 .lead {
 	line-height: 1.5;
+	font-weight: 400;
 }
 
 .container {
@@ -51,12 +61,55 @@ p, .page-content-wrapper li {
 }
 
 .navbar {
-	border-bottom: 0;
-	padding: 0.5rem 0;
+	padding: 0.2rem 0;
 
 	.container {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+
+	.nav-link {
+		color: $text-muted !important;
+	}
+
+}
+
+.mainnav {
+	// background-color: $gray-150;
+	// border-bottom: 1px solid $gray-200;
+
+	img {
+		padding-top: 2px;
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.subnav {
+	position: sticky;
+	top: 0;
+	z-index: 500;
+	background-color: $white;
+	border-top: 1px solid $gray-200;
+	border-bottom: 1px solid $gray-200;
+	padding: 1rem 0;
+
+	.subnav-title {
+		font-weight: normal;
+		font-size: 1rem;
+	}
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+	}
+
+	.navbar-item {
+		padding-right: 15px;
 	}
 }
 
@@ -65,8 +118,9 @@ p, .page-content-wrapper li {
 }
 
 .navbar-brand {
+	padding: 0px;
 	font-weight: 600;
-	font-family: 'Fira Sans';
+	// font-family: 'Fira Sans';
 
 	img {
 		width: 30px;
@@ -104,7 +158,8 @@ section, .section-padding, .top-section {
 	.lead {
 		color: $text-muted;
 		max-width: 100%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 
 		@media (min-width: 576px) {
 			max-width: 75%;
@@ -116,13 +171,8 @@ section, .section-padding, .top-section {
 	background-color: $gray-400;
 	background-position: center;
 	background-size: cover;
-//	filter: grayscale(1);
 	min-height: 300px;
 	transition: filter 0.3s ease-in;
-}
-
-.splash:hover {
-//	filter: grayscale(0);
 }
 
 
@@ -131,10 +181,14 @@ section, .section-padding, .top-section {
 }
 
 .section-bg {
-	background-color: $gray-100;
-	border-top: 1px solid $border-color;
-	border-bottom: 1px solid $border-color;
+	background-color: $gray-150;
+	border: 1px solid $border-color;
+
+	code.hljs {
+		background-color: $white;
+	}
 }
+
 
 .top-section {
 	padding: 6rem 0rem;
@@ -142,12 +196,16 @@ section, .section-padding, .top-section {
 }
 
 .card {
-//	border-top-width: 7px;
 	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
-	line-height: 1.8;
+	line-height: 1.7;
+	color: $text-muted;
+
+	.card-title, h2, h3, h4, h5, h6 {
+		color: $body-color;
+	}
 }
 
 .w-400 {
@@ -160,6 +218,10 @@ section, .section-padding, .top-section {
 	margin: auto;
 }
 
+.w-600 {
+	max-width: 600px;
+	margin: auto;
+}
 
 .mt-large {
 	margin-top: 10rem !important;
@@ -171,9 +233,9 @@ a.btn, a.card, a.no-decoration {
 
 .page-content-wrapper {
 	min-height: 500px;
-	line-height: 1.8;
 	p, li {
 //		font-size: 16px;
+		line-height: 1.8;
 	}
 
 	a {
@@ -181,8 +243,12 @@ a.btn, a.card, a.no-decoration {
 	}
 
 	h2, h3, h4 {
-		line-height: 1.8;
+		line-height: 1.5;
 	}
+}
+
+.dropdown-item {
+	font-size: 13px;
 }
 
 .dropdown-item.active,
@@ -191,6 +257,8 @@ a.btn, a.card, a.no-decoration {
 }
 
 footer {
+	border-top: 1px solid $border-color;
+	background-color: $gray-150;
 	padding-bottom: 3rem;
 }
 
@@ -480,6 +548,7 @@ img,
 }
 
 .hljs {
+	background-color: $gray-100;
 	border: 1px solid $border-color;
 	padding: 1.25rem 1.5rem;
 	border-radius: 4px;
@@ -620,18 +689,31 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 }
 
 .from-markdown {
-	@extend .py-4;
+	padding-bottom: 4rem !important;
+
+	.section-padding {
+		padding-bottom: 1em;
+	}
+
+	h2 {
+		@extend .mt-5;
+	}
+
+	h3, h4, h5 {
+		@extend .mt-4;
+	}
 }
 
-div[source-type="Generator"][data-doctype="Web Form"],  {
+div[source-type="Generator"][data-doctype="Web Form"] {
+	@extend .py-5;
+
 	.page-header-actions-block {
 		text-align: right;
 	}
 	.page-content-wrapper {
 		@extend .card;
 		@extend .p-4;
-		@extend .my-5;
-		@extend .w-500;
+		@extend .w-600;
 
 		.help-box {
 //			font-size: 14px;
@@ -653,6 +735,11 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 		background-color: $gray-200;
 		border-radius: 0.25rem;
 	}
+	.form-section-heading {
+		font-weight: bold;
+		font-size: 1.5em;
+		margin-top: 1em;
+	}
 }
 
 #page-search_docs, {
@@ -664,6 +751,17 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 	}
 }
 
+// bs3 -> bs4 for web form
+.has-error {
+	input {
+		@extend .is-invalid;
+	}
+}
+
+.control-value {
+	min-height: 44px;
+}
+
 .centered {
 	position: absolute;
 	top: 50%;
@@ -673,7 +771,7 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 }
 
 .sidebar-item {
-//	font-size: 14px;
+	font-size: 13px;
 }
 
 blockquote {
