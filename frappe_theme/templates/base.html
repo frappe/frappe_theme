@@ -46,7 +46,7 @@
 	window.socketio_port = {{ frappe.socketio_port }};
 	</script>
 </head>
-<body data-path="{{ path }}">
+<body data-path="{{ path | e }}">
 	{% block navbar %}
 		{% include "templates/includes/navbar/navbar.html" %}
 	{% endblock -%}
