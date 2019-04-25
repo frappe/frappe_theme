@@ -38,7 +38,7 @@
 	window.dev_server = {{ dev_server }};
 	</script>
 </head>
-<body data-path="{{ path }}">
+<body data-path="{{ path | e }}">
 	{%- block navbar -%}{% include "templates/includes/navbar/navbar.html" %}{%- endblock -%}
 	{% block content %}
 	{{ content }}

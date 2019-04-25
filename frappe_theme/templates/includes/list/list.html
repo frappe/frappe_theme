@@ -7,7 +7,7 @@
     		{{ no_result_message or _("Nothing to show") }}
     </div>
 {% else %}
-    <div class="website-list" data-doctype="{{ doctype }}" data-txt="{{ txt or '[notxt]' }}">
+    <div class="website-list" data-doctype="{{ doctype }}" data-txt="{{ txt or '[notxt]' | e }}">
         <!-- {% if not hide_filters -%}
             {% include "templates/includes/list/filters.html" %}
         {%- endif %} -->
