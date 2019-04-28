@@ -90,6 +90,7 @@ p, .page-content-wrapper li {
 	top: 0;
 	z-index: 500;
 	background-color: $white;
+	margin-top: -1px;
 	border-top: 1px solid $gray-200;
 	border-bottom: 1px solid $gray-200;
 	padding: 1rem 0;
@@ -606,6 +607,17 @@ img,
 	margin-bottom: 1rem;
 }
 
+body[data-path="blog"] {
+	.page-breadcrumbs {
+		display: none;
+	}
+
+	h1 {
+		margin: 1em 0 1em 0;
+	}
+}
+
+
 /* documentation styles */
 
 body[data-path*="docs"],
@@ -655,6 +667,10 @@ body[data-path*="help"] {
 	.sidebar-column {
 		display: none;
 	}
+
+	h1 {
+		font-size: 2.2em;
+	}
 }
 
 // left-padding for sidebar content
@@ -673,12 +689,20 @@ body[data-path*="help"] {
 	}
 }
 
+.website-list {
+	margin: -15px;
+}
+
+.blog-content {
+	max-width: 600px;
+	margin: auto;
+}
 
 #page-search_docs,
 #page-list,
 .from-markdown,
 div[source-type="Generator"][data-doctype="Blog Post"],
-div[source-type="Generator"][data-doctype="Web Form"],  {
+div[source-type="Generator"][data-doctype="Web Form"] {
 	max-width: 840px !important;
 	margin: auto;
 	padding-bottom: 3rem;
@@ -686,9 +710,6 @@ div[source-type="Generator"][data-doctype="Web Form"],  {
 	.breadcrumb {
 		margin-left: -15px;
 	}
-}
-
-.from-markdown {
 	padding-bottom: 4rem !important;
 
 	.section-padding {
@@ -742,7 +763,7 @@ div[source-type="Generator"][data-doctype="Web Form"] {
 	}
 }
 
-#page-search_docs, {
+#page-search_docs {
 	.page-content-wrapper {
 		h1 {
 //			font-size: 24px;
