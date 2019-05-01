@@ -43,10 +43,6 @@ h1, h2, h3, h4, h5 {
 	background-color: #fff;
 }
 
-p, .page-content-wrapper li {
-//	font-size: 16px;
-}
-
 .btn:hover {
 	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .11), 0 5px 10px 0 rgba(0, 0, 0, .08);
 }
@@ -61,7 +57,11 @@ p, .page-content-wrapper li {
 }
 
 .navbar {
-	padding: 0.2rem 0;
+	padding: 0.5rem 0;
+
+	.navbar-toggler {
+		border: 0px;
+	}
 
 	.container {
 		padding-left: 0px;
@@ -76,7 +76,7 @@ p, .page-content-wrapper li {
 
 .mainnav {
 	// background-color: $gray-150;
-	// border-bottom: 1px solid $gray-200;
+	border-bottom: 1px solid $gray-200;
 
 	img {
 		padding-top: 2px;
@@ -90,8 +90,6 @@ p, .page-content-wrapper li {
 	top: 0;
 	z-index: 500;
 	background-color: $white;
-	margin-top: -1px;
-	border-top: 1px solid $gray-200;
 	border-bottom: 1px solid $gray-200;
 	padding: 1rem 0;
 
@@ -705,7 +703,7 @@ div[source-type="Generator"][data-doctype="Blog Post"],
 div[source-type="Generator"][data-doctype="Web Form"] {
 	max-width: 840px !important;
 	margin: auto;
-	padding-bottom: 3rem;
+	padding: 3rem 0px;
 
 	.breadcrumb {
 		margin-left: -15px;
@@ -722,6 +720,12 @@ div[source-type="Generator"][data-doctype="Web Form"] {
 
 	h3, h4, h5 {
 		@extend .mt-4;
+	}
+}
+
+.main-column {
+	.from-markdown {
+		padding-top: none;
 	}
 }
 
