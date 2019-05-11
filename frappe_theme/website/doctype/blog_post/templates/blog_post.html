@@ -16,21 +16,11 @@
 <article class="blog-content" itemscope itemtype="http://schema.org/BlogPosting">
     <!-- begin blog content -->
     <div class="blog-info">
-	<p class="post-by text-center text-muted">
-	    <span class="indicator gray mx-3">
-			<a href="/blog?blogger={{ blogger }}" class="no-decoration text-muted">
-			{{ _("By") }} {{ blogger_info and blogger_info.full_name or full_name }}</a>
-		</span>
-	    <span class="indicator gray mx-3"> {{ frappe.format_date(published_on) }}</span>
-	    <span class="indicator gray mx-3">
-			<a href="/blog?blog_category={{ blog_category }}"
-				class="no-decoration text-muted">
-			{{ category.title }}</a>
-		</span>
-	    <span class="indicator gray mx-3"> {{ comment_text }}</span>
+	<p class="text-muted">
+	    {{ frappe.format_date(published_on) }}
 	</p>
     </div>
-    <div itemprop="articleBody" class="longform blog-text">
+    <div itemprop="articleBody" class="longform blog-text mb-5">
 	{{ content }}
     </div>
     <!-- end blog content -->
