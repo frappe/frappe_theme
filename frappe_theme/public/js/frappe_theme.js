@@ -58,6 +58,15 @@ frappe.ready(() => {
 			}
 		});
 
+	$(document).on('click', '.from-markdown h1, .from-markdown h2, .from-markdown h3', (e) => {
+		let $target = $(e.currentTarget);
+		if (e.pageX - $target.offset().left <= 20) {
+			scroll_to_el($target, () => {
+				window.history.pushState({}, '', '#' + $target.prop('id'));
+			})
+		}
+	});
+
 	$(window).on('load', () => {
 		let hash = window.location.hash;
 		if (hash) {
