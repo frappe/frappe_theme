@@ -684,6 +684,26 @@ body[data-path*="help"] {
 		color: #dd1144;
 		background-color: #f8f8f8;
 	}
+
+	h1, h2, h3 {
+		position: relative;
+		padding-left: 1em;
+		margin-left: -1em;
+
+		&:hover::before {
+			display: block;
+		}
+
+		&::before {
+			content: '# ';
+			position: absolute;
+			display: none;
+			left: 0;
+			color: var(--primary);
+			font-weight: normal;
+			cursor: pointer;
+		}
+	}
 }
 
 
