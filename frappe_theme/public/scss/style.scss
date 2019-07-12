@@ -21,7 +21,7 @@ $border-color: $gray-200;
 $card-border-color: $gray-300;
 $card-cap-bg: $gray-100;
 
-@import "../bootstrap-4/scss/bootstrap";
+@import "frappe/public/scss/website";
 @import "/assets/frappe_theme/css/inter.css";
 
 body {
@@ -57,8 +57,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar {
-	padding: 0.5rem 0;
-
 	.navbar-toggler {
 		border: 0px;
 	}
@@ -71,17 +69,15 @@ h1, h2, h3, h4, h5 {
 	.nav-link {
 		color: $text-muted !important;
 	}
-
 }
 
 .mainnav {
-	// background-color: $gray-150;
 	border-bottom: 1px solid $gray-200;
 
 	img {
-		padding-top: 2px;
-		width: 32px;
-		height: 32px;
+		width: 24px;
+		height: 24px;
+		margin-right: 0.75rem;
 	}
 }
 
@@ -91,7 +87,7 @@ h1, h2, h3, h4, h5 {
 	z-index: 500;
 	background-color: $white;
 	border-bottom: 1px solid $gray-200;
-	padding: 1rem 0;
+	padding: 0.5rem 0;
 
 	.subnav-title {
 		font-weight: normal;
@@ -99,8 +95,9 @@ h1, h2, h3, h4, h5 {
 	}
 
 	img {
-		width: 30px;
-		height: 30px;
+		width: 24px;
+		height: 24px;
+		margin-right: 0.75rem;
 	}
 
 	.navbar-nav {
@@ -108,7 +105,7 @@ h1, h2, h3, h4, h5 {
 	}
 
 	.navbar-item {
-		padding-right: 15px;
+		padding-left: 15px;
 	}
 }
 
@@ -117,24 +114,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar-brand {
-	padding: 0px;
+	display: flex;
+	align-items: center;
 	font-weight: 600;
-	// font-family: 'Fira Sans';
-
-	img {
-		width: 30px;
-	}
-
-	span {
-		line-height: 1.7;
-	}
 }
 
 @media (max-width: 840px) {
-	.navbar-brand {
-		margin-left: 1rem;
-	}
-
 	.page-content-wrapper {
 		padding-left: 1rem;
 		padding-right: 1rem;
@@ -631,6 +616,11 @@ body[data-path*="help"] {
 		padding-bottom: 3rem;
 	}
 
+	.page-breadcrumbs .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.navbar {
 		border-bottom: 1px solid $border-color;
 	}
@@ -774,12 +764,6 @@ div[source-type="Generator"][data-doctype="Web Form"] {
 	}
 }
 
-.main-column {
-	.from-markdown {
-		padding-top: none;
-	}
-}
-
 div[source-type="Generator"][data-doctype="Web Form"] {
 	@extend .py-5;
 
@@ -790,10 +774,6 @@ div[source-type="Generator"][data-doctype="Web Form"] {
 		@extend .card;
 		@extend .p-4;
 		@extend .w-600;
-
-		.help-box {
-//			font-size: 14px;
-		}
 	}
 
 	h1 {
