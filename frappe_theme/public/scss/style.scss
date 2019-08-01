@@ -136,20 +136,78 @@ h1, h2, h3, h4, h5 {
 	width: 100px;
 	height: 100px;
 	padding: 0.5rem;
-	border: 1px solid $text-muted;
+	border: 1px solid $secondary-black;
 	border-radius: 0.5rem;
 	background-color: $white;
 	margin-bottom: 2rem;
 }
 
-section, .section-padding, .top-section {
-	padding: 5rem 0 5rem 0;
+section {
+	padding: 6rem 0;
 
 	.lead {
-		color: $text-muted;
+		color: $secondary-black;
 		max-width: 100%;
-		margin-left: auto;
+
+		@media (min-width: 576px) {
+			max-width: 60%;
+		}
+	}
+}
+
+.top-section {
+	padding: 8rem 0rem;
+
+	.lead {
+		max-width: 100%;
+	}
+}
+
+.hero-section {
+	padding: 0rem !important;
+	min-height: 100vh;
+	text-align: center;
+	display: flex !important;
+	align-items: center !important;
+
+	@media (min-width: 576px) {
+		text-align: left;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		.lead {
+			max-width: 100%;
+		}
+
+		.container {
+			margin-bottom: 8rem;
+		}
+	}
+}
+
+.flex-fixed-width-item {
+    flex: 0 0 100px;
+}
+
+.flex-item-20 {
+    flex: 1 0 20%;
+}
+
+.flex-item-40 {
+	flex: 1 0 40%;
+	text-align: right !important;
+	img {
+		max-height: 250px;
+	}
+}
+
+.section-padding {
+ 	.lead {
 		margin-right: auto;
+		margin-left: auto;
+		margin-top: 0;
 
 		@media (min-width: 576px) {
 			max-width: 75%;
@@ -165,11 +223,6 @@ section, .section-padding, .top-section {
 	transition: filter 0.3s ease-in;
 }
 
-
-.top-section.after-splash, .section-padding.after-splash {
-	padding-top: 3rem;
-}
-
 .section-bg {
 	background-color: $gray-150;
 	border: 1px solid $border-color;
@@ -179,23 +232,21 @@ section, .section-padding, .top-section {
 	}
 }
 
-
-.top-section {
-	padding: 6rem 0rem;
-	text-align: center;
-}
-
 .card-with-link:hover {
 	border-color: $body-color;
 }
 
+.deck {
+	margin-top: 5rem !important;
+}
+
 .card {
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+	border-color: $black;
 }
 
 .card-body {
 	line-height: 1.7;
-	color: $text-muted;
+	color: $secondary-black;
 
 	.card-title, h2, h3, h4, h5, h6 {
 		color: $body-color;
@@ -632,7 +683,7 @@ body[data-path*="help"] {
 	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 
 		&:first-child {
 			margin-top: 1rem;
@@ -744,7 +795,7 @@ body[data-path*="help"] {
 .from-markdown,
 div[source-type="Generator"][data-doctype="Blog Post"],
 div[source-type="Generator"][data-doctype="Web Form"] {
-	max-width: 840px !important;
+	max-width: 1000px !important;
 	margin: auto;
 	padding: 3rem 0px;
 
