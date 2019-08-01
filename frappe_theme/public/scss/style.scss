@@ -8,12 +8,13 @@ $gray-600: #8d99a6;
 $gray-700: #495057;
 $gray-800: #36414c;
 $gray-900: #2e3338;
-$primary:	#5e64ff;
+$primary:#5e64ff;
 
 $black: #000;
 
-$body-color: $gray-800;
+$body-color: $black;
 $text-muted: $gray-600;
+$secondary-black: $gray-700;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
@@ -26,9 +27,9 @@ $card-cap-bg: $gray-100;
 
 body {
 	font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-	font-size: 15px;
+	font-size: 16px;
 	overflow-x: hidden;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 h1, h2, h3, h4, h5 {
