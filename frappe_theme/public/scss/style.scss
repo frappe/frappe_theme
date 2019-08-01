@@ -32,12 +32,21 @@ body {
 	font-weight: 300;
 }
 
+p {
+	color: $secondary-black;
+}
+
 h1, h2, h3, h4, h5 {
 	font-weight: 500;
 
 	a {
 		text-decoration: none !important;
 	}
+}
+
+ul.list {
+	line-height: 2rem;
+	color: $secondary-black;
 }
 
 .page-wrapper {
@@ -62,6 +71,14 @@ h1, h2, h3, h4, h5 {
 
 .container {
 	max-width: 1000px !important;
+}
+
+.container-md {
+	max-width: 840px !important;
+}
+
+.container-sm {
+	max-width: 576px !important;
 }
 
 .navbar {
@@ -174,7 +191,7 @@ section {
 		text-align: left;
 
 		h1 {
-			font-size: 3rem;
+			font-size: 3.2rem;
 		}
 
 		.lead {
@@ -187,24 +204,10 @@ section {
 	}
 }
 
-.flex-fixed-width-item {
-    flex: 0 0 100px;
-}
-
-.flex-item-20 {
-    flex: 1 0 20%;
-}
-
-.flex-item-40 {
-	flex: 1 0 40%;
-	text-align: right !important;
-	img {
-		max-height: 250px;
-	}
-}
-
 .section-padding {
- 	.lead {
+	padding: 6rem 0rem;
+
+	.lead {
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 0;
@@ -213,6 +216,30 @@ section {
 			max-width: 75%;
 		}
 	}
+}
+
+.flex-fixed-width-item {
+    flex: 0 0 100px;
+}
+
+.flex-item-20 {
+	flex: 1 0 20%;
+	text-align: right !important;
+}
+
+.flex-item-30 {
+	flex: 1 0 30%;
+	text-align: right !important;
+}
+
+.flex-item-40 {
+	flex: 1 0 40%;
+	text-align: right !important;
+}
+
+.flex-item-50 {
+	flex: 1 0 50%;
+	text-align: right !important;
 }
 
 .splash {
@@ -236,12 +263,34 @@ section {
 	border-color: $body-color;
 }
 
-.deck {
-	margin-top: 5rem !important;
-}
-
 .card {
 	border-color: $black;
+
+	.card-footer {
+		border-color: $black;
+
+		a.card-link {
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+}
+
+.card.no-border {
+	border: none !important;
+	background: transparent;
+
+	.card-footer {
+		border: none !important;
+		background-color: transparent;
+		color: $secondary-black;
+		padding: 1.25rem 0 !important;
+	}
+
+	.card-body {
+		padding: 1.25rem 0 !important;
+	}
 }
 
 .card-body {
@@ -266,6 +315,22 @@ section {
 .w-600 {
 	max-width: 600px;
 	margin: auto;
+}
+
+.mt-6 {
+	margin-top: $spacer * 4.5 !important;
+}
+
+.mt-7 {
+	margin-top: $spacer * 6 !important;
+}
+
+.mb-6 {
+	margin-bottom: $spacer * 4.5 !important;
+}
+
+.mb-7 {
+	margin-bottom: $spacer * 6 !important;
 }
 
 .mt-large {
@@ -614,13 +679,11 @@ img,
 }
 
 .lead-max {
+	padding: 2rem 0;
 	max-width: 100%;
-}
-
-@media (min-width: 576px) {
-	.lead-max {
-		max-width: 75%;
-	}
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: $black;
 }
 
 /* added to make iframe responsive */
