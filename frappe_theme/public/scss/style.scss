@@ -36,6 +36,11 @@ p {
 	color: $secondary-black;
 }
 
+a:hover p{
+	display: inline-block;
+	text-decoration: none !important;
+}
+
 h1, h2, h3, h4, h5 {
 	font-weight: 500;
 
@@ -70,7 +75,7 @@ ul.list {
 }
 
 .container {
-	max-width: 1000px !important;
+	max-width: 900px !important;
 }
 
 .container-md {
@@ -181,11 +186,8 @@ section {
 }
 
 .hero-section {
-	padding: 0rem !important;
-	min-height: 100vh;
+	padding: 10rem 0;
 	text-align: center;
-	display: flex !important;
-	align-items: center !important;
 
 	@media (min-width: 576px) {
 		text-align: left;
@@ -196,10 +198,6 @@ section {
 
 		.lead {
 			max-width: 100%;
-		}
-
-		.container {
-			margin-bottom: 8rem;
 		}
 	}
 }
@@ -219,7 +217,7 @@ section {
 }
 
 .flex-fixed-width-item {
-    flex: 0 0 100px;
+	flex: 0 0 100px;
 }
 
 .flex-item-20 {
@@ -392,17 +390,17 @@ $indicator-light-blue:		#7cd6fd;
 
 .indicator,
 .indicator-right {
-    background: none;
-    vertical-align: middle;
+	background: none;
+	vertical-align: middle;
 }
 
 .indicator::before,
 .indicator-right::after {
-    content:'';
-    display:inline-block;
-    height: 0.5rem;
-    width: 0.5rem;
-    border-radius:0.5rem;
+	content:'';
+	display:inline-block;
+	height: 0.5rem;
+	width: 0.5rem;
+	border-radius:0.5rem;
 }
 
 .indicator::before {
@@ -416,62 +414,62 @@ $indicator-light-blue:		#7cd6fd;
 
 .indicator.grey::before,
 .indicator-right.grey::after {
-    background: $gray-600;
+	background: $gray-600;
 }
 
 .indicator.light-gray::before,
 .indicator-right.light-gray::after {
-    background: $gray-300;
+	background: $gray-300;
 }
 
 .indicator.gray::before,
 .indicator-right.gray::after {
-    background: $gray-600;
+	background: $gray-600;
 }
 
 .indicator.blue::before,
 .indicator-right.blue::after {
-    background: $indicator-blue;
+	background: $indicator-blue;
 }
 .indicator.red::before,
 .indicator-right.red::after {
-    background: $indicator-red;
+	background: $indicator-red;
 }
 .indicator.green::before,
 .indicator-right.green::after {
-    background: $indicator-green;
+	background: $indicator-green;
 }
 .indicator.orange::before,
 .indicator-right.orange::after {
-    background: $indicator-orange;
+	background: $indicator-orange;
 }
 .indicator.purple::before,
 .indicator-right.purple::after {
-    background: $indicator-purple;
+	background: $indicator-purple;
 }
 .indicator.darkgrey::before,
 .indicator-right.darkgrey::after {
-    background: $indicator-darkgrey;
+	background: $indicator-darkgrey;
 }
 
 .indicator.black::before,
 .indicator-right.black::after {
-    background: $body-color;
+	background: $body-color;
 }
 
 .indicator.yellow::before,
 .indicator-right.yellow::after {
-    background: $indicator-yellow;
+	background: $indicator-yellow;
 }
 
 .indicator.light-blue::before,
 .indicator-right.light-blue::after {
-    background: $indicator-light-blue;
+	background: $indicator-light-blue;
 }
 
 .indicator.lightblue::before,
 .indicator-right.lightblue::after {
-    background: $indicator-light-blue;
+	background: $indicator-light-blue;
 }
 
 .modal-header .indicator {
@@ -639,9 +637,9 @@ img,
 }
 
 .square-img {
-	    position:relative;
-	    overflow:hidden;
-	    padding-bottom:100%;
+		position:relative;
+		overflow:hidden;
+		padding-bottom:100%;
 
 		img {
 			position: absolute;
