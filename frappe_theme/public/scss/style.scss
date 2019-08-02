@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
-ul.list {
+section ul {
 	line-height: 2rem;
 	color: $secondary-black;
 }
@@ -158,7 +158,6 @@ ul.list {
 	width: 100px;
 	height: 100px;
 	padding: 0.5rem;
-	border: 1px solid $secondary-black;
 	border-radius: 0.5rem;
 	background-color: $white;
 	margin-bottom: 2rem;
@@ -172,7 +171,9 @@ section {
 		max-width: 100%;
 
 		@media (min-width: 576px) {
-			max-width: 60%;
+			max-width: 75%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }
@@ -847,7 +848,7 @@ body[data-path*="help"] {
 }
 
 .blog-content {
-	max-width: 600px;
+	max-width: 840px;
 	margin: auto;
 }
 
@@ -856,9 +857,21 @@ body[data-path*="help"] {
 .from-markdown,
 div[source-type="Generator"][data-doctype="Blog Post"],
 div[source-type="Generator"][data-doctype="Web Form"] {
-	max-width: 1000px !important;
+	max-width: 900px !important;
 	margin: auto;
 	padding: 3rem 0px;
+
+	section {
+		text-align: center;
+	}
+
+	.top-section {
+		padding: 6rem 0;
+
+		.lead {
+			max-width: 75% !important;
+		}
+	}
 
 	.breadcrumb {
 		margin-left: -15px;
