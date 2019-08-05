@@ -12,9 +12,9 @@ $primary:#5e64ff;
 
 $black: #000;
 
-$body-color: $black;
+$body-color: $gray-800;
 $text-muted: $gray-600;
-$secondary-black: $gray-700;
+$secondary-black: $gray-600;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
@@ -108,6 +108,8 @@ section ul {
 }
 
 .mainnav {
+	border-bottom: 1px solid $gray-200;
+
 	img {
 		width: 30px;
 		height: 30px;
@@ -269,7 +271,7 @@ section {
 }
 
 .card {
-	border-color: $black;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
 	.card-footer {
 		border-color: $black;
@@ -688,7 +690,7 @@ img,
 	max-width: 100%;
 	font-size: 1.5rem;
 	font-weight: 400;
-	color: $black;
+	color: $body-color;
 }
 
 /* added to make iframe responsive */
