@@ -275,8 +275,6 @@ section {
 	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
 	.card-footer {
-		border-color: $black;
-
 		a.card-link {
 			font-size: 0.8rem;
 			text-transform: uppercase;
@@ -292,7 +290,7 @@ section {
 	.card-footer {
 		border: none !important;
 		background-color: transparent;
-		color: $secondary-black;
+		color: $text-muted;
 		padding: 1.25rem 0 !important;
 	}
 
