@@ -72,20 +72,18 @@ section ul {
 
 .container {
 	max-width: 900px !important;
-	padding-left: 0px !important;
-	padding-right: 0px !important;
+	@media (min-width: 576px) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
 .container-md {
 	max-width: 840px !important;
-	padding-left: 0px !important;
-	padding-right: 0px !important;
 }
 
 .container-sm {
 	max-width: 576px !important;
-	padding-left: 0px !important;
-	padding-right: 0px !important;
 }
 
 .navbar {
@@ -214,7 +212,6 @@ section {
 	.lead {
 		margin-right: auto;
 		margin-left: auto;
-		padding: 0 1rem;
 		margin-top: 0;
 
 		@media (min-width: 576px) {
