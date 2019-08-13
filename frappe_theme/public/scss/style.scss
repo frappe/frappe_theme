@@ -164,7 +164,7 @@ section {
 
 	.lead {
 		max-width: 90%;
-		margin: 0 !important;
+		margin: 0;
 	}
 }
 
@@ -837,7 +837,9 @@ div[source-type="Generator"][data-doctype="Web Form"] {
 		padding: 6rem 0;
 
 		.lead {
-			max-width: 75% !important;
+			max-width: 90% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
 		}
 	}
 
