@@ -31,11 +31,6 @@ body {
 	font-weight: 400;
 }
 
-a:hover p{
-	display: inline-block;
-	text-decoration: none !important;
-}
-
 h1, h2, h3, h4, h5 {
 	font-weight: 700;
 
@@ -238,11 +233,14 @@ section {
 
 .section-bg {
 	background-color: $gray-150;
-	border: 1px solid $border-color;
 
 	code.hljs {
 		background-color: $white;
 	}
+}
+
+.section-gray {
+	background-color: $gray-300;
 }
 
 .card-with-link:hover {
@@ -250,7 +248,8 @@ section {
 }
 
 .card {
-	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	border: none !important;
 
 	.card-footer {
 		a.card-link {
@@ -258,22 +257,6 @@ section {
 			text-transform: uppercase;
 			font-weight: 500;
 		}
-	}
-}
-
-.card.no-border {
-	border: none !important;
-	background: transparent;
-
-	.card-footer {
-		border: none !important;
-		background-color: transparent;
-		color: $text-muted;
-		padding: 1.25rem 0 !important;
-	}
-
-	.card-body {
-		padding: 1.25rem 0 !important;
 	}
 }
 
