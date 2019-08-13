@@ -14,7 +14,6 @@ $black: #000;
 
 $body-color: $gray-800;
 $text-muted: $gray-600;
-$secondary-black: $gray-600;
 $link-color: $black;
 $yiq-contrasted-threshold: 180;
 
@@ -47,7 +46,7 @@ h1, h2, h3, h4, h5 {
 
 section ul {
 	line-height: 2rem;
-	color: $secondary-black;
+	color: $text-muted;
 }
 
 .page-wrapper {
@@ -63,24 +62,12 @@ section ul {
 	font-weight: 400;
 }
 
-.text-secondary {
-	color: $secondary-black;
-}
-
 .container {
 	max-width: 840px !important;
 	@media (min-width: 576px) {
 		padding-left: 0px;
 		padding-right: 0px;
 	}
-}
-
-.container-md {
-	max-width: 840px !important;
-}
-
-.container-sm {
-	max-width: 576px !important;
 }
 
 .navbar {
@@ -94,7 +81,7 @@ section ul {
 	}
 
 	.nav-link {
-		color: $secondary-black !important;
+		color: $text-muted !important;
 	}
 }
 
@@ -166,7 +153,7 @@ section {
 	padding: 6rem 0;
 
 	.lead {
-		color: $secondary-black;
+		color: $text-muted;
 		max-width: 100%;
 
 		@media (min-width: 576px) {
@@ -292,7 +279,7 @@ section {
 
 .card-body {
 	line-height: 1.7;
-	color: $secondary-black;
+	color: $text-muted;
 
 	.card-title, h2, h3, h4, h5, h6 {
 		color: $body-color;
