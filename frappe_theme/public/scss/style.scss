@@ -273,6 +273,11 @@ section {
 	background-color: $gray-300;
 }
 
+.badge-pill {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
 .card-with-link:hover {
 	border-color: $body-color;
 }
