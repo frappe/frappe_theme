@@ -273,6 +273,10 @@ section {
 	background-color: $gray-300;
 }
 
+.header-link:hover {
+	text-decoration: underline !important;
+}
+
 .badge-pill {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
