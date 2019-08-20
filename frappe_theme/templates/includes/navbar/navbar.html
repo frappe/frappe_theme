@@ -16,8 +16,8 @@
 <li>
 {% else %}
 	<li class="nav-item">
-		<a class="nav-link" href="{{ (item.url or '')|abs_url }}"
-			{{ item.target or ''}}>
+		<a class="{{ 'btn btn-primary ml-2' if item.button else 'nav-link' }}"
+			href="{{ (item.url or '')|abs_url }}" {{ item.target or ''}} data-navbar-label="{{ item.label }}">
 			{{ item.label }}
 		</a>
 	</li>
