@@ -1,30 +1,40 @@
 {% macro hero(title, subtitle) %}
 <section class='hero-docs'>
-    <h1>{{ title }}</h1>
-    {% if subtitle %}
-    <p class='lead'>{{ subtitle }}</p>
-    {% endif %}
+	<h1>{{ title }}</h1>
+	{% if subtitle %}
+	<p class='lead'>{{ subtitle }}</p>
+	{% endif %}
 </section>
 {% endmacro %}
 
 {% macro cards(items) %}
 <div class='row'>
-    {% for card in items %}
-        <div class='col-sm-4 mt-4'>
-            <a href='{{ card.link }}' class='card border h-100'>
-                <div class='card-body'>
-                {% if card.title %}
-                <h5 class='card-title'>{{ card.title }}</h5>
-                {% endif %}
-                {{ card.content }}
-                </div>
-                {% if card.badge %}
-                <div class='card-footer'>
-                    <span class='badge badge-pill badge-{{ card.badge_style or "secondary" }}'>{{ card.badge }}</span>
-                </div>
-                {% endif %}
-            </a>
-        </div>
-    {% endfor %}
+	{% for card in items %}
+		<div class='col-sm-4 mt-4'>
+			<a href='{{ card.link }}' class='card border h-100'>
+				<div class='card-body'>
+				{% if card.title %}
+				<h5 class='card-title'>{{ card.title }}</h5>
+				{% endif %}
+				{{ card.content }}
+				</div>
+				{% if card.badge %}
+				<div class='card-footer'>
+					<span class='badge badge-pill badge-{{ card.badge_style or "secondary" }}'>{{ card.badge }}</span>
+				</div>
+				{% endif %}
+			</a>
+		</div>
+	{% endfor %}
 </div>
+{% endmacro %}
+
+{% macro signup_footer() %}
+<section class="section-sm section-light">
+	<div class="container text-center">
+		<h4>
+			<a class="text-body header-link" href="/pricing">Sign up for ERPNext</a>
+			or <a class="text-body header-link" href="/contact-form">Get Free Consultation</a></h4>
+	</div>
+</section>
 {% endmacro %}
