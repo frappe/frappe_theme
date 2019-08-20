@@ -29,8 +29,8 @@
 </div>
 {% endmacro %}
 
-{% macro signup_footer() %}
-<section class="section-sm section-light">
+{% macro signup_footer(section_class) %}
+<section class="section-sm {{ section_class or ''}}">
 	<div class="container text-center">
 		<h4>
 			<a class="text-body header-link" href="/pricing">Sign up for ERPNext</a>
