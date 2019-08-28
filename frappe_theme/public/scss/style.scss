@@ -140,6 +140,13 @@ section ul {
 	font-weight: 700;
 }
 
+@media (max-width: 840px) {
+	body[frappe-content-type="markdown"] .page-content-wrapper {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
 .img-box {
 	width: 100px;
 	height: 100px;
