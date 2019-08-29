@@ -1064,3 +1064,9 @@ blockquote {
 #alert-container .desk-alert .next-action-container .next-action:last-child {
 	border-right: none;
 }
+
+.w-md-100 {
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+}
