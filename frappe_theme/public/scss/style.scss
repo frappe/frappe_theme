@@ -350,6 +350,14 @@ a.btn, a.card, a.no-decoration {
 	text-decoration: none !important;
 }
 
+.btn-group-xs > .btn, .btn-xs {
+	padding: .5rem .4rem;
+	font-size: 80%;
+	font-weight: 400;
+	line-height: .5;
+	border-radius: .2rem;
+}
+
 .page-content-wrapper {
 	min-height: 500px;
 	p, li {
