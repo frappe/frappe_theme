@@ -87,6 +87,20 @@ section ul {
 
 	.nav-link {
 		color: $text-muted !important;
+		@media (max-width: 768px) {
+			margin-bottom: 0.25rem !important;
+			margin-top: 0.25rem !important;
+		}
+	}
+
+	.nav-item > .btn {
+		margin-left: 0.5rem;
+		@media (max-width: 768px) {
+			margin-left: 0px !important;
+			width: 100%;
+			margin-bottom: 0.5rem !important;
+			margin-top: 0.5rem !important;
+		}
 	}
 }
 
@@ -1063,10 +1077,4 @@ blockquote {
 
 #alert-container .desk-alert .next-action-container .next-action:last-child {
 	border-right: none;
-}
-
-.w-md-100 {
-	@media (max-width: 768px) {
-		width: 100%;
-	}
 }
