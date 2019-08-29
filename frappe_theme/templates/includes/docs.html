@@ -32,9 +32,11 @@
 {% macro signup_footer(section_class) %}
 <section class="section-sm {{ section_class or ''}}">
 	<div class="container text-center">
-		<h4>
-			<a class="text-body header-link" href="/pricing">Sign up for ERPNext</a>
-			or <a class="text-body header-link" href="/contact-form">Get Free Consultation</a></h4>
+		<p class="lead">ERPNext is used by more than 5000 companies across the world</p>
+		<div class="mt-4">
+			<a class="btn btn-primary" href="/signup?plan=P-Standard#personal-details">Start Free Trial</a>
+			<a class="btn btn-secondary" href="/contact-form">Contact Us</a></h4>
+		</div>
 	</div>
 </section>
 {% endmacro %}

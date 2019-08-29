@@ -60,9 +60,6 @@ section ul {
 	background-color: #fff;
 }
 
-.btn:hover {
-	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .11), 0 5px 10px 0 rgba(0, 0, 0, .08);
-}
 
 .lead {
 	line-height: 1.5;
@@ -253,9 +250,14 @@ section {
 	transition: filter 0.3s ease-in;
 }
 
-.section-sm {
+.section-md {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
+}
+
+.section-sm {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .section-bg {
@@ -279,8 +281,8 @@ section {
 }
 
 .badge-pill {
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
 }
 
 .card-with-link:hover {
