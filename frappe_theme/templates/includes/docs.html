@@ -40,3 +40,27 @@
 	</div>
 </section>
 {% endmacro %}
+
+{% macro breadcrumb(links) %}
+<div class="page-breadcrumbs">
+	<div class="container mt-3">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+				{% for link in links %}
+					{% if link.active %}
+						<li class="breadcrumb-item active" aria-current="page">
+							{{ link.label }}
+						</li>
+					{% else %}
+						<li class="breadcrumb-item">
+							<a href="{{ link.url }}" itemprop="url">
+								{{ link.label }}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ol>
+		</nav>
+	</div>
+</div>
+{% endmacro %}
