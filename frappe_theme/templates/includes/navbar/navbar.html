@@ -13,8 +13,8 @@
 		</div>
 	<li>
 {% else %}
-	<li class="nav-item">
-		<a class="{{ 'btn btn-primary' if item.button else 'nav-link' }}" href="{{ (item.url or '')|abs_url }}"
+	<li class="nav-item {{ 'd-flex' if item.button }}">
+		<a class="{{ 'btn btn-sm btn-secondary align-self-sm-center' if item.button else 'nav-link' }}" href="{{ (item.url or '')|abs_url }}"
 			{{ item.target or ''}} data-navbar-label="{{ item.label }}">
 			{{ item.label }}
 		</a>

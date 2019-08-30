@@ -232,6 +232,12 @@ section {
 	}
 }
 
+.section-dark {
+	background-color: #718096;
+	color: #ffffff;
+	border: none !important;
+}
+
 .flex-fixed-width-item {
 	flex: 0 0 100px;
 }
@@ -398,7 +404,7 @@ a.btn, a.card, a.no-decoration {
 }
 
 footer {
-	border-top: 1px solid $border-color;
+	// border-top: 1px solid $border-color;
 	background-color: $gray-150;
 	padding-bottom: 3rem;
 }
