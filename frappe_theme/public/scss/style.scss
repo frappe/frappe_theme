@@ -292,6 +292,10 @@ section {
 	background-color: $gray-100;
 }
 
+.top-section.section-light {
+	background-image: linear-gradient(0deg, $gray-100 0%, #fff 100%);
+}
+
 .section-gray {
 	background-color: $gray-300;
 }
