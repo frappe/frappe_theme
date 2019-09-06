@@ -6,7 +6,14 @@
 	<style>
 		{% include "templates/includes/custom.css" ignore missing %}
 	</style>
+	{% if head_html is defined -%}
+		{{ head_html or "" }}
+	{%- endif %}
 {%- endblock -%}
+
+{%- block head_include %}
+	{{ head_include or "" }}
+{% endblock -%}
 
 {% block navbar %}
 	{{ super() }}
