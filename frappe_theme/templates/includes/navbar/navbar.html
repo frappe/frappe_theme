@@ -14,13 +14,20 @@
 	<li>
 {% else %}
 	<li class="nav-item {{ 'd-flex' if item.button }}">
-		<a class="{{ 'btn btn-sm btn-secondary align-self-sm-center' if item.button else 'nav-link' }}" href="{{ (item.url or '')|abs_url }}"
+		<a class="{{ 'btn btn-sm btn-secondary align-self-sm-center' if item.button else 'nav-link' }} {{ 'indicator blue' if item.highlight else '' }}" style="{{ 'width:120px' if item.highlight else '' }}"
+		href="{{ (item.url or '')|abs_url }}"
 			{{ item.target or ''}} data-navbar-label="{{ item.label }}">
 			{{ item.label }}
 		</a>
 	</li>
 {% endif %}
 {% endmacro %}
+
+<style>
+	.navbar .dropdown-toggle::after {
+		display: none;
+	}
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-light mainnav">
 	<div class="container">
