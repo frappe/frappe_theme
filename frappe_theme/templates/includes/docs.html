@@ -29,6 +29,28 @@
 </div>
 {% endmacro %}
 
+{% macro imgcards(items) %}
+<div class='row'>
+	{% for card in items %}
+		<div class='col-sm-4 mt-4'>
+			<a href='{{ card.link }}' class='card border'>
+				<div class='card-body' style="display: block; margin-left: auto; margin-right: auto;">
+				{{ card.content }}
+				{% if card.title %}
+				<h5 class='card-title'>{{ card.title }}</h5>
+				{% endif %}
+				</div>
+				<!--{% if card.badge %}
+				<div class='card-footer'>
+					<span class='badge badge-pill badge-{{ card.badge_style or "secondary" }}'>{{ card.badge }}</span>
+				</div>
+				{% endif %} -->
+			</a>
+		</div>
+	{% endfor %}
+</div>
+{% endmacro %}
+
 {% macro signup_footer(section_class) %}
 <section class="section-md {{ section_class or ''}}">
 	<div class="container text-center">
