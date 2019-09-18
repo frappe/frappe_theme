@@ -33,18 +33,13 @@
 <div class='row'>
 	{% for card in items %}
 		<div class='col-sm-4 mt-4'>
-			<a href='{{ card.link }}' class='card border'>
-				<div class='card-body' style="display: block; margin-left: auto; margin-right: auto;">
-				{{ card.content }}
-				{% if card.title %}
-				<h5 class='card-title'>{{ card.title }}</h5>
-				{% endif %}
+			<a href='{{ card.link }}' class='card border h-100'>
+				<div class='card-body d-flex' style='min-height: 150px;'>
+					<img src="{{ card.content }}" class="align-self-center">
 				</div>
-				<!--{% if card.badge %}
 				<div class='card-footer'>
-					<span class='badge badge-pill badge-{{ card.badge_style or "secondary" }}'>{{ card.badge }}</span>
+					{{ card.title }}
 				</div>
-				{% endif %} -->
 			</a>
 		</div>
 	{% endfor %}
