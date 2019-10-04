@@ -57,4 +57,36 @@ frappe.ready(() => {
 		let position = offset_top - subnav_height;
 		$('html, body').animate({ scrollTop: position }, 500, callback);
 	}
+
+	// show screenshot preview
+	$(document).on('click', 'img.screenshot', (e) => {
+		let $img = $(e.target);
+		show_screenshot_preview($img);
+	});
+
+	$(document).on('click', '.screenshot-preview', e => {
+		if ($(e.target).is(':not(img)')) {
+			hide_screenshot_preview();
+		}
+	});
+
+	$(document.body).on('keydown', e => {
+		if (e.key === 'Escape') {
+			hide_screenshot_preview();
+		}
+	});
+
+	function show_screenshot_preview($img) {
+		let x_icon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+		let $preview = $(`<div class="screenshot-preview">
+			<button class="btn">${x_icon}</button></div>
+		`).appendTo(document.body);
+		$preview.append($img.clone().removeClass('screenshot'));
+		$('html, body').addClass('disable-scroll');
+	}
+
+	function hide_screenshot_preview() {
+		$('html, body').removeClass('disable-scroll');
+		$(document.body).find('.screenshot-preview').remove();
+	}
 });
