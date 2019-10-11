@@ -753,6 +753,38 @@ img,
 	border: 1px solid #d1d8dd;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.disable-scroll {
+	overflow: hidden;
+}
+
+.screenshot-preview {
+	z-index: 99999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+
+	img {
+		width: 80%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	button {
+		position: fixed;
+		right: 1rem;
+		top: 1rem;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
 }
 
 body[data-path="blog"] {
