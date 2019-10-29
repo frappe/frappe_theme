@@ -1,57 +1,57 @@
 {% macro render_item(item) %}
 {% if item.child_items %}
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-  	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ item.label }}
-  </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	  {% for child in item.child_items %}
-		  <a class="dropdown-item small" href="{{ (child.url or '')|abs_url }}"
-			  {{ child.target or ''}}>
-			  {{ child.label }}</a>
-	  {% endfor %}
-  </div>
-
-<li>
+	<li class="nav-item dropdown w-100">
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{{ item.label }}
+		</a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			{% for child in item.child_items %}
+			<a class="dropdown-item small" href="{{ (child.url or '')|abs_url }}" {{ child.target or ''}}>
+				{{ child.label }}</a>
+			{% endfor %}
+		</div>
+	<li>
 {% else %}
-	<li class="nav-item">
-		<a class="nav-link" href="{{ (item.url or '')|abs_url }}"
-			{{ item.target or ''}}>
+	<li class="nav-item {{ 'd-flex' if item.button else '' }}">
+		<a class="{{ 'btn btn-sm btn-secondary align-self-sm-center' if item.button else 'nav-link' }} {{ 'indicator blue' if item.highlight else '' }}" style="{{ 'width:120px' if item.highlight else '' }}" {% if item.new_tab %}target="_blank"{% endif %}
+		href="{{ (item.url or '')|abs_url }}"
+			{{ item.target or ''}} data-navbar-label="{{ item.label }}">
 			{{ item.label }}
 		</a>
 	</li>
 {% endif %}
-
 {% endmacro %}
+
 
 <nav class="navbar navbar-expand-lg navbar-light mainnav">
 	<div class="container">
-	<a class="navbar-brand" href="{{ url_prefix }}{{ home_page or "/"}}">
-		{% if  logo_image_url  %}
+		<a class="navbar-brand" href="{{ url_prefix }}{{ home_page or "/"}}">
+			{% if  logo_image_url  %}
 			<img class="d-inline-block align-top" src="{{  logo_image_url  }}">
-		{% endif %}
-		<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-	</button>
+			{% endif %}
+			<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-		{%- for item in top_bar_items -%}
-			{% if not item.right and not item.parent_label -%}
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto mt-4 mt-lg-0">
+				{%- for item in top_bar_items -%}
+				{% if not item.right and not item.parent_label -%}
 				{{ render_item(item) }}
-			{% endif %}
-		{%- endfor %}
-	</ul>
-    <ul class="navbar-nav ml-auto justify-content-end">
-		{%- for item in top_bar_items -%}
-			{% if item.right and not item.parent_label -%}
+				{% endif %}
+				{%- endfor %}
+			</ul>
+			<ul class="navbar-nav ml-auto justify-content-end">
+				{%- for item in top_bar_items -%}
+				{% if item.right and not item.parent_label -%}
 				{{ render_item(item) }}
-			{% endif %}
-		{%- endfor %}
-		{% include("frappe_theme/templates/includes/navbar/navbar_login.html") %}
-	</ul>
-  </div>
+				{% endif %}
+				{%- endfor %}
+				{% include("frappe_theme/templates/includes/navbar/navbar_login.html") %}
+			</ul>
+		</div>
 </nav>
