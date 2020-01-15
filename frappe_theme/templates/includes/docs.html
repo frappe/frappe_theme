@@ -1,0 +1,66 @@
+{% macro hero(title, subtitle) %}
+<section class='hero-docs'>
+	<h1>{{ title }}</h1>
+	{% if subtitle %}
+	<p class='lead'>{{ subtitle }}</p>
+	{% endif %}
+</section>
+{% endmacro %}
+
+{% macro cards(items) %}
+<div class='row'>
+	{% for card in items %}
+		<div class='col-sm-4 mt-4'>
+			<a href='{{ card.link }}' class='card border h-100'>
+				<div class='card-body'>
+				{% if card.title %}
+				<h5 class='card-title'>{{ card.title }}</h5>
+				{% endif %}
+				{{ card.content }}
+				</div>
+				{% if card.badge %}
+				<div class='card-footer'>
+					<span class='badge badge-pill badge-{{ card.badge_style or "secondary" }}'>{{ card.badge }}</span>
+				</div>
+				{% endif %}
+			</a>
+		</div>
+	{% endfor %}
+</div>
+{% endmacro %}
+
+{% macro signup_footer(section_class) %}
+<section class="section-md {{ section_class or ''}}">
+	<div class="container text-center">
+		<p class="lead">ERPNext is used by more than 5000 companies across the world</p>
+		<div class="mt-4">
+			<a class="btn btn-primary" href="/signup?plan=P-Standard#personal-details">Start Free Trial</a>
+			<a class="btn btn-secondary" href="/contact-form">Contact Us</a></h4>
+		</div>
+	</div>
+</section>
+{% endmacro %}
+
+{% macro breadcrumb(links) %}
+<div class="page-breadcrumbs">
+	<div class="container mt-3">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+				{% for link in links %}
+					{% if link.active %}
+						<li class="breadcrumb-item active" aria-current="page">
+							{{ link.label }}
+						</li>
+					{% else %}
+						<li class="breadcrumb-item">
+							<a href="{{ link.url }}" itemprop="url">
+								{{ link.label }}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ol>
+		</nav>
+	</div>
+</div>
+{% endmacro %}
