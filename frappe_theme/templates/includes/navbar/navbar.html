@@ -28,7 +28,7 @@
 	<div class="container">
 		<a class="navbar-brand" href="{{ url_prefix }}{{ home_page or "/"}}">
 			{% if  logo_image_url  %}
-			<img class="d-inline-block align-top" src="{{  logo_image_url  }}">
+			<img class="d-inline-block align-top" src="{{  logo_image_url  }}" alt="Logo">
 			{% endif %}
 			<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
 		</a>
