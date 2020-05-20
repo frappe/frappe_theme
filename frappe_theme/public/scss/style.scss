@@ -815,6 +815,10 @@ body[frappe-content-type="markdown"] {
 		padding-right: 0;
 	}
 
+	.page-breadcrumbs {
+		margin-bottom: 2.5rem;
+	}
+
 	.navbar {
 		border-bottom: 1px solid $border-color;
 	}
@@ -828,7 +832,7 @@ body[frappe-content-type="markdown"] {
 	p.lead {
 		font-size: 1.1rem;
 		margin-top: -1.5rem !important;
-		padding-bottom: 3rem;
+		padding-bottom: 1.5rem;
 	}
 
 	h2 {
