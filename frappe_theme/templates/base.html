@@ -4,7 +4,7 @@
 	{% if head_html is defined -%}
 		{{ head_html or "" }}
 	{%- endif %}
-	<link href="/assets/css/frappe-theme-bs4.css" rel="stylesheet">
+	{{ include_style('website.bundle.css') }}
 	<link type="text/css" rel="stylesheet" href="/assets/frappe_theme/css/github.css">
 	<style>
 		{% include "templates/includes/custom.css" ignore missing %}
